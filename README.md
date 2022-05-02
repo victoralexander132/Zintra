@@ -7,3 +7,4 @@ Zintra bajo
 - Donovan Diego Martinez Castañeda
 - Arantxa Pérez Espíndola
 - Ana Laura Vazquez Solache
+- Ricardo Ortega Eusebio
