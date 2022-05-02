@@ -1,4 +1,4 @@
 # Zintra
 Zintra bajo
-## Integrantes
+## Integrantes del equipo
 - Víctor Manuel Soto Alexander
