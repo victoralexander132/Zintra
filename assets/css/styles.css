@@ -13,3 +13,18 @@
   object-position: center;
 }
 
+.footer{
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(23, 53, 43, 1);
+}
+
+.img-contacto{
+  width: 40px;
+  height: 50px;
+  /* margin-left: 1vw;
+  object-fit: contain;
+  object-position: center; */
+}
