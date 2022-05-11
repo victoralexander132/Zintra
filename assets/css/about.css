@@ -1,10 +1,12 @@
-
+*{
+  box-sizing: border-box;
+}
 
 .pantalla{
   /* position: absolute; */
-  border: 3px solid orange;
+  /* border: 3px solid orange; */
   width: 100%;
-  height: calc(100vh - 143px);
+  height: calc(100vh - 142px);
   display: flex;
   justify-content: center;
   align-items: top;
@@ -19,15 +21,15 @@
   background-color: rgba(207, 225, 219, 0.72);
   color: rgba(23, 53, 43, 1);
   margin-top: 5vh;
-  padding: 20px;
+  padding: 0 2em 0;
   font-size: 12pt;
   width: 80vw;
-  height: 40vh;
+  height: 45vh;
   border-radius: 50px;
   }
 
 @media screen and (max-width: 900px) {
   .cuadro {
-    font-size: 10pt;
+    font-size: 8pt;
   }
 }
