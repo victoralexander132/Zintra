@@ -12,7 +12,7 @@
   position: absolute;
   background-image: url('/assets/images/conjunto.jpg');
   background-size: cover ;
-  object-position: center;
+  background-position: center;
 }
 
 .cuadro{
