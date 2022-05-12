@@ -1,0 +1,29 @@
+.img {
+    height: 36vw;
+    width: 36vw;
+    border-radius: 50%;
+
+    object-fit: cover; 
+    object-position: center;
+
+    /* 
+    max-height: calc(100vh - 160px); 
+    max-width: calc(100vh - 160px);
+     */
+} 
+
+.img2{
+    height: 33vw;
+    width: 33vw;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.titulo{
+
+}
+
+.parrafo{
+
+}
