@@ -26,8 +26,8 @@
   /* ESTILOS BODY */
   .fondo {
     background-image: url(../images/contacto/azul-rosa.jpg);
-    background-size: 100%;
-    background-position:center;
+    background-size: cover;
+    background-position: 50% 40%; //50% 40%
     background-repeat:no-repeat;   
   }
 
@@ -39,6 +39,15 @@
    border-radius: 10px;
    
   }
+
+  @media (max-width: 767.98px) { 
+  .fondo{
+  background-size: 70%
+  background-repeat: no-repeat;
+  background-position: center;
+  }
+  }
+
 
   .container{
      /*  top: 50vh;  */  
