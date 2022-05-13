@@ -28,10 +28,19 @@ body{
     align-items: center;
 }
 
-.planta{
+.img-planta{
     height: 35px;
     
     }
+
+.img-sobre{
+  height: 25px;
+}
+
+.img-camion{
+ height: 27px;
+ text-align: right;
+}
 
 @media screen and (max-width: 350px) {
     .texto-boton{
