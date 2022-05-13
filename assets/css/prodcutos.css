@@ -1,0 +1,79 @@
+body{
+    margin-bottom: 75px;
+}
+
+.color-card{
+    background-color: rgb(234, 234, 234);
+  }
+  
+  .card-font{
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .titulo{
+    font-weight: 700;
+  }
+  
+  a:link, a:visited,  a:hover, a:active
+  {
+      color: #000000;
+      text-decoration: none;
+  }  
+
+.boton{
+    background-color: rgb(151, 219, 174);
+    height: 60px;
+    margin-top: 15px;
+    text-align: left;
+    align-items: center;
+}
+
+.img-planta{
+    height: 35px;
+    
+    }
+
+.img-sobre{
+  height: 25px;
+}
+
+.img-camion{
+ height: 27px;
+ text-align: right;
+}
+
+@media screen and (max-width: 350px) {
+    .texto-boton{
+        font-size: 6pt;
+    }
+    
+}
+.texto-boton{
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: auto;
+    
+}
+
+.grow{
+    transition: all .2s ease-in-out;
+  }
+  
+  .grow:hover,
+  .grow:focus,
+  .grow:active {
+      transform: scale(1.1);
+  }
+  
+
+  .sidebar{
+    --offset: var(--space);
+  flex-grow: 1;
+  flex-basis: 300px;
+  align-self: start;
+  position: sticky;
+  top: var(--offset);
+  }
+
+  .sidebar .component {
+    max-height: calc(100vh - var(--offset) * 2);}
