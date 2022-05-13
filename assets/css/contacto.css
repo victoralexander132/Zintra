@@ -1,6 +1,9 @@
 /* Estilos NAVBAR */
 body {
-	background: url(../images/contacto/azul-rosa.jpg) no-repeat center center fixed;
+	background: url(../images/contacto/azul-rosa.jpg) /* no-repeat center center fixed */;
+	background-size: cover;
+	background-position: 100%;
+	background-repeat: no-repeat;
 }
 
 .img-logo {
@@ -30,12 +33,39 @@ body {
 	width: 40%;
 	margin-top: 10vh;
 	padding: 5% 3%;
+	border-radius: 10px;
+	height: calc(100vh - TamañoNavbar - TamañoFooter);
+
+	
 }
 @media screen and (max-width: 1100px) {
 	.form-pantalla {
 		width: 80%;
-		margin-top: 10%;
+		/* margin-top: 10%; */
+		align-items: center;
 	}
+
+	body{
+	background: url(../images/contacto/azul-rosa.jpg) /* no-repeat center center fixed */;
+	background-size: 120% 220%;
+	background-position: top center;
+	background-repeat: no-repeat
+	}
+	
+	/* body{
+		background: url(../images/contacto/azul-rosa.jpg) no-repeat center center fixed;
+		background-size: 120% 200%;
+		background-position: top center;
+	} */
+
+}
+
+@media screen and (max-width: 600px){
+	body{
+	background: url(../images/contacto/azul-rosa.jpg) no-repeat /* center center fixed */;
+	background-size: 150% 110%;
+	background-position: center;
+}
 }
 
 /* ESTILOS FOOTER */
