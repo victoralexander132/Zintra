@@ -29,20 +29,3 @@
     }
 
 
-.color-card{
-  background-color: rgb(234, 234, 234);
-}
-
-.card-font{
-  font-family: 'Montserrat', sans-serif;
-}
-
-.titulo{
-  font-weight: 800;
-}
-
-a:link, a:visited,  a:hover, a:active
-{
-    color: #000000;
-    
-}
