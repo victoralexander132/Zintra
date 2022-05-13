@@ -81,16 +81,61 @@
 
                 <div class="formulario">   
 					</div>  
-					<div class="boton1">
-						<button type="button" class="btn btn-lg btn-block">Comprar</button>
-					</div>
-					<div class="boton">
-						<button type="button" class="btn btn-lg btn-block boton text-white d-flex grow"><span class="texto-boton">Consigue tu planta ideal</span></button>
-					</div>
-					<div class="boton">
-						<button type="button" class="btn btn-lg btn-block boton text-white d-flex grow"><span class="texto-boton">Contacto</span></button>
-					</div>
-					<div class="p-3 mb-3 boton texto-boton text-white d-flex" style="width:100%;">Envios a todo México</div>
+					<form>
+						<legend>ARMA TU ZIKLIC IDEAL</legend>
+						<div class="form-group">
+							<label for="tamaño">Elige el tamaño</label>
+							<select id="tamaño" class="form-control">
+								<option>Mini-Zik</option>
+								<option>Zikli</option>
+								<option>Medi-Zik</option>
+								<option>Maxi-Zik</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="color">Escribe tu color favorito</label>
+							<input type="text" id="color" class="form-control" placeholder="Escribe tu color favorito">
+						</div>
+
+						<div class="form-group">
+							<label for="uso">Uso</label>
+							<select id="uso" class="form-control">
+								<option>Planta</option>
+								<option>Vela</option>
+								<option>Contenedor (vacio)</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="uso">Planta</label>
+							<select id="uso" class="form-control">
+								<option>Planta 1</option>
+								<option>Planta 2</option>
+								<option>Planta 3</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="uso">Extras (Opcional)</label>
+							<select id="uso" class="form-control">
+								<option>Plane mini</option>
+								<option>Plane med</option>
+								<option>Plane grande</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+								<label class="form-check-label" for="disabledFieldsetCheck">
+									Can't check this
+									</label>
+								</div>
+							</div>
+							<button type="submit" class="btn btn-primary">Submit</button>
+
+					</form>
 				</div>  
 
             <div class="col-8">

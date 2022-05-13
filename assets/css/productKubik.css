@@ -64,33 +64,24 @@ top: var(--offset);
     object-position: center;
 }
 
+
+    @media screen and (max-width: 768px) {
+
+        body{
+            margin-bottom: 15vh;
+        }
+
+    }
+    
+    @media screen and (max-width: 425px) {
+        body{
+            margin-bottom: 25vh;
+        }
+    }
+
     @media screen and (max-width: 350px) {
         .texto-boton{
             font-size: 6pt;
         }
         
     }
-/* *{
-    box-sizing: border-box;
-}
-
-body{
-    margin-bottom: 15vh;
-} 
-
-#imagenes{
-    width: 97%;
-    height: calc(100vh - 170px);
-}
-
-
-.pantalla{
-    height: calc(100vh - 120px);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-image: url('/assets/images/productKubik/verde\ y\ azul.jpg');
-    background-size: cover ;
-    background-position: center;
-    align-self: center;
-}  */
