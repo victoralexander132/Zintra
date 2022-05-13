@@ -1,0 +1,96 @@
+body{
+    margin-bottom: 10vh;;
+}
+
+
+.card-font{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.titulo{
+    font-weight: 700;
+}
+
+a:link, a:visited,  a:hover, a:active
+{
+    color: #000000;
+    text-decoration: none;
+}  
+
+.boton{
+    background-color: rgb(151, 219, 174);
+    height: 60px;
+    margin-top: 15px;
+    text-align: left;
+    align-items: center;
+}
+
+
+
+.texto-boton{
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: auto;
+    
+}
+
+.grow{
+    transition: all .2s ease-in-out;
+}
+
+.grow:hover,
+.grow:focus,
+.grow:active {
+transform: scale(1.1);
+}
+
+.sidebar{
+    --offset: var(--space);
+flex-grow: 1;
+flex-basis: 300px;
+align-self: start;
+position: sticky;
+top: var(--offset);
+}
+
+.sidebar .component {
+    max-height: calc(100vh - var(--offset) * 2);}
+
+
+.img-cards{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+    @media screen and (max-width: 350px) {
+        .texto-boton{
+            font-size: 6pt;
+        }
+        
+    }
+/* *{
+    box-sizing: border-box;
+}
+
+body{
+    margin-bottom: 15vh;
+} 
+
+#imagenes{
+    width: 97%;
+    height: calc(100vh - 170px);
+}
+
+
+.pantalla{
+    height: calc(100vh - 120px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url('/assets/images/productKubik/verde\ y\ azul.jpg');
+    background-size: cover ;
+    background-position: center;
+    align-self: center;
+}  */
