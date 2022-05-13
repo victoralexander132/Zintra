@@ -27,7 +27,7 @@
   .fondo {
     background-image: url(../images/contacto/azul-rosa.jpg);
     background-size: cover;
-    background-position: 50% 40%; //50% 40%
+    background-position: 50% 40%;
     background-repeat:no-repeat;   
   }
 
@@ -40,18 +40,30 @@
    
   }
 
-  @media (max-width: 767.98px) { 
+  @media screen and (max-width: 767px) { 
   .fondo{
-  background-size: 70%
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  }
+
+  .container{
+    
+  }
+
+  .form{
+    
   }
   }
 
 
   .container{
-     /*  top: 50vh;  */  
-     
+     /* top: 50vh; */
+    background-color: rgba(255, 255, 255, 0.90);
+    width: 40vw;
+    padding: 20px;
+    border-radius: 10px;
+
   }
 
   .btn{
