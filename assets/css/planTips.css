@@ -18,12 +18,22 @@
     object-position: center;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 995px) {
+    .imgCircular{
+    height: 39vw;
+    width: 39vw;
+    }
+    
     .imgTip {
-        height: 33vw;
-        width: 39vw;
+        height: 36vw;
+        width: 43vw;
         object-fit: cover;
         object-position: center;
+    }
+
+    .col{
+        text-align: center;
+        justify-content: center;
     }
 }
 
