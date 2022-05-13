@@ -2,7 +2,7 @@ body{
     margin-bottom: 75px;
 }
 
-//barra lateral - principal 
+/* barra lateral - principal */ 
 
 h2{
   font-size: 38px;
@@ -14,7 +14,7 @@ h2{
   color: rgb(244, 187, 187);
 }
 
-// barra buscar
+/* barra buscar */
 
 .busqueda{
   margin-bottom: 20px;
@@ -115,3 +115,4 @@ margin-left: auto;}
 
   .sidebar .component {
     max-height: calc(100vh - var(--offset) * 2);
+  }
