@@ -1,8 +1,7 @@
-.img {
+.imgCircular {
     height: 36vw;
     width: 36vw;
     border-radius: 50%;
-
     object-fit: cover; 
     object-position: center;
 
@@ -12,18 +11,45 @@
      */
 } 
 
-.img2{
-    height: 33vw;
-    width: 33vw;
+.imgTip {
+    height: 23vw;
+    width: 29vw;
     object-fit: cover;
     object-position: center;
 }
 
-
-.titulo{
-
+@media screen and (max-width: 767px) {
+    .imgTip {
+        height: 33vw;
+        width: 39vw;
+        object-fit: cover;
+        object-position: center;
+    }
 }
 
-.parrafo{
-
+.owl-container {
+    max-width: 90%;
+    margin: auto;
 }
+
+.item {
+    background-color: rgb(151, 149, 149);
+    color: rgb(42, 42, 44);
+    justify-content: center;
+    align-items: center;
+    width: 46 rem;
+    height: 46 rem; 
+    display: flex;
+}
+
+.grow {
+    transition: all .2s ease-in-out;
+  }
+  
+.grow:hover,
+.grow:focus,
+.grow:active {
+      transform: scale(1.03);
+  }
+  
+  
