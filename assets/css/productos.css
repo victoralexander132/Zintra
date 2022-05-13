@@ -2,19 +2,47 @@ body{
     margin-bottom: 75px;
 }
 
+/* barra lateral - principal */ 
+
+h2{
+  font-size: 38px;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.rosa{
+  color: rgb(244, 187, 187);
+}
+
+/* barra buscar */
+
+.busqueda{
+  margin-bottom: 20px;
+}
+
+.cuad-rosa{
+background-color: rgb(244, 187, 187);
+}
+
+#button-addon2{
+  background-color: rgb(218, 217, 217);
+  border: none;
+}
+
+
 .color-card{
     background-color: rgb(234, 234, 234);
   }
   
-  .card-font{
-    font-family: 'Montserrat', sans-serif;
-  }
+.card-font{
+  font-family: 'Montserrat', sans-serif;
+}
   
-  .titulo{
-    font-weight: 700;
-  }
+.titulo{
+  font-weight: 700;
+}
   
-  a:link, a:visited,  a:hover, a:active
+a:link, a:visited,  a:hover, a:active
   {
       color: #000000;
       text-decoration: none;
@@ -39,8 +67,7 @@ body{
 
 .img-camion{
  height: 27px;
- text-align: right;
-}
+margin-left: auto;}
 
 @media screen and (max-width: 350px) {
     .texto-boton{
@@ -64,6 +91,17 @@ body{
   .grow:active {
       transform: scale(1.1);
   }
+
+.hvr-fade{
+  transition: all .2s ease-in-out;
+  transition-property: color, background-color;
+}
+
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+  background-color: rgb(84, 133, 101);
+  color: white;
+}
+
   
 
   .sidebar{
@@ -76,4 +114,5 @@ body{
   }
 
   .sidebar .component {
-    max-height: calc(100vh - var(--offset) * 2);}
+    max-height: calc(100vh - var(--offset) * 2);
+  }
