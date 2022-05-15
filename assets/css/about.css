@@ -62,14 +62,6 @@ i.bi {
 	border-radius: 50px;
 }
 
-.card {
-	margin: 100px auto 0;
-	width: 30vw;
-	height: 70vh;
-	perspective: 1000px;
-	border: none;
-}
-
 .names-info {
 	color: black;
 	font-weight: 700;
@@ -105,6 +97,14 @@ a {
 
 #title-zintra {
 	font-size: 54pt;
+}
+
+.card {
+	margin: 100px auto 0;
+	width: 30vw;
+	height: 50vh;
+	perspective: 1000px;
+	border: none;
 }
 
 .card__inner {
@@ -191,6 +191,7 @@ a {
 }
 
 .card__body {
+	overflow: scroll;
 	height: 70%;
 	display: flex;
 	flex-direction: column;
