@@ -1,4 +1,4 @@
-const cards = document.querySelectorAll('.card-face');
+const cards = document.querySelectorAll('.card__inner');
 
 cards.forEach((card) => {
 	card.addEventListener('click', function () {
