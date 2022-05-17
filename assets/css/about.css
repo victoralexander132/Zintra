@@ -280,6 +280,9 @@ a {
 }
 
 @media screen and (max-width: 991px) {
+	body {
+		margin-bottom: 20vh;
+	}
 	.cuadro {
 		flex-direction: column;
 		justify-content: center;
