@@ -16,18 +16,18 @@ h2{
 
 /* barra buscar */
 
-.busqueda{
-  margin-bottom: 20px;
-}
 
 .cuad-rosa{
 background-color: rgb(244, 187, 187);
+
 }
 
 #button-addon2{
   background-color: rgb(218, 217, 217);
   border: none;
+  
 }
+
 
 
 .color-card{
@@ -102,10 +102,20 @@ margin-left: auto;}
   color: white;
 }
 
-  
 
-  .sidebar{
-    --offset: var(--space);
+ .sidebar{
+  position: fixed;
+  left: 10%;
+  float: left;
+  width: 26%;
+} 
+
+.tarjetas{
+  margin-left: 33%;
+}
+
+  /* .sidebar{
+  offset: var(--space); 
   flex-grow: 1;
   flex-basis: 300px;
   align-self: start;
@@ -116,3 +126,4 @@ margin-left: auto;}
   .sidebar .component {
     max-height: calc(100vh - var(--offset) * 2);
   }
+ */ 
