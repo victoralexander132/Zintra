@@ -19,7 +19,7 @@ h2{
 
 .cuad-rosa{
 background-color: rgb(244, 187, 187);
-
+border-radius: 15px;
 }
 
 #button-addon2{
@@ -54,6 +54,7 @@ a:link, a:visited,  a:hover, a:active
     margin-top: 15px;
     text-align: left;
     align-items: center;
+    border-radius: 15px;
 }
 
 .img-planta{
@@ -69,12 +70,8 @@ a:link, a:visited,  a:hover, a:active
  height: 27px;
 margin-left: auto;}
 
-@media screen and (max-width: 350px) {
-    .texto-boton{
-        font-size: 6pt;
-    }
-    
-}
+
+
 .texto-boton{
     font-size: 16px;
     font-weight: 700;
@@ -114,16 +111,8 @@ margin-left: auto;}
   margin-left: 33%;
 }
 
-  /* .sidebar{
-  offset: var(--space); 
-  flex-grow: 1;
-  flex-basis: 300px;
-  align-self: start;
-  position: sticky;
-  top: var(--offset);
+@media screen and (max-width: 350px) {
+  .texto-boton{
+      font-size: 6pt;
   }
-
-  .sidebar .component {
-    max-height: calc(100vh - var(--offset) * 2);
-  }
- */ 
+}
