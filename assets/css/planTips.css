@@ -18,6 +18,13 @@
     object-position: center;
 }
 
+.imgTip2{
+    width: 23vw;
+    height: 29vw;
+    object-fit: cover;
+    object-position: center;
+}
+
 @media screen and (max-width: 995px) {
     .imgCircular{
     height: 39vw;
