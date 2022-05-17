@@ -32,13 +32,15 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false"> Productos </a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="#">Kubik</a>
-								<a class="dropdown-item" href="#">Ziclik</a>
-								<a class="dropdown-item" href="#">A-Round</a>
-								<a class="dropdown-item" href="#">Sunny</a>
-								<a class="dropdown-item" href="#">Ziklos</a>
+								<a class="dropdown-item" href="productos.html">Todos los productos</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#">Plane</a>
+								<a class="dropdown-item " href="">Kubik <img src="assets/images/productKubik/square.png" style="height: 15px; margin-left: 40px;" alt="cuadro"></a>
+								<a class="dropdown-item" href="#">Ziclik  <img src="assets/images/productKubik/circle.png" style="height: 15px; margin-left: 43px;" alt="cuadro"></a>
+								<a class="dropdown-item" href="#">A-Round  <img src="assets/images/productKubik/a-round.png" style="height: 15px; margin-left: 10px;" alt="cuadro"></a>
+								<a class="dropdown-item" href="#">Sunny  <img src="assets/images/productKubik/sunny.png" style="height: 15px; margin-left: 35px;" alt="cuadro"></a>
+								<a class="dropdown-item" href="#">Ziklos  <img src="assets/images/productKubik/ciklos.png" style="height: 15px; margin-left: 30px;" alt="cuadro"> <img src="assets/images/productKubik/plus.png" style="height: 15px;" alt="plus"></a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Plane <img src="assets/images/productKubik/square.png" style="height: 15px; margin-left: 10px;" alt="cuadro"> <img src="assets/images/productKubik/circle.png" style="height: 15px;" alt="cuadro"> <img src="assets/images/productKubik/a-round.png" style="height: 15px;" alt="cuadro"></a>
 							</div>
 						</li>
 						<a class="nav-link" href="#">PlanTips</a>
@@ -68,18 +70,32 @@
 						<h2>TIPOS DE <span>ZIKLICS</span></h2>
 					</div>
 
-					<div class="busqueda">
-						<div class="input-group mb-3">
-							<input type="text" class="form-control" placeholder="Nuestros productos" aria-label="Recipient's username" aria-describedby="button-addon2" />
-							<div class="input-group-append">
-								<button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+					<div class="container p-3 mb-3 mt-4 cuad-rosa">
+						<div class="busqueda">
+							<div class="input-group d-flex">
+								<input type="text" class="form-control" placeholder="Nombre del producto..." aria-label="Recipient's username" aria-describedby="button-addon2" />
+								<div class="input-group-append">
+									<button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="formulario"></div>
-					<form>
-						<legend>ARMA TU ZIKLIC IDEAL</legend>
+					<div class="formulario" ></div>
+					<form id="cuad-verde">
+						<legend class="text-center"><b>ARMA TU ZIKLIC IDEAL</b></legend>
+
+						<div class="form-group">
+							<label for="tamaño">Tipo de Ziclik</label>
+							<select id="tamaño" class="form-control">
+								<option>Kubik </option>
+								<option>Ziklik</option>
+								<option>A-Round</option>
+								<option>Sunny</option>
+								<option>Ziklos</option>
+							</select>
+						</div>
+
 						<div class="form-group">
 							<label for="tamaño">Elige el tamaño</label>
 							<select id="tamaño" class="form-control">
@@ -98,15 +114,16 @@
 						<div class="form-group">
 							<label for="uso">Uso</label>
 							<select id="uso" class="form-control">
+								<option>Contenedor (vacio)</option>
 								<option>Planta</option>
 								<option>Vela</option>
-								<option>Contenedor (vacio)</option>
 							</select>
 						</div>
 
 						<div class="form-group">
 							<label for="uso">Planta</label>
 							<select id="uso" class="form-control">
+								<option>Otro</option>
 								<option>Planta 1</option>
 								<option>Planta 2</option>
 								<option>Planta 3</option>
@@ -116,6 +133,7 @@
 						<div class="form-group">
 							<label for="uso">Extras (Opcional)</label>
 							<select id="uso" class="form-control">
+								<option>Ninguno</option>
 								<option>Plane mini</option>
 								<option>Plane med</option>
 								<option>Plane grande</option>
@@ -124,11 +142,11 @@
 
 						<div class="form-group">
 							<div class="form-check">
-								<input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled />
+								<input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" />
 								<label class="form-check-label" for="disabledFieldsetCheck"> No soy un robot </label>
 							</div>
 						</div>
-						<button type="submit" class="btn" style>Agregar al carrito</button>
+						<button type="submit" class="btn align-self-center" style="background-color: rgb(244, 187, 187);"><b>Agregar al carrito</b><img src="assets/images/productKubik/carrito-de-compras.png" class="img-compras img-fluid ml-3" alt="carrito"></button>
 					</form>
 				</div>
 
