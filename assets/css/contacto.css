@@ -1,9 +1,12 @@
 /* Estilos NAVBAR */
 body {
-	background: url(../images/contacto/azul-rosa.jpg) /* no-repeat center center fixed */;
+	background: url(../images/contacto/azul-rosa.jpg);
+	margin: 0;
+	padding: 0;
 	background-size: cover;
-	background-position: 100%;
+	background-position: center;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 .img-logo {
@@ -31,26 +34,27 @@ body {
 .form-pantalla {
 	background-color: rgba(255, 255, 255, 0.9);
 	width: 40%;
-	margin-top: 10vh;
+	height: 50%;
+	/* margin-top: 10vh; */
 	padding: 5% 3%;
 	border-radius: 10px;
-	height: calc(100vh - TamañoNavbar - TamañoFooter);
-
-	
+		
 }
 @media screen and (max-width: 1100px) {
 	.form-pantalla {
 		width: 80%;
+		height: calc(100vh - 20vh - 5vh);
 		/* margin-top: 10%; */
-		align-items: center;
+	 	align-content: center;
 	}
 
-	body{
-	background: url(../images/contacto/azul-rosa.jpg) /* no-repeat center center fixed */;
+	/*body{
+	background: url(../images/contacto/azul-rosa.jpg) no-repeat center center fixed;
 	background-size: 120% 220%;
 	background-position: top center;
-	background-repeat: no-repeat
+	background-repeat: no-repeat;
 	}
+	/*
 	
 	/* body{
 		background: url(../images/contacto/azul-rosa.jpg) no-repeat center center fixed;
@@ -60,14 +64,14 @@ body {
 
 }
 
-@media screen and (max-width: 600px){
+/* @media screen and (max-width: 600px){
 	body{
-	background: url(../images/contacto/azul-rosa.jpg) no-repeat /* center center fixed */;
+	background: url(../images/contacto/azul-rosa.jpg) no-repeat center center fixed;
 	background-size: 150% 110%;
 	background-position: center;
 }
 }
-
+ */
 /* ESTILOS FOOTER */
 
 .t-footer {

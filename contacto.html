@@ -37,7 +37,7 @@
 							</div>
 						</li>
 						<a class="nav-link" href="#">PlanTips</a>
-						<a class="nav-link" href="#">Contacto</a>
+						<a class="nav-link active" href="#">Contacto</a>
 					</div>
 				</div>
 				<a class="navbar-brand" href="#">
@@ -46,9 +46,10 @@
 			</div>
 		</nav>
 
-		<div class="container-fluid form-pantalla">
+		<div class="container-fluid form-pantalla .flex-sm-{grow|shrink}-1">
 			<form>
 				<h2 style="text-align: center">Contacto</h2>
+				<br>
 				<div class="form-group row">
 					<label for="inputName" class="col-sm-2 col-form-label">Nombre</label>
 					<div class="col-sm-10">
@@ -70,10 +71,18 @@
 				<div class="form-group row">
 					<label for="inputMessage" class="col-sm-2 col-form-label">Mensaje</label>
 					<div class="col-sm-10">
-						<textarea class="form-control" id="inputMessage" rows="7" placeholder="Escribe aquí tu mensaje"></textarea>
+						<textarea class="form-control" id="inputMessage" rows="5" placeholder="Escribe aquí tu mensaje"></textarea>
 					</div>
 				</div>
-				<button type="submit" class="btn text-white" style="background-color: rgba(74, 156, 128, 1)">Enviar</button>
+				<button type="submit" class="btn text-white col-form-label d-flex justify-content-center" style="background-color: rgba(74, 156, 128, 1)">Enviar</button>
+				<!-- <div class="form-group row">
+					<label for="inputVacio" class="col-sm-10 col-md-10 col-form-label"></label>
+					<div>
+						<div class="col-sm-2 col-md-2">
+							<button type="submit" class="btn text-white col-form-label" style="background-color: rgba(74, 156, 128, 1)">Enviar</button>
+						</div>						
+					</div>					
+				</div> -->				
 			</form>
 		</div>
 
