@@ -1,39 +1,32 @@
-.login{
-    width: 40%;
-    height: auto;
-    margin-top: 7vh;
-    margin-bottom: 15vh;
-    background-color: rgba(255, 253, 253, 0.443);
-    border-radius: 30px;
-    padding: 20px;
-    color: black ; 
-    font-family: 'Montserrat', sans-serif;
-    max-width: 600px;
-
-  
+.login {
+	width: 40%;
+	height: auto;
+	margin-top: 7vh;
+	margin-bottom: 15vh;
+	background-color: rgba(255, 253, 253, 0.443);
+	border-radius: 30px;
+	padding: 20px;
+	color: black;
+	max-width: 600px;
 }
-  .loginPantalla{
-    width: 100%;
-    height: calc(100vh - 76px);
-    display: flex;
-    justify-content: center; 
-    background-image: url(/assets/images/images.login/gris2.jpg);
-    background-size: cover;
-    background-position: center;
-  }
+.loginPantalla {
+	width: 100%;
+	height: calc(100vh - 76px);
+	display: flex;
+	justify-content: center;
+	background-image: url(/assets/images/login/gris2.jpg);
+	background-size: cover;
+	background-position: center;
+}
 
+.formulario {
+	background-color: rgba(255, 253, 253, 0.443);
+}
 
-  .formulario{
-    background-color: rgba(255, 253, 253, 0.443);
-  }
-  
-   @media screen and (max-witdh: 100%){
-    .login{
-      border: 7px solid red;
-      width: 50%;
-      margin-top: 3rems;
-  } 
-
-  
-
+@media screen and (max-witdh: 100%) {
+	.login {
+		border: 7px solid red;
+		width: 50%;
+		margin-top: 3rems;
+	}
 }
