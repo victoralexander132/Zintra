@@ -1,3 +1,18 @@
+h1{
+    font-size: 53px;
+    font-weight: 30;
+  }
+
+h2{
+    font-size: 33px;
+    font-weight: 15;
+}
+
+p, ul, li, h1, h2{
+font-family: 'Montserrat', sans-serif;
+
+}
+
 .imgCircular {
     height: 36vw;
     width: 36vw;
@@ -68,5 +83,7 @@
 .grow:active {
       transform: scale(1.03);
   }
+
+  
   
   
