@@ -4,19 +4,12 @@ body{
 
 /* barra lateral - principal */ 
 
-h2{
-  font-size: 38px;
-  font-weight: 800;
-  font-family: 'Montserrat', sans-serif;
-}
-
+/*texto*/
 .rosa{
   color: rgb(244, 187, 187);
 }
 
 /* barra buscar */
-
-
 .cuad-rosa{
 background-color: rgb(244, 187, 187);
 border-radius: 15px;
@@ -29,7 +22,7 @@ border-radius: 15px;
 }
 
 
-
+/*tarjeteros*/
 .color-card{
     background-color: rgb(234, 234, 234);
   }
@@ -102,9 +95,10 @@ margin-left: auto;}
 
  .sidebar{
   position: fixed;
-  left: 10%;
+  left: 8%;
   float: left;
-  width: 26%;
+  width: 25%;
+  
 } 
 
 .tarjetas{
@@ -115,4 +109,15 @@ margin-left: auto;}
   .texto-boton{
       font-size: 6pt;
   }
+}
+
+@media screen and (max-width: 780px){
+  .sidebar{
+  position: initial;
+  float: inline-start;
+  }
+  .tarjetas{
+    margin: auto;
+  }
+  
 }
