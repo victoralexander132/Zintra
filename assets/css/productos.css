@@ -121,3 +121,19 @@ margin-left: auto;}
   }
   
 }
+
+@media screen and (min-width: 1024px){
+  .sidebar{
+    position: fixed;
+    left: 8%;
+    float: left;
+    width: 15%;
+    
+}
+.texto-boton{
+  font-size: 10px;
+  font-weight: 700;
+  margin-right: auto;
+
+}
+}
