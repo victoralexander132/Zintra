@@ -1,3 +1,9 @@
+
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
 h1{
     font-size: 53px;
     font-weight: 30;
@@ -83,6 +89,85 @@ font-family: 'Montserrat', sans-serif;
 .grow:active {
       transform: scale(1.03);
   }
+
+/* Se añadio */
+  .containerT3{
+    width: 90%;
+    
+    max-width: 120em;
+    padding: 1em;
+    object-fit: cover; 
+    object-position: center;
+    box-sizing:auto;
+
+}
+
+.ulT3{
+  width: 100%;
+  max-width: 120em;
+  min-height: 2em;
+  height: 3vw;
+    display: flex;
+    /* flex-flow: row nowrap; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+ .liT3{
+    width: 11vw;
+    height: 3vw;
+    min-height: 2em;
+    transition: all .3s ease;
+    object-fit: cover;
+    object-position: center;
+}
+   
+
+.liT3.activo {
+    background-color: rgba(23, 53, 43, 1);
+    color:rgb(255, 255, 255);
+    width: 11.6vw;
+    height: 3.3vw;
+    vertical-align: middle;
+}
+
+ .subContainerT3{
+  min-height: 56vh;
+  max-height: 60vh;
+  width: 100%;
+  max-width: 120em;
+  
+}
+
+ .bloqueT3{
+  position: absolute;
+  opacity: 0;
+  transform: translateY(33%);
+  transition: all .9s ease;
+}
+
+.bloqueT3.activo {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.imgTip3 {
+  height: 23vw;
+  width: 29vw;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media screen and (max-width: 995px) { 
+  .imgTip3 {
+      height: 26vw;
+      width: 33vw;
+      object-fit: cover;
+      object-position: center;
+  }
+}
 
   
   
