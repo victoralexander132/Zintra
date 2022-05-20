@@ -1,4 +1,4 @@
-#button-addon2{
+.button-addon2{
     background-color: rgb(218, 217, 217);
     border: none;
     border-radius: 10px;
@@ -30,16 +30,6 @@ a:link, a:visited,  a:hover, a:active
     text-decoration: none;
 }  
 
-.boton{
-    background-color: rgb(151, 219, 174);
-    height: 60px;
-    margin-top: 15px;
-    text-align: left;
-    align-items: center;
-}
-
-
-
 .texto-boton{
     font-size: 16px;
     font-weight: 700;
@@ -47,28 +37,31 @@ a:link, a:visited,  a:hover, a:active
     
 }
 
-.grow{
-    transition: all .2s ease-in-out;
+.boton-rosa{
+    background-color: rgb(244, 187, 187);
 }
 
-.grow:hover,
-.grow:focus,
-.grow:active {
-transform: scale(1.1);
+.hvr-fade {
+	transition: all 0.2s ease-in-out;
+	transition-property: color, background-color;
+}
+.hvr-fade:hover,
+.hvr-fade:focus,
+.hvr-fade:active {
+	background-color: rgb(243, 119, 119);
+	color: white;
 }
 
-.sidebar{
-    --offset: var(--space);
-flex-grow: 1;
-flex-basis: 300px;
-align-self: start;
-position: sticky;
-top: var(--offset);
+.hvr-fade-gray {
+	transition: all 0.2s ease-in-out;
+	transition-property: color, background-color;
 }
-
-.sidebar .component {
-    max-height: calc(100vh - var(--offset) * 2);}
-
+.hvr-fade-gray:hover,
+.hvr-fade-gray:focus,
+.hvr-fade-gray:active {
+	background-color: rgb(108, 107, 107);
+	color: white;
+}
 
 .img-cards{
     width: 100%;
@@ -85,7 +78,6 @@ top: var(--offset);
     @media screen and (max-width: 985px) {
 
         #cuad-verde{
-            background-color: rgb(151, 219, 174);
             padding: 5vw;
             border-radius: 20px;
         }

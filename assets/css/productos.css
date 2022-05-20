@@ -69,16 +69,6 @@ a:active {
 	margin-right: auto;
 }
 
-.grow {
-	transition: all 0.2s ease-in-out;
-}
-
-.grow:hover,
-.grow:focus,
-.grow:active {
-	transform: scale(1.1);
-}
-
 .hvr-fade {
 	transition: all 0.2s ease-in-out;
 	transition-property: color, background-color;
