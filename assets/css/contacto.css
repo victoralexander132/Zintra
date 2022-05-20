@@ -1,6 +1,6 @@
 /* Estilos NAVBAR */
 body {
-	background: url(../images/contacto/azul-rosa.jpg);
+	background: url(../images/contacto/nuevo-bg.png);
 	margin: 0;
 	padding: 0;
 	background-size: cover;
@@ -34,6 +34,12 @@ body {
 .card{
 	background-color: rgba(255, 255, 255, 0.9);
 	border-radius: 15px;
+}
+
+@media screen and (max-width:500px) {
+.card{
+	height: calc(24px-);
+}
 }
 /* .form-pantalla {
 	background-color: rgba(255, 255, 255, 0.9);
