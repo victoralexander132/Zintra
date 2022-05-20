@@ -1,14 +1,29 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-size: 53px;
+    font-weight: 30;
+  }
+
+h2{
+    font-size: 33px;
+    font-weight: 15;
+}
+
+p, ul, li, h1, h2{
+font-family: 'Montserrat', sans-serif;
+
+}
+
 .imgCircular {
     height: 36vw;
     width: 36vw;
     border-radius: 50%;
     object-fit: cover; 
     object-position: center;
-
-    /* 
-    max-height: calc(100vh - 160px); 
-    max-width: calc(100vh - 160px);
-     */
 } 
 
 .imgTip {
@@ -17,6 +32,7 @@
     object-fit: cover;
     object-position: center;
 }
+
 
 @media screen and (max-width: 995px) {
     .imgCircular{
@@ -37,6 +53,100 @@
     }
 }
 
+
+/* se añadio
+.card-h {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border: 1px;
+    font-size: 19px;
+    font-weight: 15;
+  } */
+
+
+/* Se añadio */
+.containerT3{
+    width: 90%;
+    max-width: 90vw;
+    height: auto;
+    padding: 1em;
+    display: flex;
+    object-fit: cover; 
+    object-position: center;
+    box-sizing:border-box;
+
+}
+
+.ulT3{
+    width: 100%;
+    max-width: 120em;
+    min-height: 2em;
+    height: 3vw;
+    padding: 4%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+ .liT3{
+    background-color: rgb(132, 151, 144);
+    width:  3.6vw;
+    min-height: 3.3vw;
+    transition: all .3s ease;
+    border-radius: 50%;
+    margin: 1vw;
+}
+   
+
+.liT3.activo {
+    background-color: rgba(23, 53, 43, 1);
+    color:rgb(255, 255, 255);
+    width: 4vw;
+    height: 4vw;
+}
+
+.subContainerT3{
+    height: calc(100vh - 33vh);
+    width: 100%;
+    max-width: 120em;
+    display: flex;
+    box-sizing:border-box;
+}
+
+.bloqueT3{
+    position: absolute;
+    opacity: 0;
+    transform: translateY(33%);
+    transition: all .9s ease;
+}
+
+.bloqueT3.activo {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.imgTip3 {
+    height: 26vw;
+    width: 33vw;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media screen and (max-width: 390px) { 
+    .subContainerT3{
+        min-height: 76vh;
+    }
+    .col{
+        text-align: center;
+        justify-content: center;
+    }
+  }
+
 .owl-container {
     max-width: 90%;
     margin: auto;
@@ -50,6 +160,12 @@
     width: 46 rem;
     height: 46 rem; 
     display: flex;
+}
+
+.imgCarr{
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .grow {
