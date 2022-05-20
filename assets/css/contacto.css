@@ -7,6 +7,7 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	height: 100vh;
 }
 
 .img-logo {
@@ -30,6 +31,11 @@ body {
 }
 
 /* ESTILOS BODY */
+
+.container.form{
+	height: 100vh;
+}
+	
 
 .card{
 	background-color: rgba(255, 255, 255, 0.9);
@@ -60,7 +66,3 @@ body {
 } */
 
 /* ESTILOS FOOTER */
-
-.t-footer {
-	font-size: calc(0.7rem + 0.1vw);
-}
