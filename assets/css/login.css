@@ -6,18 +6,67 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	
 }
 .login{
 	background-color: rgba(255, 255, 255, 0.9);
 	width: 50%;
-	height: 60%;
 	/* margin-top: 10vh; */
-	padding: 5% 3%;
+	padding: 10% 3%;
 	border-radius: 30px;
 	text-align: center;
 	align-content: center;
-	margin-top: 4vh;
-	margin-bottom: 4vh;
+	margin-top: 5vh;
+	margin-bottom: 6vh;
+	height: 80vh;
+}
+.cont_trans{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+footer {
+	padding: 10px;
+	width: 100%;
+	justify-content: center;
+}
+
+.footer {
+	background-color: var(--principal);
+	display: flex;
+	flex-direction: row;
+}
+
+.container .footer {
+	display: flex;
+}
+
+.footer-text p {
+	padding-top: 15px;
+	font-size: small;
+	color: white;
+}
+
+.footer-logos {
+	display: inline-block;
+	display: flex;
+}
+
+.logo {
+	margin-left: auto;
+	display: inline-block;
+}
+
+.bi {
+	color: white;
+}
+
+@media (max-width: 576px) {
+	.footer-logos {
+		flex-direction: column;
+	}
 }
 
 
