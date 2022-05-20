@@ -66,7 +66,6 @@ a:active {
 	margin-right: auto;
 }
 
-
 .hvr-fade {
 	transition: all 0.2s ease-in-out;
 	transition-property: color, background-color;
