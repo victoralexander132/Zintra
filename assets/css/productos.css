@@ -129,7 +129,58 @@ a:active {
 }
 
 @media screen and (max-width: 350px) {
+<<<<<<< HEAD
+  .texto-boton{
+      font-size: 6pt;
+  }
+}
+
+@media screen and (max-width: 780px){
+  .sidebar{
+  position: initial;
+  float: inline-start;
+  }
+  .tarjetas{
+    margin: auto;
+  }
+  
+}
+
+@media screen and (min-width: 1024px){
+  .sidebar{
+    position: none;
+    left: 8%;
+    float: left;
+    width: 18%;
+    font-size: 10px;   
+}
+.texto-boton{
+  font-size: 10px;
+  font-weight: 700;
+  margin-right: auto;
+
+}
+.img-planta{
+  height: 25px;
+  
+  }
+
+.img-sobre{
+height: 15px;
+}
+
+.img-camion{
+height: 17px;
+margin-left: auto;}
+
+.tarjetas{
+  margin-left: 25%;
+
+}
+}
+=======
 	.texto-boton {
 		font-size: 6pt;
 	}
 } */
+>>>>>>> ba8cc049ec42c5198c434190392147cbdf0003a1
