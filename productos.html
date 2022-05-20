@@ -27,10 +27,10 @@
 
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav ml-auto">
-						<a class="nav-link active" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
 						<a class="nav-link" href="about.html">Nosotros</a>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false"> Productos </a>
+							<a class="nav-link dropdown-toggle active" href="productos.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false"> Productos </a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a class="dropdown-item" href="productos.html">Todos los productos</a>
 								<div class="dropdown-divider"></div>
@@ -55,13 +55,13 @@
 
 		<div class="container mt-5 card-font">
 			<div class="row justify-content-center">
-				<div class="col-lg-4 col-md-12">
-					<div>
-						<h2 style="font-size: 37px; font-weight: 800">TIPOS DE <span class="rosa">ZIKLICS</span></h2>
+				<div class="col-9 col-lg-3 col-md-8 col-sm-9 col-xl-4 sidebar">
+					<div class="d-flex">
+						<h2 style="font-size: 150%; font-weight: 800">TIPOS DE <span class="rosa">ZIKLICS</span></h2>
 					</div>
-					<div class="container p-3 mb-3 mt-4 cuad-rosa">
+					<div class="container p-3 mb-3 mt-3 cuad-rosa d-flex">
 						<div class="busqueda">
-							<div class="input-group d-flex">
+							<div class="input-group ">
 								<input type="text" class="form-control" placeholder="Nombre del producto..." aria-label="Recipient's username" aria-describedby="button-addon2" />
 								<div class="input-group-append">
 									<button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
@@ -69,19 +69,39 @@
 							</div>
 						</div>
 					</div>
-					<div class="lista"></div>
-					<div class="boton1">
-						<button type="button" class="btn btn-lg btn-block">Comprar</button>
+					
+					<div class="container">
+						<table class="table table-borderless p-3 mb-3 mt-3">
+						<thead>
+						<tr>
+							<th scope="col">CARRITO</th>
+						</tr>
+						</thead>
+						<tbody>
+							<th></th>
+						</tbody>
+						<tfoot>
+							<tr>
+							<th scope="col">Tu carrito esta Vacio</th>
+							</tr>
+							<tr>
+							<th><button type="button" class="btn btn-primary">Comprar</button></th>
+							<th><button type="button" class="btn btn-secondary">Vaciar</button></th>
+							</tr>
+						</tfoot>
+						</table>
 					</div>
+					
 					<div class="boton">
 						<button type="button" class="btn btn-lg btn-block boton text-white d-flex hvr-fade"><span class="texto-boton">Consigue tu planta ideal</span><img src="assets/images/productos/plant.png" class="img-planta" alt="" /></button>
 					</div>
 					<div class="boton">
 						<button type="button" class="btn btn-lg btn-block boton text-white d-flex hvr-fade"><span class="texto-boton">Contacto</span><img src="assets/images/productos/sobre.png" class="img-sobre" alt="" /></button>
 					</div>
-					<div class="p-3 mb-3 boton texto-boton text-white d-flex hvr-fade" style="width: 100%">Envios a todo México <img src="assets/images/productos/lado-del-camion.png" class="img-camion img-fluid" alt="" /></div>
-				</div>
-				<div class="col-8">
+					<div class="p-3 mb-3 boton texto-boton text-white d-flex hvr-fade" style="width: 100%">Envios a todo México <img src="assets/images/productos/lado-del-camion.png" class="img-camion img-fluid" alt="" />
+					</div>
+					</div>
+					<div class="col-9 col-lg-9 col-md-8 col-sm-9 col-xl-8 tarjetas">
 					<div class="row row-cols-1 row-cols-md-2">
 						<div class="col mb-5 grow">
 							<a href="">
@@ -89,7 +109,7 @@
 									<img src="assets/images/productos/tarjeteros 1.jpg" class="card-img-top" alt="..." />
 									<div class="card-body color-card">
 										<h5 class="card-title titulo">K U B I K</h5>
-										<p class="card-text">Contenedor cuadrado pequeño, mutiusos.</p>
+										<p class="card-text">Contenedor cuadrado pequeño, multiusos.</p>
 									</div>
 								</div>
 							</a>
@@ -100,7 +120,7 @@
 									<img src="assets/images/productos/contenedor.jpg" class="card-img-top" alt="..." />
 									<div class="card-body color-card">
 										<h5 class="card-title titulo">Z I C L I K</h5>
-										<p class="card-text">Contenedor circular pequeño, mutiusos.</p>
+										<p class="card-text">Contenedor circular pequeño, multiusos.</p>
 									</div>
 								</div>
 							</a>
@@ -111,7 +131,7 @@
 									<img src="assets/images/productos/ovalda y hexagonal mini 2.jpg" class="card-img-top" alt="..." />
 									<div class="card-body color-card">
 										<h5 class="card-title titulo">A - R O U N D</h5>
-										<p class="card-text">Contenedor ovalado pequeño, mutiusos.</p>
+										<p class="card-text">Contenedor ovalado pequeño, multiusos.</p>
 									</div>
 								</div>
 							</a>
@@ -133,7 +153,7 @@
 									<img src="assets/images/productos/dorado y azul.jpg" class="card-img-top" alt="..." />
 									<div class="card-body color-card">
 										<h5 class="card-title titulo">Z I K L O S</h5>
-										<p class="card-text">Contenedor circular mediano, mutiusos.</p>
+										<p class="card-text">Contenedor circular mediano, multiusos.</p>
 									</div>
 								</div>
 							</a>
