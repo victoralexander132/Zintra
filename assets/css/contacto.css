@@ -1,12 +1,13 @@
 /* Estilos NAVBAR */
 body {
-	background: url(../images/contacto/azul-rosa.jpg);
+	background: url(../images/contacto/nuevo-bg.png);
 	margin: 0;
 	padding: 0;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	height: 100vh;
 }
 
 .img-logo {
@@ -31,9 +32,20 @@ body {
 
 /* ESTILOS BODY */
 
+.container.form{
+	height: 100vh;
+}
+	
+
 .card{
 	background-color: rgba(255, 255, 255, 0.9);
 	border-radius: 15px;
+}
+
+@media screen and (max-width:500px) {
+.card{
+	height: calc(24px-);
+}
 }
 /* .form-pantalla {
 	background-color: rgba(255, 255, 255, 0.9);
@@ -54,7 +66,3 @@ body {
 } */
 
 /* ESTILOS FOOTER */
-
-.t-footer {
-	font-size: calc(0.7rem + 0.1vw);
-}

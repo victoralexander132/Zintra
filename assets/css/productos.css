@@ -1,123 +1,82 @@
-body{
-    margin-bottom: 75px;
-}
-
-/* barra lateral - principal */ 
+/* barra lateral - principal */
 
 /*texto*/
-.rosa{
-  color: rgb(244, 187, 187);
+.rosa {
+	color: rgb(244, 187, 187);
 }
 
 /* barra buscar */
-.cuad-rosa{
-background-color: rgb(244, 187, 187);
-border-radius: 15px;
+.cuad-rosa {
+	background-color: rgb(244, 187, 187);
+	border-radius: 15px;
 }
 
-#button-addon2{
-  background-color: rgb(218, 217, 217);
-  border: none;
-  
+#button-addon2 {
+	background-color: rgb(218, 217, 217);
+	border: none;
 }
-
 
 /*tarjeteros*/
-.color-card{
-    background-color: rgb(234, 234, 234);
-  }
-  
-.card-font{
-  font-family: 'Montserrat', sans-serif;
-}
-  
-.titulo{
-  font-weight: 700;
-}
-  
-a:link, a:visited,  a:hover, a:active
-  {
-      color: #000000;
-      text-decoration: none;
-  }  
-
-.boton{
-    background-color: rgb(151, 219, 174);
-    height: 60px;
-    margin-top: 15px;
-    text-align: left;
-    align-items: center;
-    border-radius: 15px;
+.color-card {
+	background-color: rgb(234, 234, 234);
 }
 
-.img-planta{
-    height: 35px;
-    
-    }
-
-.img-sobre{
-  height: 25px;
+.card-font {
+	font-family: 'Montserrat', sans-serif;
 }
 
-.img-camion{
- height: 27px;
-margin-left: auto;}
-
-
-
-.texto-boton{
-    font-size: 16px;
-    font-weight: 700;
-    margin-right: auto;
-    
+.titulo {
+	font-weight: 700;
 }
 
-.grow{
-    transition: all .2s ease-in-out;
-  }
-  
-  .grow:hover,
-  .grow:focus,
-  .grow:active {
-      transform: scale(1.1);
-  }
-
-.hvr-fade{
-  transition: all .2s ease-in-out;
-  transition-property: color, background-color;
+a:link,
+a:visited,
+a:hover,
+a:active {
+	color: #000000;
+	text-decoration: none;
 }
 
-.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
-  background-color: rgb(84, 133, 101);
-  color: white;
+.boton {
+	background-color: rgb(151, 219, 174);
+	height: 60px;
+	margin-top: 15px;
+	text-align: left;
+	align-items: center;
+	border-radius: 15px;
 }
 
-
- .sidebar{
-  position: fixed;
-  left: 8%;
-  float: left;
-  width: 25%;
-  
-} 
-
-.tarjetas{
-  margin-left: 33%;
+.img-planta {
+	height: 35px;
 }
 
-@media screen and (max-width: 350px) {
-  .texto-boton{
-      font-size: 6pt;
-  }
+.img-sobre {
+	height: 25px;
 }
 
-@media screen and (max-width: 780px){
-  .sidebar{
-  position: initial;
-  float: inline-start;
-  }
-  .tarjetas{
-    margin: auto;
-  }
-  
+.img-camion {
+	height: 27px;
+	margin-left: auto;
+}
+
+.texto-boton {
+	font-size: 16px;
+	font-weight: 700;
+	margin-right: auto;
+}
+
+.hvr-fade {
+	transition: all 0.2s ease-in-out;
+	transition-property: color, background-color;
+}
+
+.hvr-fade:hover,
+.hvr-fade:focus,
+.hvr-fade:active {
+	background-color: rgb(84, 133, 101);
+	color: white;
+}
+
+.sidebar {
+	position: relative;
 }
