@@ -17,7 +17,7 @@
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-dark sticky-top flex-nowrap" style="background-color: rgba(23, 53, 43, 1)">
 			<div class="container-fluid">
-				<a class="navbar-brand mr-auto" href="#">
+				<a class="navbar-brand mr-auto" href="index.html">
 					<img class="img-logo" src="assets/images/inicio/logo.png" alt="" />
 				</a>
 
@@ -28,24 +28,26 @@
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav ml-auto">
 						<a class="nav-link active" href="#">Inicio <span class="sr-only">(current)</span></a>
-						<a class="nav-link" href="#">Nosotros</a>
+						<a class="nav-link" href="about.html">Nosotros</a>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false"> Productos </a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="#">Kubik</a>
-								<a class="dropdown-item" href="#">Ziclik</a>
-								<a class="dropdown-item" href="#">A-Round</a>
-								<a class="dropdown-item" href="#">Sunny</a>
-								<a class="dropdown-item" href="#">Ziklos</a>
+								<a class="dropdown-item" href="productos.html">Todos los productos</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#">Plane</a>
+								<a class="dropdown-item" href="producKubik.html">Kubik <img src="assets/images/productKubik/square.png" style="height: 15px; margin-left: 40px" alt="cuadro" /></a>
+								<a class="dropdown-item" href="producKubik.html">Ziclik <img src="assets/images/productKubik/circle.png" style="height: 15px; margin-left: 43px" alt="cuadro" /></a>
+								<a class="dropdown-item" href="producKubik.html">A-Round <img src="assets/images/productKubik/a-round.png" style="height: 15px; margin-left: 10px" alt="cuadro" /></a>
+								<a class="dropdown-item" href="producKubik.html">Sunny <img src="assets/images/productKubik/sunny.png" style="height: 15px; margin-left: 35px" alt="cuadro" /></a>
+								<a class="dropdown-item" href="producKubik.html">Ziklos <img src="assets/images/productKubik/ciklos.png" style="height: 15px; margin-left: 30px" alt="cuadro" /> <img src="assets/images/productKubik/plus.png" style="height: 15px" alt="plus" /></a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="producKubik.html">Plane <img src="assets/images/productKubik/square.png" style="height: 15px; margin-left: 10px" alt="cuadro" /> <img src="assets/images/productKubik/circle.png" style="height: 15px" alt="cuadro" /> <img src="assets/images/productKubik/a-round.png" style="height: 15px" alt="cuadro" /></a>
 							</div>
 						</li>
-						<a class="nav-link" href="#">PlanTips</a>
-						<a class="nav-link" href="#">Contacto</a>
+						<a class="nav-link" href="planTips.html">PlanTips</a>
+						<a class="nav-link" href="contacto.html">Contacto</a>
 					</div>
 				</div>
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand" href="login.html">
 					<img class="img-person" src="assets/images/inicio/person.png" alt="" />
 				</a>
 			</div>
@@ -61,25 +63,56 @@
 			</div>
 		</div>
 
+		<div class="container mt-3" id="progressbar">
+			<div class="row">
+				<div class="col">
+					<div class="progress mb-2" style="height: 2px;">
+						<div class="progress-bar" role="progressbar" style="width: 25%; background-color: rgba(23, 53, 43, 1);" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+
+					<div class="progress" style="height: 25px;">
+						<div class="progress-bar" role="progressbar" style="width: 25%; background-color: rgba(23, 53, 43, 1); border: solid 1px rgb(255, 255, 255);" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" >DISEÑA TU ZIKLIC</div>
+						<div class="progress-bar" role="progressbar" style="width: 25%; background-color: rgba(255, 255, 255, 0);color: rgb(148, 148, 148);border: solid 1px rgba(23, 53, 43, 0.609);" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >DIRECCION</div>
+						<div class="progress-bar" role="progressbar" style="width: 25%; background-color: rgba(255, 255, 255, 0);color: rgb(148, 148, 148);border: solid 1px rgba(23, 53, 43, 0.609);" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >FORMA DE PAGO</div>
+						<div class="progress-bar" role="progressbar" style="width: 25%; background-color: rgba(255, 255, 255, 0);color: rgb(148, 148, 148);border: solid 1px rgba(23, 53, 43, 0.609);" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >ENVIO</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
 		<div class="container mt-5 card-font sidebar">
 			<div class="row justify-content-center">
 				<div class="col-lg-4 col-md-12">
-					<div>
-						<h2>TIPOS DE <span>ZIKLICS</span></h2>
-					</div>
-
-					<div class="busqueda">
-						<div class="input-group mb-3">
-							<input type="text" class="form-control" placeholder="Nuestros productos" aria-label="Recipient's username" aria-describedby="button-addon2" />
-							<div class="input-group-append">
-								<button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+					<div class="container p-3 mb-3 mt-4 cuad-rosa">
+						<div class="busqueda">
+							<div class="input-group d-flex">
+								<input type="text" class="form-control" placeholder="Nombre del producto..." aria-label="Recipient's username" aria-describedby="button-addon2" />
+								<div class="input-group-append">
+									<button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+								</div>
 							</div>
 						</div>
 					</div>
 
+
 					<div class="formulario"></div>
-					<form>
-						<legend>ARMA TU ZIKLIC IDEAL</legend>
+					<form id="cuad-verde">
+						<legend><b>ARMA TU ZIKLIC IDEAL</b></legend>
+
+
+
+						<div class="form-group">
+							<label for="tamaño">Tipo de Ziclik</label>
+							<select id="tamaño" class="form-control">
+								<option>Kubik</option>
+								<option>Ziklik</option>
+								<option>A-Round</option>
+								<option>Sunny</option>
+								<option>Ziklos</option>
+							</select>
+						</div>
+
 						<div class="form-group">
 							<label for="tamaño">Elige el tamaño</label>
 							<select id="tamaño" class="form-control">
@@ -98,15 +131,16 @@
 						<div class="form-group">
 							<label for="uso">Uso</label>
 							<select id="uso" class="form-control">
+								<option>Contenedor (vacio)</option>
 								<option>Planta</option>
 								<option>Vela</option>
-								<option>Contenedor (vacio)</option>
 							</select>
 						</div>
 
 						<div class="form-group">
 							<label for="uso">Planta</label>
 							<select id="uso" class="form-control">
+								<option>Otro</option>
 								<option>Planta 1</option>
 								<option>Planta 2</option>
 								<option>Planta 3</option>
@@ -116,6 +150,7 @@
 						<div class="form-group">
 							<label for="uso">Extras (Opcional)</label>
 							<select id="uso" class="form-control">
+								<option>Ninguno</option>
 								<option>Plane mini</option>
 								<option>Plane med</option>
 								<option>Plane grande</option>
@@ -124,11 +159,11 @@
 
 						<div class="form-group">
 							<div class="form-check">
-								<input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled />
+								<input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" />
 								<label class="form-check-label" for="disabledFieldsetCheck"> No soy un robot </label>
 							</div>
 						</div>
-						<button type="submit" class="btn" style>Agregar al carrito</button>
+						<button type="submit" class="btn d-flex align-self-center" style="background-color: rgb(244, 187, 187)"><b>Agregar al carrito</b><img src="assets/images/productKubik/carrito-de-compras.png" class="img-compras img-fluid ml-3" alt="carrito" /></button>
 					</form>
 				</div>
 

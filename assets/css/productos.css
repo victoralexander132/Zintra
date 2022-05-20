@@ -4,32 +4,25 @@ body{
 
 /* barra lateral - principal */ 
 
-h2{
-  font-size: 38px;
-  font-weight: 800;
-  font-family: 'Montserrat', sans-serif;
-}
-
+/*texto*/
 .rosa{
   color: rgb(244, 187, 187);
 }
 
 /* barra buscar */
-
-.busqueda{
-  margin-bottom: 20px;
-}
-
 .cuad-rosa{
 background-color: rgb(244, 187, 187);
+border-radius: 15px;
 }
 
 #button-addon2{
   background-color: rgb(218, 217, 217);
   border: none;
+  
 }
 
 
+/*tarjeteros*/
 .color-card{
     background-color: rgb(234, 234, 234);
   }
@@ -54,6 +47,7 @@ a:link, a:visited,  a:hover, a:active
     margin-top: 15px;
     text-align: left;
     align-items: center;
+    border-radius: 15px;
 }
 
 .img-planta{
@@ -69,12 +63,8 @@ a:link, a:visited,  a:hover, a:active
  height: 27px;
 margin-left: auto;}
 
-@media screen and (max-width: 350px) {
-    .texto-boton{
-        font-size: 6pt;
-    }
-    
-}
+
+
 .texto-boton{
     font-size: 16px;
     font-weight: 700;
@@ -102,17 +92,32 @@ margin-left: auto;}
   color: white;
 }
 
+
+ .sidebar{
+  position: fixed;
+  left: 8%;
+  float: left;
+  width: 25%;
   
+} 
 
+.tarjetas{
+  margin-left: 33%;
+}
+
+@media screen and (max-width: 350px) {
+  .texto-boton{
+      font-size: 6pt;
+  }
+}
+
+@media screen and (max-width: 780px){
   .sidebar{
-    --offset: var(--space);
-  flex-grow: 1;
-  flex-basis: 300px;
-  align-self: start;
-  position: sticky;
-  top: var(--offset);
+  position: initial;
+  float: inline-start;
   }
-
-  .sidebar .component {
-    max-height: calc(100vh - var(--offset) * 2);
+  .tarjetas{
+    margin: auto;
   }
+  
+}
