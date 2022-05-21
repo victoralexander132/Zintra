@@ -266,7 +266,7 @@ a {
 	.cuadro {
 		flex-direction: column;
 		justify-content: center;
-		font-size: 8pt;
+		font-size: medium;
 	}
 
 	.card {
@@ -281,6 +281,12 @@ a {
 		width: 100%;
 	}
 	#title-zintra {
-		font-size: 40pt;
+		font-size: 30pt;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.cuadro {
+		font-size: smaller;
 	}
 }
