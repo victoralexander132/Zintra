@@ -9,32 +9,11 @@ body {
 	flex-direction: column;
 }
 
-.img-logo {
-	width: 100px;
-	height: 50px;
-	object-fit: contain;
-	object-position: center;
-}
-
-.img-person {
-	width: 40px;
-	height: 50px;
-	margin-left: 1vw;
-	object-fit: contain;
-	object-position: center;
-}
-
-.img-contacto {
-	width: 40px;
-	height: 50px;
-}
-
 /* ESTILOS BODY */
 
 .form-pantalla {
 	background-color: rgba(255, 255, 255, 0.9);
 	width: 45%;
-	margin-top: 10vh;
 	padding: 5% 3%;
 	border-radius: 10px;
 	height: calc(100vh - TamañoNavbar - TamañoFooter);
@@ -52,12 +31,6 @@ body {
 		background-position: top center;
 		background-repeat: no-repeat;
 	}
-
-	/* body{
-		background: url(../images/contacto/azul-rosa.jpg) no-repeat center center fixed;
-		background-size: 120% 200%;
-		background-position: top center;
-	} */
 }
 
 @media screen and (max-width: 600px) {
@@ -66,10 +39,4 @@ body {
 		background-size: 150% 110%;
 		background-position: center;
 	}
-}
-
-/* ESTILOS FOOTER */
-
-.t-footer {
-	font-size: calc(0.7rem + 0.1vw);
 }
