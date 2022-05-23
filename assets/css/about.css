@@ -1,21 +1,10 @@
-body {
-	margin-bottom: 10vh;
-}
-
-a:hover {
+.work-logos i:hover {
 	color: rgb(99, 99, 99);
-	background-color: transparent;
-	text-decoration: none;
 }
 
-.grow {
-	transition: all 0.2s ease-in-out;
-}
-
-.grow:hover,
-.grow:focus,
-.grow:active {
-	transform: scale(1.1);
+.bi-github,
+.bi-linkedin {
+	color: black;
 }
 
 .pantalla {
@@ -47,42 +36,14 @@ a:hover {
 	font-weight: 700;
 }
 
-a {
-	color: black;
-	background-color: transparent;
-	text-decoration: none;
+.cuadro h2 {
+	font-size: 5rem;
 }
 
-.cuadro-info {
-	/* background-color: rgba(243, 164, 107, 0.87); */
-	border-radius: 20px;
-	color: rgba(92, 141, 137, 1);
-	width: 30vw;
-	height: 30vh;
-	display: flex;
-	text-align: center;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.img-card {
-	width: 50%;
-	position: absolute;
-	top: 70%;
-	border-radius: 50%;
-	margin-top: 20px;
-	align-self: flex-start;
-}
-
-#title-zintra {
-	font-size: 54pt;
-}
-
-.card {
-	margin: 100px auto 0;
-	width: 30vw;
-	height: 80vh;
+.about .card {
+	margin: 50px auto 0;
+	width: 100%;
+	height: calc(70vw - 5vh);
 	perspective: 1000px;
 	border: none;
 }
@@ -164,8 +125,8 @@ a {
 
 .pp {
 	display: block;
-	width: 30%;
-	height: 30%;
+	width: 25%;
+	height: 25%;
 	margin: 0 auto 30px;
 	border-radius: 50%;
 	background-color: #fff;
@@ -182,22 +143,18 @@ a {
 }
 
 .card__body {
-	overflow: scroll;
-	display: flex;
-	max-height: 55%;
-	min-height: 40%;
-	flex-direction: column;
-	padding: 30px 30px 0;
-	align-items: center;
-	justify-content: baseline;
+	height: 65%;
+	display: grid;
+	gap: 10px;
+	grid-template-rows: auto auto 4fr auto;
+	padding: 15px 10px 0;
 }
 
 .card__body h3 {
 	color: var(--dark);
 	text-align: center;
 	font-size: 24px;
-	font-weight: 600;
-	margin-bottom: 15px;
+	font-weight: 400;
 }
 
 .work-logos {
@@ -209,8 +166,8 @@ a {
 }
 
 .card__body p {
-	margin-top: auto;
-	margin-bottom: auto;
+	overflow: auto;
+	place-content: center;
 	color: var(--dark);
 	font-size: 18px;
 	line-height: 1.4;
@@ -244,43 +201,69 @@ a {
 	transform: translateY(-2px);
 }
 
-@media (min-width: 768px) {
-	.button-37 {
-		padding: 10px 30px;
+/* ================ MEDIA QUERIES ================ */
+@media only screen and (max-width: 1199.98px) {
+	.about .card {
+		height: 60vh;
+	}
+	.about .card__body {
+		height: 60%;
 	}
 }
 
-@media screen and (max-width: 1200px) {
-	.card {
-		width: 48vw;
-	}
-	.card__body {
-		position: inherit;
-	}
-}
-
-@media screen and (max-width: 991px) {
-	body {
-		margin-bottom: 20vh;
-	}
+@media only screen and (max-width: 991.98px) {
 	.cuadro {
 		flex-direction: column;
 		justify-content: center;
-		font-size: 8pt;
-	}
-
-	.card {
-		width: 90vw;
-	}
-
-	.card__body {
-		padding: 5px;
+		font-size: medium;
 	}
 
 	.cuadro-info {
 		width: 100%;
 	}
-	#title-zintra {
-		font-size: 40pt;
+	.cuadro h2 {
+		font-size: 30pt;
+	}
+
+	.about .card {
+		height: 60vh;
+	}
+	.about .card__body {
+		height: 48%;
 	}
 }
+
+@media screen and (max-width: 767.98px) {
+	.about .card {
+		height: 60vh;
+	}
+	.about .card__body {
+		height: 58%;
+	}
+}
+
+@media screen and (max-width: 575.98px) {
+	.about .card {
+		height: 90vh;
+	}
+	.about .card__body {
+		height: 60%;
+	}
+	.cuadro {
+		height: 70vh;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.about .card {
+		height: 100vh;
+	}
+	.about .card__body {
+		height: 65%;
+	}
+	.cuadro {
+		font-size: 10px;
+	}
+}
+
+/* ================ MEDIA QUERIES ================ */
