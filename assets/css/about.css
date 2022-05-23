@@ -249,6 +249,9 @@
 	.about .card__body {
 		height: 60%;
 	}
+	.cuadro {
+		height: 70vh;
+	}
 }
 
 @media screen and (max-width: 400px) {
@@ -257,6 +260,9 @@
 	}
 	.about .card__body {
 		height: 65%;
+	}
+	.cuadro {
+		font-size: 10px;
 	}
 }
 
