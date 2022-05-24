@@ -90,7 +90,7 @@
 
 .card__face--front button {
 	display: block;
-	margin-bottom: 50px;
+	margin-bottom: 5px;
 	border-radius: 50%;
 	border: none;
 	color: black;
@@ -100,6 +100,12 @@
 
 .card__face--front button:hover {
 	color: rgba(0, 0, 0, 0.2);
+}
+
+.card__face--front .sabermas {
+	font-size: 3rem;
+	font-weight: 600;
+	margin-top: 0;
 }
 
 .card__face--back {
