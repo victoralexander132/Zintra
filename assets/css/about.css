@@ -131,9 +131,21 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #f8a370;
 	z-index: -1;
 	border-radius: 0px 0px 50% 0px;
+}
+
+.naranja::after {
+	background-color: #f8a370;
+}
+.azul::after {
+	background-color: #b5ded9;
+}
+.amarillo::after {
+	background-color: #faea98;
+}
+.morado::after {
+	background-color: #b49fcc;
 }
 
 .pp {
