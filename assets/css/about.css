@@ -59,9 +59,6 @@
 .card__inner.is-flipped {
 	transform: rotateY(180deg);
 }
-.flip {
-	z-index: 50;
-}
 
 .card__face {
 	position: absolute;
@@ -75,24 +72,40 @@
 }
 
 .card__face--front {
-	background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+	/* background-image: linear-gradient(to bottom right, var(--primary), var(--secondary)); */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
 }
 
 .card__face--front h2 {
+	font-weight: 600;
 	color: #fff;
-	font-size: 1.5em;
+	font-size: 4.5rem;
 	margin-top: auto;
 	margin-bottom: auto;
 }
 
 .card__face--front button {
 	display: block;
-	font-size: 1.5em;
-	margin-bottom: 50px;
+	margin-bottom: 5px;
+	border-radius: 50%;
+	border: none;
+	color: black;
+	font-weight: 100;
+	background-color: white;
+}
+
+.card__face--front button:hover {
+	color: rgba(0, 0, 0, 0.2);
+}
+
+.card__face--front .sabermas {
+	font-size: 3rem;
+	font-weight: 600;
+	margin-top: 0;
 }
 
 .card__face--back {
@@ -118,9 +131,21 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
 	z-index: -1;
 	border-radius: 0px 0px 50% 0px;
+}
+
+.naranja::after {
+	background-color: #f8a370;
+}
+.azul::after {
+	background-color: #b5ded9;
+}
+.amarillo::after {
+	background-color: #faea98;
+}
+.morado::after {
+	background-color: #b49fcc;
 }
 
 .pp {
@@ -169,36 +194,30 @@
 	overflow: auto;
 	place-content: center;
 	color: var(--dark);
-	font-size: 18px;
+	font-size: 1.6rem;
 	line-height: 1.4;
 }
 
 /* CSS */
-.button-37 {
-	background-color: #13aa52;
-	border: 1px solid #13aa52;
-	border-radius: 4px;
-	box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
-	box-sizing: border-box;
-	color: #fff;
-	cursor: pointer;
-	font-family: 'Akzidenz Grotesk BQ Medium', -apple-system, BlinkMacSystemFont, sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	outline: none;
-	outline: 0;
-	padding: 10px 25px;
-	text-align: center;
-	transform: translateY(0);
-	transition: transform 150ms, box-shadow 150ms;
-	user-select: none;
-	-webkit-user-select: none;
-	touch-action: manipulation;
+
+.about .boton {
+	display: flex;
+	justify-content: center;
+	align-content: center;
 }
 
-.button-37:hover {
-	box-shadow: rgba(0, 0, 0, 0.15) 0 3px 9px 0;
-	transform: translateY(-2px);
+.btn {
+	display: inline;
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;
+	padding: 0;
+	font-size: 3rem;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+	color: rgba(0, 0, 0, 0.2);
 }
 
 /* ================ MEDIA QUERIES ================ */
