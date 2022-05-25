@@ -19,6 +19,8 @@ body {
 	margin-top: 5vh;
 	margin-bottom: 6vh;
 	height: 80vh;
+	
+	
 }
 .cont_trans{
 	margin: 0px;
@@ -61,6 +63,21 @@ footer {
 
 .bi {
 	color: white;
+}
+
+form button {
+	color: white;
+	padding: 1rem 2.5rem;
+	bottom: 0;
+	border: none;
+	border-radius: 3px;
+	background-color: var(--primary);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+	transition: all 0.3s ease;
+}
+
+form button:hover {
+	background-color: var(--principal);
 }
 
 

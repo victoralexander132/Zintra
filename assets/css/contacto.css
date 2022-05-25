@@ -7,31 +7,14 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	height: 100vh;
-}
-
-.img-logo {
-	width: 100px;
-	height: 50px;
-	object-fit: contain;
-	object-position: center;
-}
-
-.img-person {
-	width: 40px;
-	height: 50px;
-	margin-left: 1vw;
-	object-fit: contain;
-	object-position: center;
-}
-
-.img-contacto {
-	width: 40px;
-	height: 50px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 /* ESTILOS BODY */
 
+<<<<<<< HEAD
 /* .container.form{
 	height: 100vh;
 } */
@@ -77,3 +60,9 @@ body {
 } */
 
 /* ESTILOS FOOTER */
+=======
+.card {
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 15px;
+}
+>>>>>>> 3483566244f4f28091ee6af4ba29bb7aff3703e1

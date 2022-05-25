@@ -1,0 +1,156 @@
+/* Estilos NAVBAR */
+body {
+	background: url(../images/comprar/Blanco\ y\ dorado\ cuadrado.jpg) /* no-repeat center center fixed */;
+	background-size: cover;
+	background-position: 100%;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* ESTILOS BODY */
+
+.form-pantalla {
+	background-color: rgba(255, 255, 255, 0.9);
+	width: 45%;
+	padding: 5% 3%;
+	border-radius: 10px;
+	height: calc(100vh - TamañoNavbar - TamañoFooter);
+}
+@media screen and (max-width: 1100px) {
+	.form-pantalla {
+		width: 96%;
+		/* margin-top: 10%; */
+		align-items: center;
+	}
+
+	body {
+		background: url(../images/contacto/azul-rosa.jpg) /* no-repeat center center fixed */;
+		background-size: 120% 220%;
+		background-position: top center;
+		background-repeat: no-repeat;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		background: url(../images/contacto/azul-rosa.jpg) no-repeat /* center center fixed */;
+		background-size: 150% 110%;
+		background-position: center;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+.clearfix:after {
+	content: ' '; /* Older browser do not support empty content */
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+body {
+	font-family: poppins, arial, sans-serif;
+	background-color: whitesmoke;
+}
+
+form .form-list {
+	margin-top: 1.5rem;
+	margin-left: 3.5rem;
+}
+.form-list-row {
+	margin: 1rem 0;
+}
+
+.form-list-row label {
+	font-size: 1rem;
+}
+
+.form-list-row input {
+	width: 70%;
+	font-size: 1rem;
+	padding: 0.4rem 0;
+	border: none;
+	display: inline-block;
+	border-bottom: solid 2px #999;
+	background-color: transparent;
+	transition: all 0.3s ease;
+}
+.form-list-row:focus {
+	border-color: #cdb196;
+}
+
+.user .fa-user {
+	color: #999;
+	font-size: 1rem;
+}
+
+.number.fa-credit-card {
+	color: #999;
+	font-size: 1rem;
+}
+
+.number input {
+	position: relative;
+	left: -20px;
+	padding-left: 30px;
+}
+
+.date {
+	float: left;
+}
+
+.date input {
+	width: 60px;
+	text-align: center;
+}
+.date .year {
+	margin-left: 1.5rem;
+}
+
+.cvc {
+	float: left;
+	margin-left: 6rem;
+	text-align: center;
+}
+
+.fa-question-circle {
+	color: dodgerblue;
+	display: inline-block;
+	position: relative;
+	left: 0.75rem;
+}
+
+.cvc input {
+	width: 70px;
+	text-align: center;
+}
+
+.checkbox {
+	margin-top: 2rem;
+}
+.checkbox input {
+	width: auto;
+}
+
+.checkbox span {
+	font-size: 0.8rem;
+}
+form button {
+	color: white;
+	background-color: var(--primary);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+form button:hover {
+	background-color: var(--principal);
+}
