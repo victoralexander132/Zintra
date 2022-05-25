@@ -6,12 +6,41 @@
 }
 
 /* barra buscar */
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	color: #000000;
+	text-decoration: none;
+}
+
 .cuad-rosa {
 	background-color: rgb(244, 187, 187);
 	border-radius: 15px;
 }
 
-#button-addon2 {
+
+.sidebar {
+	position: relative;
+}
+
+
+/*Carrito */
+
+.texto-carrito{
+	position:relative ;
+	text-align: center;
+	align-items: center;
+	align-self: center;
+}
+
+.hvr-fade-gray {
+	transition: all 0.2s ease-in-out;
+	transition-property: color, background-color;
+}
+
+.color-boton {
 	background-color: rgb(218, 217, 217);
 	border: none;
 }
@@ -29,13 +58,6 @@
 	font-weight: 700;
 }
 
-a:link,
-a:visited,
-a:hover,
-a:active {
-	color: #000000;
-	text-decoration: none;
-}
 
 .boton {
 	background-color: rgb(151, 219, 174);
@@ -77,6 +99,3 @@ a:active {
 	color: white;
 }
 
-.sidebar {
-	position: relative;
-}
