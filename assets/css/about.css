@@ -37,6 +37,7 @@
 }
 
 .cuadro h2 {
+	font-family: 'Satisfy', cursive;
 	font-size: 5rem;
 }
 
@@ -282,7 +283,7 @@
 		height: 65%;
 	}
 	.cuadro {
-		font-size: 10px;
+		font-size: 15px;
 	}
 }
 
