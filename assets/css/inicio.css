@@ -1,3 +1,15 @@
+.t-titulo{
+	font-weight: bold;
+	font-size: 6vh;
+}
+.t-zik{
+	color: #DA2F2F;
+}
+
+.t-infoindex{
+	font-size: 3vh;
+}
+
 .img-carrusel {
 	height: calc(100vh - 76px);
 	object-fit: cover;
@@ -16,7 +28,7 @@
 }
 
 .cuadro {
-	background-color: rgba(255, 255, 255, 0.492);
+	background-color: rgba(255, 255, 255, 0.653);
 	padding: 50px;
 	color: black;
 	border-radius: 40px;
@@ -52,13 +64,29 @@
 	border-radius: 20px;
 	padding: 20px;
 	align-self: center;
+	height: 340px;
 }
 
+@media screen and (max-width: 1078px) {
+	.cuadro {
+		width: 80%;
+	}
+	.card-detail {
+		height: auto;
+	}
+
+}
 @media screen and (max-width: 768px) {
 	.cuadro {
-		flex-direction: column;
-		justify-content: center;
-		font-size: 8pt;
 		width: 100%;
 	}
 }
+@media screen and (max-width: 375px) {
+	.t-titulo{
+		font-size: 4vh;
+	}
+	.t-infoindex{
+		font-size: 3vh;
+	}
+}
+
