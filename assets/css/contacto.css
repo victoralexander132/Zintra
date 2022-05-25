@@ -7,62 +7,14 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	height: 100vh;
-}
-
-.img-logo {
-	width: 100px;
-	height: 50px;
-	object-fit: contain;
-	object-position: center;
-}
-
-.img-person {
-	width: 40px;
-	height: 50px;
-	margin-left: 1vw;
-	object-fit: contain;
-	object-position: center;
-}
-
-.img-contacto {
-	width: 40px;
-	height: 50px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 /* ESTILOS BODY */
 
-.container.form{
-	height: 100vh;
-}
-	
-
-.card{
+.card {
 	background-color: rgba(255, 255, 255, 0.9);
 	border-radius: 15px;
 }
-
-@media screen and (max-width:500px) {
-.card{
-	height: calc(24px-);
-}
-}
-/* .form-pantalla {
-	background-color: rgba(255, 255, 255, 0.9);
-	width: 40%;
-	height: 50%;
-	margin-top: 10vh;
-	padding: 5% 3%;
-	border-radius: 10px;
-		
-} 
-@media screen and (max-width: 1100px) {
-	.form-pantalla {
-		width: 80%;
-		height: calc(100vh - 20vh - 5vh);
-		margin-top: 10%; 
-	 	align-content: center;
-	}
-} */
-
-/* ESTILOS FOOTER */
