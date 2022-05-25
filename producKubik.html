@@ -63,25 +63,26 @@
 			</div>
 		</div>
 
-		<div class="container mt-3" id="progressbar">
-			<div class="row">
-				<div class="col">
-					<div class="progress mb-2" style="height: 2px;">
-						<div class="progress-bar" role="progressbar" style="width: 25%; background-color: rgba(23, 53, 43, 1);" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-					</div>
+		<div class="container-fluid">
+			<div class="container mt-3" id="progressbar">
+				<div class="row">
+					<div class="col">
+						<div class="progress mb-2" style="height: 2px">
+							<div class="progress-bar" role="progressbar" style="width: 25%; background-color: #5c8d89;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
 
-					<div class="progress" style="height: 25px;">
-						<div class="progress-bar" role="progressbar" style="width: 25%; background-color: rgba(23, 53, 43, 1); border: solid 1px rgb(255, 255, 255);" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" >DISEÑA TU ZIKLIC</div>
-						<div class="progress-bar" role="progressbar" style="width: 25%; background-color: rgba(255, 255, 255, 0);color: rgb(148, 148, 148);border: solid 1px rgba(23, 53, 43, 0.609);" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >DIRECCION</div>
-						<div class="progress-bar" role="progressbar" style="width: 25%; background-color: rgba(255, 255, 255, 0);color: rgb(148, 148, 148);border: solid 1px rgba(23, 53, 43, 0.609);" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >FORMA DE PAGO</div>
-						<div class="progress-bar" role="progressbar" style="width: 25%; background-color: rgba(255, 255, 255, 0);color: rgb(148, 148, 148);border: solid 1px rgba(23, 53, 43, 0.609);" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >ENVIO</div>
+						<div class="progress" style="height: 25px">
+							<div class="progress-bar pro-bar-color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">DISEÑA</div>
+							<div class="progress-bar pro-bar-sincolor" role="progressbar"  aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">DIRECCIÓN</div>
+							<div class="progress-bar pro-bar-sincolor" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">FORMA DE PAGO</div>
+							<div class="progress-bar pro-bar-sincolor" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">CONFIRMACIÓN</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		
 
-		<div class="container mt-5 card-font sidebar">
+		<div class="container mt-4 card-font sidebar">
 			<div class="row justify-content-center">
 				<div class="col-lg-4 col-md-12">
 					<div class="container p-3 mb-3 mt-3 cuad-rosa d-flex">
@@ -124,8 +125,8 @@
 						</div>
 
 						<div class="form-group">
-							<label for="color">Escribe tu color favorito</label>
-							<input type="text" id="color" class="form-control" placeholder="Escribe tu color favorito" />
+							<label for="color">Elige tu color favorito</label>
+							<input type="color" id="inputColor" value="#5c8d89">
 						</div>
 
 						<div class="form-group">
@@ -163,39 +164,39 @@
 								<label class="form-check-label" for="disabledFieldsetCheck"> No soy un robot </label>
 							</div>
 						</div>
-						<button type="submit" class="btn d-flex align-self-center hvr-fade boton-rosa" ><b>Agregar al carrito</b><img src="assets/images/productKubik/carrito-de-compras.png" class="img-compras img-fluid ml-3" alt="carrito" /></button>
+						<button type="submit" class="btn d-flex mx-auto hvr-fade boton-rosa" ><b>Agregar al carrito</b><img src="assets/images/productKubik/carrito-de-compras.png" class="img-compras img-fluid ml-3" alt="carrito" /></button>
 					</form>
 				</div>
 
 				<div class="col-8">
 					<div class="row row-cols-1 row-cols-md-2">
 						<div class="col">
-							<a href="">
-								<div class="card img-cards mb-3 ml-auto mr-auto">
+							<a href="#">
+								<div class="card h-100 img-cards mb-3 ml-auto mr-auto">
 									<img src="assets/images/productKubik/AMARILLO.jpg" class="card-img-top img-cards" alt="..." />
 								</div>
 							</a>
 						</div>
 
 						<div class="col">
-							<a href="">
-								<div class="card img-cards mb-3 ml-auto mr-auto">
+							<a href="#">
+								<div class="card h-100 img-cards mb-3 ml-auto mr-auto">
 									<img src="assets/images/productKubik/rec blanco.jpg" class="card-img-top img-cards" alt="..." />
 								</div>
 							</a>
 						</div>
 
 						<div class="col">
-							<a href="">
-								<div class="card img-cards mb-3 ml-auto mr-auto">
+							<a href="#">
+								<div class="card h-100 img-cards mb-3 ml-auto mr-auto">
 									<img src="assets/images/productKubik/rosa cerca.jpg" class="card-img-top img-cards" alt="..." />
 								</div>
 							</a>
 						</div>
 
 						<div class="col">
-							<a href="">
-								<div class="card img-cards mb-3 ml-auto mr-auto">
+							<a href="#">
+								<div class="card h-100 img-cards mb-3 ml-auto mr-auto">
 									<img src="assets/images/productKubik/tarjeteros 1.jpg" class="card-img-top img-cards" alt="..." />
 									<div class="card-body color-card"></div>
 								</div>
@@ -203,21 +204,22 @@
 						</div>
 
 						<div class="col">
-							<a href="">
-								<div class="card img-cards mb-3 ml-auto mr-auto">
+							<a href="#">
+								<div class="card h-100 img-cards mb-3 ml-auto mr-auto">
 									<img src="assets/images/productKubik/verde y azul 2.jpg" class="card-img-top img-cards" alt="..." />
 								</div>
 							</a>
 						</div>
 
 						<div class="col">
-							<a href="">
-								<div class="card img-cards mb-3 ml-auto mr-auto">
+							<a href="#">
+								<div class="card h-100 img-cards mb-3 ml-auto mr-auto">
 									<img src="assets/images/productKubik/verde y cuadrada.jpg" class="card-img-top img-cards" alt="..." />
 								</div>
 							</a>
 						</div>
 					</div>
+					<br>
 				</div>
 			</div>
 		</div>
