@@ -77,6 +77,9 @@ form button:hover {
 	background-color: var(--principal);
 }
 
+.formulario__grupo-correcto .formulario__validacion-estado{
+	color: green;
+}
 
 @media (max-width: 576px) {
 	.footer-logos {

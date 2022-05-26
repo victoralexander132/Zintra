@@ -11,6 +11,62 @@ const passwordError = document.querySelector("#errorPassword")
 
 const statusInf = {
 	email: false,
-	password: false,
-	
+	password: false,	
 }
+
+inputs.forEach((inp)=>{
+	inp.addEventListener("keyup",(e) =>{
+		switch(e.target.name){
+            case "email":
+				if(expresiones.email.test(e.target.value)){
+					statusInf.email = true
+					
+					emailError.textContent = ""
+                   }
+				else{
+					statusInf.email = false
+					
+					emailError.textContent = "Correo Electronico Incorrecto"
+				    }
+			    break
+    
+			case "password":
+				if(expresiones.password.test(e.target.value)){
+					statusInf.password = true
+					
+					passwordError.textContent = ""
+                }
+				else{
+					statusInf.password = false
+					
+					passwordError.textContent = "Contraseña Incorrecta "
+				}
+                break
+		}
+
+	})
+	
+})
+
+formulario.addEventListener("submit", (e) =>{
+    e.preventDefault();
+    /* console.log(Objet.values(statusInf));
+    console.log(Objet.values(statusInf).incluedes(false)); */
+    const check = document.querySelector("#terminos").checked
+    /* console.log(check); */
+    if(!Objet.values(statusInf).incluedes(false) && check == true){
+        /* console.log("Enviado"); */
+        document.querySelector(".alert-danger").style.display = "none"
+        const datos = Object.fromEntries(
+            new FormData(e.target)
+        )
+        console.log(datos)
+        formulario.resert()
+
+    }
+    else{
+        /* console.log("No Enviado"); */
+        document.querySelector(".alert-danger").style.display = "block"
+    }
+    
+})

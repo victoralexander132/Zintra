@@ -7,7 +7,7 @@ const expresiones = {
 
 const formulario = document.querySelector("form")
 /* console.log(formulario); */
-const inputs = document.querySelectorAll("#input")
+const inputs = document.querySelectorAll("input")
 /* console.log(inputs); */
 
 const emailError = document.querySelector("#errorEmail")
@@ -33,13 +33,13 @@ inputs.forEach((inp)=>{
 					statusInf.email = true
 					
 					emailError.textContent = ""
-				}
+                   }
 				else{
 					statusInf.email = false
 					
-					emailError.textContent = "Error"
-				}
-			break
+					emailError.textContent = "Correo Electronico Incorrecto"
+				    }
+			    break
                 case "nombre":
                     if(expresiones.nombre.test(e.target.value)){
                         statusInf.nombre = true
@@ -49,7 +49,7 @@ inputs.forEach((inp)=>{
                     else{
                         statusInf.nombre = false
                         
-                        nombreError.textContent = "Error"
+                        nombreError.textContent = "Usuario Incorrecto"
                         
                     }    
 				break
@@ -62,10 +62,9 @@ inputs.forEach((inp)=>{
 				else{
 					statusInf.password = false
 					
-					passwordError.textContent = "Error "
+					passwordError.textContent = "Contraseña Incorrecta"
 				}
-
-				break
+                break
 			case "telefono":
 				if(expresiones.telefono.test(e.target.value)){
 					statusInf.telefono = true
@@ -75,13 +74,10 @@ inputs.forEach((inp)=>{
 				else{
 					statusInf.telefono = false 
 					
-					telefonoError.textContent = "Error"
+					telefonoError.textContent = "Telefono Incorrecto"
 				}
 
 				break
-			
-			
-
 		}
 
 	})
