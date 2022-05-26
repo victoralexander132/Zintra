@@ -15,6 +15,14 @@ body {
 /* ESTILOS BODY */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+.card {
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 15px;
+}
+=======
+>>>>>>> 5d03786fbf4ca356adec6a92f48cc12155db8605
 /* .container.form{
 	height: 100vh;
 } */
@@ -40,7 +48,7 @@ body {
 		display: flex;
 		align-items:center;
 		margin-top: auto;
-}
+}}
 /* .form-pantalla {
 	background-color: rgba(255, 255, 255, 0.9);
 	width: 40%;
@@ -60,9 +68,13 @@ body {
 } */
 
 /* ESTILOS FOOTER */
+<<<<<<< HEAD
 =======
 .card {
 	background-color: rgba(255, 255, 255, 0.9);
 	border-radius: 15px;
 }
 >>>>>>> 3483566244f4f28091ee6af4ba29bb7aff3703e1
+=======
+>>>>>>> 7851fd37e08ca585595b070c5bf01be1592db8e7
+>>>>>>> 5d03786fbf4ca356adec6a92f48cc12155db8605
