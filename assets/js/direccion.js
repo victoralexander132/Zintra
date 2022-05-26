@@ -9,6 +9,7 @@ const expresiones = {
 	password: /^.{4,12}$/, // 4 a 12 digitos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{7,14}$/, // 7 a 14 numeros.
+	address: /^[a-zA-ZÀ-ÿ\s0-9,.-#]{1,80}$/,
 };
 
 const formulario = document.querySelector('form');
@@ -97,7 +98,7 @@ inputs.forEach((input) => {
 				break;
 
 			case 'address':
-				if (expresiones.nombre.test(e.target.value)) {
+				if (expresiones.address.test(e.target.value)) {
 					$valAddress.textContent = '';
 					areValid.address = true;
 				} else {
