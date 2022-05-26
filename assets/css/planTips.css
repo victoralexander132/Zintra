@@ -11,16 +11,11 @@ h1{
 h2{
     font-size: 33px;
     font-weight: 15;
-}
-
-p, ul, li, h1, h2{
-font-family: 'Montserrat', sans-serif;
-
-}
+} 
 
 .imgCircular {
-    height: 36vw;
-    width: 36vw;
+    height: 39vw;
+    width: 39vw;
     border-radius: 50%;
     object-fit: cover; 
     object-position: center;
@@ -32,7 +27,6 @@ font-family: 'Montserrat', sans-serif;
     object-fit: cover;
     object-position: center;
 }
-
 
 @media screen and (max-width: 995px) {
     .imgCircular{
@@ -53,7 +47,6 @@ font-family: 'Montserrat', sans-serif;
     }
 }
 
-
 /* se añadio
 .card-h {
     padding-top: 3px;
@@ -65,18 +58,14 @@ font-family: 'Montserrat', sans-serif;
     font-weight: 15;
   } */
 
-
-/* Se añadio */
 .containerT3{
     width: 90%;
-    max-width: 90vw;
     height: auto;
     padding: 1em;
     display: flex;
     object-fit: cover; 
     object-position: center;
-    box-sizing:border-box;
-
+    box-sizing: border-box;
 }
 
 .ulT3{
@@ -84,7 +73,7 @@ font-family: 'Montserrat', sans-serif;
     max-width: 120em;
     min-height: 2em;
     height: 3vw;
-    padding: 4%;
+    padding: 5%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -101,7 +90,6 @@ font-family: 'Montserrat', sans-serif;
     border-radius: 50%;
     margin: 1vw;
 }
-   
 
 .liT3.activo {
     background-color: rgba(23, 53, 43, 1);
@@ -145,6 +133,16 @@ font-family: 'Montserrat', sans-serif;
         text-align: center;
         justify-content: center;
     }
+
+    h1{
+        font-size: 33px;
+        font-weight: 30;
+      }
+    
+    h2{
+        font-size: 29px;
+        font-weight: 15;
+    } 
   }
 
 .owl-container {
