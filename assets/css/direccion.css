@@ -57,12 +57,11 @@ form button:hover {
 	}
 }
 
-@media screen and (max-width: 600px) {
-	body {
-		background: url(../images/contacto/azul-rosa.jpg) no-repeat /* center center fixed */;
-		background-size: 150% 110%;
-		background-position: center;
-	}
+@media screen and (max-width: 650px) {
+body {
+
+		background-position: 14%, 80%;
+	} 
 	.pro-bar-color{
 		font-size: 10px;
 	}
