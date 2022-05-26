@@ -1,6 +1,10 @@
 .t-titulo{
 	font-weight: bold;
-	font-size: 6vh;
+	font-size: 3em;
+}
+.t-titulo2{
+	font-weight: bold;
+	font-size: 2em;
 }
 .t-zik{
 	color: #DA2F2F;
@@ -88,5 +92,14 @@
 	.t-infoindex{
 		font-size: 3vh;
 	}
+	.t-titulo2{
+		font-weight: bold;
+		font-size: 3vh;
+	}
 }
 
+@media screen and (max-width: 320px) {
+	.t-subt{
+		font-size:15px;
+	}
+}
