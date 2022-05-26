@@ -17,18 +17,16 @@ fetch(urlProductos).then(resp => resp.json().then(datos => {
 
         const template =  `
                         <div class="col mb-5 grow">
-                        
                             <div class="card h-100 ml-auto mr-auto" >
-                                <img src="${infoProducto.url}" class="card-img-top" alt="..." />
-                                <div class="card-body color-card ">
-                                    <p class="card-text id">${producto.id}</p>
+                                <img src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.url}" />
+                                <div class="card-body color-card">
+                                    <p class="card-text id" style="display:none">${producto.id}</p>
                                     <h5 class="card-title titulo">${infoProducto.nombre}</h5>
                                     <p class="card-text">${infoProducto.descripcion}</p>
                                     <p class="card-text precio">${infoProducto.precio}</p>
-                                    <button class="agregar">Agregar al carrito</button>
-                                </div>
+                                    <button class="agregar">Agregar al carrito</button></div>
+                                </div>  
                             </div>
-                        
                         </div>
                             `
         $contenedorPadre.innerHTML += template
