@@ -14,7 +14,55 @@ body {
 
 /* ESTILOS BODY */
 
+<<<<<<< HEAD
 .card {
 	background-color: rgba(255, 255, 255, 0.9);
 	border-radius: 15px;
 }
+=======
+/* .container.form{
+	height: 100vh;
+} */
+	
+
+.card{
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 15px;
+}
+
+@media screen and (min-height: 1000px) {
+.container.formulario{
+	height: 85vh;
+	display: flex;
+	align-items:center;
+	margin-top: auto;	
+}
+}
+
+@media screen and (min-width: 1000px) {
+.container.formulario{
+		height: 85vh;
+		display: flex;
+		align-items:center;
+		margin-top: auto;
+}}
+/* .form-pantalla {
+	background-color: rgba(255, 255, 255, 0.9);
+	width: 40%;
+	height: 50%;
+	margin-top: 10vh;
+	padding: 5% 3%;
+	border-radius: 10px;
+		
+} 
+@media screen and (max-width: 1100px) {
+	.form-pantalla {
+		width: 80%;
+		height: calc(100vh - 20vh - 5vh);
+		margin-top: 10%; 
+	 	align-content: center;
+	}
+} */
+
+/* ESTILOS FOOTER */
+>>>>>>> 7851fd37e08ca585595b070c5bf01be1592db8e7
