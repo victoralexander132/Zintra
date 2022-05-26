@@ -37,13 +37,14 @@
 }
 
 .cuadro h2 {
+	font-family: 'Satisfy', cursive;
 	font-size: 5rem;
 }
 
 .about .card {
 	margin: 50px auto 0;
 	width: 100%;
-	height: calc(70vw - 5vh);
+	height: 80vh;
 	perspective: 1000px;
 	border: none;
 }
@@ -191,10 +192,11 @@
 }
 
 .card__body p {
+	text-align: justify;
 	overflow: auto;
 	place-content: center;
 	color: var(--dark);
-	font-size: 1.6rem;
+	font-size: 1.2rem;
 	line-height: 1.4;
 }
 
@@ -234,7 +236,7 @@
 	.cuadro {
 		flex-direction: column;
 		justify-content: center;
-		font-size: medium;
+		font-size: 18px;
 	}
 
 	.cuadro-info {
@@ -258,6 +260,10 @@
 	}
 	.about .card__body {
 		height: 58%;
+	}
+	.cuadro {
+		height: 80vh;
+		font-size: 15px;
 	}
 }
 
