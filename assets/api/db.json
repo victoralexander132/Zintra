@@ -8,7 +8,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Azul"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/around-medi-azul-maceta.jpg"
+        "url" : "assets/api/api_img/around-medi-azul-maceta.jpg"
     },
     {
         "id" : "2",
@@ -19,7 +19,7 @@
         "tamanio" : ["Medi"],
         "color":["Azul"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/around-medi-azul-maceta2.jpg"
+        "url" : "assets/api/api_img/around-medi-azul-maceta2.jpg"
     },
     {
         "id" : "3",
@@ -30,7 +30,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Rosa"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/around-medi-rosa-maceta.jpg"
+        "url" : "assets/api/api_img/around-medi-rosa-maceta.jpg"
     },
     {
         "id" : "4",
@@ -41,7 +41,7 @@
         "tamanio" : ["Medi", "Maxi"],
         "color" : ["Turquesa", "Dorado"],
         "uso" : ["Modelo", "Maceta"],
-        "url" : "assets/api_img/conjunto-maxi-colores-maceta.jpg"
+        "url" : "assets/api/api_img/conjunto-maxi-colores-maceta.jpg"
     },
     {
         "id" : "5",
@@ -52,7 +52,7 @@
         "tamanio" : ["Medi", "Maxi"],
         "color" : ["Turquesa", "Azul"],
         "uso" : ["Modelo","Maceta"],
-        "url" : "assets/api_img/conjunto-maxi-colores-maceta2.jpg"
+        "url" : "assets/api/api_img/conjunto-maxi-colores-maceta2.jpg"
     },
     {
         "id" : "6",
@@ -63,7 +63,7 @@
         "tamanio" : ["Maxi"],
         "color" : ["Colores"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-maxi-colores-maceta3.jpg"
+        "url" : "assets/api/api_img/conjunto-maxi-colores-maceta3.jpg"
     },
     {
         "id" : "7",
@@ -74,7 +74,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Turquesa", "Verde"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-maxi-colores-maceta4.jpg"
+        "url" : "assets/api/api_img/conjunto-maxi-colores-maceta4.jpg"
     },
     {
         "id" : "8",
@@ -85,7 +85,7 @@
         "tamanio" : ["Maxi", "Mini"],
         "color" : ["Turquesa", "Violeta"],
         "uso" : ["Maceta", "Contenedor"],
-        "url" : "assets/api_img/conjunto-maxi-colores-usos1.jpg"
+        "url" : "assets/api/api_img/conjunto-maxi-colores-usos1.jpg"
     },
     {
         "id" : "9",
@@ -96,7 +96,7 @@
         "tamanio" : ["Maxi", "Mini"],
         "color" : ["Turquesa", "Morado"],
         "uso" : ["Maceta", "Contenedor"],
-        "url" : "assets/api_img/conjunto-maxi-colores-usos2.jpg"
+        "url" : "assets/api/api_img/conjunto-maxi-colores-usos2.jpg"
     },
     {
         "id" : "10",
@@ -107,7 +107,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Amarillo"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/conjunto-medi-amarillo-modelo.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-amarillo-modelo.jpg"
     },
     {
         "id" : "11",
@@ -118,7 +118,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Amarillo"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/conjunto-medi-amarillo-modelo2.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-amarillo-modelo2.jpg"
     },
     {
         "id" : "12",
@@ -129,7 +129,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Blancoazul"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-blancoazul-maceta.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-blancoazul-maceta.jpg"
     },
     {
         "id" : "13",
@@ -140,7 +140,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Blancoazul"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-blancoazul-maceta2.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-blancoazul-maceta2.jpg"
     },
     {
         "id" : "14",
@@ -151,7 +151,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Blanco"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-blanco-maceta.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-blanco-maceta.jpg"
     },
     {
         "id" : "15",
@@ -162,7 +162,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-colores-maceta.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-colores-maceta.jpg"
     },
     {
         "id" : "16",
@@ -173,7 +173,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-colores-maceta01.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-colores-maceta01.jpg"
     },
     {
         "id" : "17",
@@ -184,7 +184,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-colores-maceta02.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-colores-maceta02.jpg"
     },
     {
         "id" : "18",
@@ -195,7 +195,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-colores-maceta03.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-colores-maceta03.jpg"
     },
     {
         "id" : "19",
@@ -206,7 +206,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-colores-maceta04.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-colores-maceta04.jpg"
     },
     {
         "id" : "20",
@@ -217,7 +217,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-colores-maceta05.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-colores-maceta05.jpg"
     },
     {
         "id" : "21",
@@ -228,7 +228,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-colores-maceta06.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-colores-maceta06.jpg"
     },
     {
         "id" : "22",
@@ -239,7 +239,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-colores-maceta07.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-colores-maceta07.jpg"
     },
     {
         "id" : "23",
@@ -250,7 +250,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/conjunto-medi-colores-modelo.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-colores-modelo.jpg"
     },
     {
         "id" : "24",
@@ -261,7 +261,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/conjunto-medi-colores-modelo2.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-colores-modelo2.jpg"
     },
     {
         "id" : "25",
@@ -272,7 +272,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Usos"],
-        "url" : "assets/api_img/conjunto-medi-colores-usos.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-colores-usos.jpg"
     },
     {
         "id" : "26",
@@ -283,7 +283,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Usos"],
-        "url" : "assets/api_img/conjunto-medi-colores-usos2.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-colores-usos2.jpg"
     },
     {
         "id" : "27",
@@ -294,7 +294,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Gris"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-gris-maceta.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-gris-maceta.jpg"
     },
     {
         "id" : "28",
@@ -305,7 +305,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Gris"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-gris-maceta2.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-gris-maceta2.jpg"
     },
     {
         "id" : "29",
@@ -316,7 +316,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Gris"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-gris-maceta3.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-gris-maceta3.jpg"
     },
     {
         "id" : "30",
@@ -327,7 +327,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Gris"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-gris-maceta4.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-gris-maceta4.jpg"
     },
     {
         "id" : "31",
@@ -338,7 +338,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Gris"],
         "uso" : ["Usos"],
-        "url" : "assets/api_img/conjunto-medi-gris-usos.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-gris-usos.jpg"
     },
     {
         "id" : "32",
@@ -349,7 +349,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Negro"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-negro-maceta.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-negro-maceta.jpg"
     },
     {
         "id" : "33",
@@ -360,7 +360,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Negro"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-negro-maceta2.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-negro-maceta2.jpg"
     },
     {
         "id" : "34",
@@ -371,7 +371,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Negro"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-negro-maceta3.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-negro-maceta3.jpg"
     },
     {
         "id" : "35",
@@ -382,7 +382,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Negro"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/conjunto-medi-negro-modelo.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-negro-modelo.jpg"
     },
     {
         "id" : "36",
@@ -393,7 +393,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Rosa"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-medi-rosa-maceta.jpg"
+        "url" : "assets/api/api_img/conjunto-medi-rosa-maceta.jpg"
     },
     {
         "id" : "37",
@@ -404,7 +404,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Colores"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-mini-colores-maceta.jpg"
+        "url" : "assets/api/api_img/conjunto-mini-colores-maceta.jpg"
     },
     {
         "id" : "38",
@@ -415,7 +415,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Colores"],
         "uso" : ["Usos"],
-        "url" : "assets/api_img/conjunto-mini-colores-usos2.jpg"
+        "url" : "assets/api/api_img/conjunto-mini-colores-usos2.jpg"
     },
     {
         "id" : "39",
@@ -426,7 +426,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Dorado"],
         "uso" : ["Usos"],
-        "url" : "assets/api_img/conjunto-mini-dorado-usos.jpg"
+        "url" : "assets/api/api_img/conjunto-mini-dorado-usos.jpg"
     },
     {
         "id" : "40",
@@ -437,7 +437,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Morado"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/conjunto-mini-morado-modelo.jpg"
+        "url" : "assets/api/api_img/conjunto-mini-morado-modelo.jpg"
     },
     {
         "id" : "41",
@@ -448,7 +448,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Morado"],
         "uso" : ["Velas"],
-        "url" : "assets/api_img/conjunto-mini-morado-velas.jpg"
+        "url" : "assets/api/api_img/conjunto-mini-morado-velas.jpg"
     },
     {
         "id" : "42",
@@ -459,7 +459,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Rosa"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/conjunto-mini-rosa-modelo.jpg"
+        "url" : "assets/api/api_img/conjunto-mini-rosa-modelo.jpg"
     },
     {
         "id" : "43",
@@ -470,7 +470,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Turquesa"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/conjunto-mini-turquesa-modelo.jpg"
+        "url" : "assets/api/api_img/conjunto-mini-turquesa-modelo.jpg"
     },
     {
         "id" : "44",
@@ -481,7 +481,7 @@
         "tamanio" : ["Varios"],
         "color" : ["Amarillo"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/conjunto-varios-amarillo-maceta1.jpg"
+        "url" : "assets/api/api_img/conjunto-varios-amarillo-maceta1.jpg"
     },
     {
         "id" : "45",
@@ -492,7 +492,7 @@
         "tamanio" : ["Varios"],
         "color" : ["Colores"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/conjunto-varios-colores-modelo.jpg"
+        "url" : "assets/api/api_img/conjunto-varios-colores-modelo.jpg"
     },
     {
         "id" : "46",
@@ -503,7 +503,7 @@
         "tamanio" : ["Varios"],
         "color" : ["Colores"],
         "uso" : ["Usos"],
-        "url" : "assets/api_img/conjunto-varios-colores-usos.jpg"
+        "url" : "assets/api/api_img/conjunto-varios-colores-usos.jpg"
     },
     {
         "id" : "47",
@@ -514,7 +514,7 @@
         "tamanio" : ["Varios"],
         "color" : ["Gris"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/conjunto-varios-gris-modelo.jpg"
+        "url" : "assets/api/api_img/conjunto-varios-gris-modelo.jpg"
     },
     {
         "id" : "48",
@@ -525,7 +525,7 @@
         "tamanio" : ["Varios"],
         "color" : ["Gris"],
         "uso" : ["Usos"],
-        "url" : "assets/api_img/conjunto-varios-gris-usos.jpg"
+        "url" : "assets/api/api_img/conjunto-varios-gris-usos.jpg"
     },
     {
         "id" : "49",
@@ -536,7 +536,7 @@
         "tamanio" : ["Varios"],
         "color" : ["Gris"],
         "uso" : ["Usos"],
-        "url" : "assets/api_img/conjunto-varios-gris-usos2.jpg"
+        "url" : "assets/api/api_img/conjunto-varios-gris-usos2.jpg"
     },
     {
         "id" : "50",
@@ -547,7 +547,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/kubic-medi-colores-modelo.jpg"
+        "url" : "assets/api/api_img/kubic-medi-colores-modelo.jpg"
     },
     {
         "id" : "51",
@@ -558,7 +558,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/kubik-medi-colores-maceta.jpg"
+        "url" : "assets/api/api_img/kubik-medi-colores-maceta.jpg"
     },
     {
         "id" : "52",
@@ -569,7 +569,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/kubik-medi-colores-maceta2.jpg"
+        "url" : "assets/api/api_img/kubik-medi-colores-maceta2.jpg"
     },
     {
         "id" : "53",
@@ -580,7 +580,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Gris"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/kubik-medi-gris-maceta.jpg"
+        "url" : "assets/api/api_img/kubik-medi-gris-maceta.jpg"
     },
     {
         "id" : "54",
@@ -591,7 +591,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Gris"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/kubik-medi-gris-maceta2.jpg"
+        "url" : "assets/api/api_img/kubik-medi-gris-maceta2.jpg"
     },
     {
         "id" : "55",
@@ -602,7 +602,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Gris"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/kubik-medi-gris-maceta3.jpg"
+        "url" : "assets/api/api_img/kubik-medi-gris-maceta3.jpg"
     },
     {
         "id" : "56",
@@ -613,7 +613,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Negro"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/kubik-medi-negro-maceta.jpg"
+        "url" : "assets/api/api_img/kubik-medi-negro-maceta.jpg"
     },
     {
         "id" : "57",
@@ -624,7 +624,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Negro"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/kubik-medi-negro-maceta2.jpg"
+        "url" : "assets/api/api_img/kubik-medi-negro-maceta2.jpg"
     },
     {
         "id" : "58",
@@ -635,7 +635,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Negro"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/kubik-medi-negro-maceta3.jpg"
+        "url" : "assets/api/api_img/kubik-medi-negro-maceta3.jpg"
     },
     {
         "id" : "59",
@@ -646,7 +646,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Rosa"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/kubik-medi-rosa-maceta.jpg"
+        "url" : "assets/api/api_img/kubik-medi-rosa-maceta.jpg"
     },
     
     {
@@ -658,7 +658,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Amarillo"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/kubik-mini-amarillo-maceta.jpg"
+        "url" : "assets/api/api_img/kubik-mini-amarillo-maceta.jpg"
     },
     
     {
@@ -670,7 +670,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Colores"],
         "uso" : ["Tarjetero"],
-        "url" : "assets/api_img/kubik-mini-colores-tarjetero.jpg"
+        "url" : "assets/api/api_img/kubik-mini-colores-tarjetero.jpg"
     },
     
     {
@@ -682,7 +682,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Colores"],
         "uso" : ["Tarjetero"],
-        "url" : "assets/api_img/kubik-mini-colores-tarjetero2.jpg"
+        "url" : "assets/api/api_img/kubik-mini-colores-tarjetero2.jpg"
     },
     
     {
@@ -694,7 +694,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Colores"],
         "uso" : ["Tarjetero"],
-        "url" : "assets/api_img/kubik-mini-colores-tarjetero3.jpg"
+        "url" : "assets/api/api_img/kubik-mini-colores-tarjetero3.jpg"
     },
     
     {
@@ -706,7 +706,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Colores"],
         "uso" : ["Bases"],
-        "url" : "assets/api_img/plane-mini-colores-bases.jpg"
+        "url" : "assets/api/api_img/plane-mini-colores-bases.jpg"
     },
     
     {
@@ -718,7 +718,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Blanco"],
         "uso" : ["Usos"],
-        "url" : "assets/api_img/sunny-mini-blanco-usos.jpg"
+        "url" : "assets/api/api_img/sunny-mini-blanco-usos.jpg"
     },
     
     {
@@ -730,7 +730,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Blanco"],
         "uso" : ["Vela"],
-        "url" : "assets/api_img/sunny-mini-blanco-vela.jpg"
+        "url" : "assets/api/api_img/sunny-mini-blanco-vela.jpg"
     },
     
     {
@@ -742,7 +742,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Colores"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/sunny-mini-colores-modelo.jpg"
+        "url" : "assets/api/api_img/sunny-mini-colores-modelo.jpg"
     },
     
     {
@@ -754,7 +754,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Colores"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/sunny-mini-colores-modelo2.jpg"
+        "url" : "assets/api/api_img/sunny-mini-colores-modelo2.jpg"
     },
     
     {
@@ -766,7 +766,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Colores"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/sunny-mini-colores-modelo3.jpg"
+        "url" : "assets/api/api_img/sunny-mini-colores-modelo3.jpg"
     },
     
     {
@@ -778,7 +778,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Morado"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/sunny-mini-morado-maceta.jpg"
+        "url" : "assets/api/api_img/sunny-mini-morado-maceta.jpg"
     },
     
     {
@@ -790,7 +790,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/zickic-medi-colores-modelo.jpg"
+        "url" : "assets/api/api_img/zickic-medi-colores-modelo.jpg"
     },
     
     {
@@ -802,7 +802,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Amarillo"],
         "uso" : ["Contenedor"],
-        "url" : "assets/api_img/zicklic-medi-amarillo-contenedor.jpg"
+        "url" : "assets/api/api_img/zicklic-medi-amarillo-contenedor.jpg"
     },
     
     {
@@ -814,7 +814,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Contenedor"],
-        "url" : "assets/api_img/zicklic-medi-colores-contenedor.jpg"
+        "url" : "assets/api/api_img/zicklic-medi-colores-contenedor.jpg"
     },
     
     {
@@ -826,7 +826,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/zicklic-medi-colores-maceta.jpg"
+        "url" : "assets/api/api_img/zicklic-medi-colores-maceta.jpg"
     },
     {
         "id" : "75",
@@ -837,7 +837,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/zicklic-medi-colores-maceta2.jpg"
+        "url" : "assets/api/api_img/zicklic-medi-colores-maceta2.jpg"
     },
     {
         "id" : "76",
@@ -848,7 +848,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/zicklic-medi-colores-modelo.jpg"
+        "url" : "assets/api/api_img/zicklic-medi-colores-modelo.jpg"
     },
     {
         "id" : "77",
@@ -859,7 +859,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/zicklic-medi-colores-modelo2.jpg"
+        "url" : "assets/api/api_img/zicklic-medi-colores-modelo2.jpg"
     },
     {
         "id" : "78",
@@ -870,7 +870,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/zicklic-medi-colores-modelo3.jpg"
+        "url" : "assets/api/api_img/zicklic-medi-colores-modelo3.jpg"
     },
     {
         "id" : "79",
@@ -881,7 +881,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Gris"],
         "uso" : ["Usos"],
-        "url" : "assets/api_img/zicklic-medi-gris-usos.jpg"
+        "url" : "assets/api/api_img/zicklic-medi-gris-usos.jpg"
     },
     {
         "id" : "80",
@@ -892,7 +892,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Gris"],
         "uso" : ["Usos"],
-        "url" : "assets/api_img/zicklic-medi-gris-usos2.jpg"
+        "url" : "assets/api/api_img/zicklic-medi-gris-usos2.jpg"
     },
     {
         "id" : "81",
@@ -903,7 +903,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Morado"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/zicklic-medi-morado-modelo.jpg"
+        "url" : "assets/api/api_img/zicklic-medi-morado-modelo.jpg"
     },
     {
         "id" : "82",
@@ -914,7 +914,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Morado"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/zicklic-medi-morado-modelo1.jpg"
+        "url" : "assets/api/api_img/zicklic-medi-morado-modelo1.jpg"
     },
     {
         "id" : "83",
@@ -925,7 +925,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Negro"],
         "uso" : ["Contenedor"],
-        "url" : "assets/api_img/zicklic-medi-negro-contenedor.jpg"
+        "url" : "assets/api/api_img/zicklic-medi-negro-contenedor.jpg"
     },
     {
         "id" : "84",
@@ -936,7 +936,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Negro"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/zicklic-medi-negro-modelo.jpg"
+        "url" : "assets/api/api_img/zicklic-medi-negro-modelo.jpg"
     },
     {
         "id" : "85",
@@ -947,7 +947,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Rosa"],
         "uso" : ["Contenedor"],
-        "url" : "assets/api_img/zicklic-medi-rosa-contenedor.jpg"
+        "url" : "assets/api/api_img/zicklic-medi-rosa-contenedor.jpg"
     },
     {
         "id" : "86",
@@ -958,7 +958,7 @@
         "tamanio" : ["Medi"],
         "color" : ["Colores"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/zicklic-medi-verde-contenedor.jpg"
+        "url" : "assets/api/api_img/zicklic-medi-verde-contenedor.jpg"
     },
     {
         "id" : "87",
@@ -969,7 +969,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Gris"],
         "uso" : ["Velas"],
-        "url" : "assets/api_img/zicklic-mini-gris-velas.jpg"
+        "url" : "assets/api/api_img/zicklic-mini-gris-velas.jpg"
     },
     {
         "id" : "88",
@@ -980,7 +980,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Rosa"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/zicklic-mini-rosanegro-maceta.jpg"
+        "url" : "assets/api/api_img/zicklic-mini-rosanegro-maceta.jpg"
     },
     {
         "id" : "89",
@@ -991,7 +991,7 @@
         "tamanio" : ["Mini"],
         "color" : ["Rosa"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/zicklic-mini-rosa-velas.jpg"
+        "url" : "assets/api/api_img/zicklic-mini-rosa-velas.jpg"
     },
     {
         "id" : "90",
@@ -1002,7 +1002,7 @@
         "tamanio" : ["Varios"],
         "color" : ["Colores"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/zicklic-varios-gris-usos.jpg"
+        "url" : "assets/api/api_img/zicklic-varios-gris-usos.jpg"
     },
     {
         "id" : "91",
@@ -1013,7 +1013,7 @@
         "tamanio" : ["Varios"],
         "color" : ["Colores"],
         "uso" : ["Modelo"],
-        "url" : "assets/api_img/zicklic-varios-gris-usos2.jpg"
+        "url" : "assets/api/api_img/zicklic-varios-gris-usos2.jpg"
     },
     {
         "id" : "92",
@@ -1024,7 +1024,7 @@
         "tamanio" : ["Maxi"],
         "color" : ["Colores"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/ziclos-maxi-colores-maceta.jpg"
+        "url" : "assets/api/api_img/ziclos-maxi-colores-maceta.jpg"
     },
     {
         "id" : "93",
@@ -1035,7 +1035,7 @@
         "tamanio" : ["Maxi"],
         "color" : ["Dorado"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/ziclos-maxi-dorada-maceta.jpg"
+        "url" : "assets/api/api_img/ziclos-maxi-dorada-maceta.jpg"
     },
     {
         "id" : "94",
@@ -1046,7 +1046,7 @@
         "tamanio" : ["Maxi"],
         "color" : ["Amarillo"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/ziklos-maxi-amarillo-maceta.jpg"
+        "url" : "assets/api/api_img/ziklos-maxi-amarillo-maceta.jpg"
     },
     {
         "id" : "95",
@@ -1057,7 +1057,7 @@
         "tamanio" : ["Maxi"],
         "color" : ["Amarillo"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/ziklos-maxi-amarillo-maceta2.jpg"
+        "url" : "assets/api/api_img/ziklos-maxi-amarillo-maceta2.jpg"
     },
     {
         "id" : "96",
@@ -1068,7 +1068,7 @@
         "tamanio" : ["Maxi"],
         "color" : ["Amarillo"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/ziklos-maxi-amarillo-maceta3.jpg"
+        "url" : "assets/api/api_img/ziklos-maxi-amarillo-maceta3.jpg"
     },
     {
         "id" : "97",
@@ -1079,7 +1079,7 @@
         "tamanio" : ["Maxi"],
         "color" : ["Amarillo"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/ziklos-maxi-amarillo-maceta4.jpg"
+        "url" : "assets/api/api_img/ziklos-maxi-amarillo-maceta4.jpg"
     },
     {
         "id" : "98",
@@ -1090,7 +1090,7 @@
         "tamanio" : ["Maxi"],
         "color" : ["Azul"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/ziklos-maxi-azul-maceta.jpg"
+        "url" : "assets/api/api_img/ziklos-maxi-azul-maceta.jpg"
     },
     {
         "id" : "99",
@@ -1101,7 +1101,7 @@
         "tamanio" : ["Maxi"],
         "color" : ["Colores"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/ziklos-maxi-colores-maceta.jpg"
+        "url" : "assets/api/api_img/ziklos-maxi-colores-maceta.jpg"
     },
     {
         "id" : "100",
@@ -1112,7 +1112,7 @@
         "tamanio" : ["Maxi"],
         "color" : ["Colores"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/ziklos-maxi-colores-maceta2.jpg"
+        "url" : "assets/api/api_img/ziklos-maxi-colores-maceta2.jpg"
     },
     {
         "id" : "101",
@@ -1123,7 +1123,7 @@
         "tamanio" : ["Maxi"],
         "color" : ["Dorado"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/ziklos-maxi-dorado-maceta.jpg"
+        "url" : "assets/api/api_img/ziklos-maxi-dorado-maceta.jpg"
     },
     {
         "id" : "102",
@@ -1134,7 +1134,7 @@
         "tamanio" : ["Maxi"],
         "color" : ["Gris"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/ziklos-maxi-gris-maceta.jpg"
+        "url" : "assets/api/api_img/ziklos-maxi-gris-maceta.jpg"
     },
     {
         "id" : "103",
@@ -1145,7 +1145,7 @@
         "tamanio" : ["Maxi"],
         "color" : ["Negro"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/ziklos-maxi-negro-maceta.jpg"
+        "url" : "assets/api/api_img/ziklos-maxi-negro-maceta.jpg"
     },
     {
         "id" : "104",
@@ -1156,7 +1156,7 @@
         "tamanio" : ["Maxi"],
         "color" : ["Turquesa"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/ziklos-maxi-turquesa-maceta.jpg"
+        "url" : "assets/api/api_img/ziklos-maxi-turquesa-maceta.jpg"
     },
     {
         "id" : "105",
@@ -1167,6 +1167,6 @@
         "tamanio" : ["Maxi"],
         "color" : ["Turquesa"],
         "uso" : ["Maceta"],
-        "url" : "assets/api_img/ziklos-maxi-turquesa-maceta2.jpg"
+        "url" : "assets/api/api_img/ziklos-maxi-turquesa-maceta2.jpg"
     }
     ]
