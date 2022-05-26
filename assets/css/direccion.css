@@ -1,11 +1,12 @@
 /* Estilos NAVBAR */
 body {
-	background: url(../images/comprar/Blanco\ y\ dorado\ cuadrado.jpg) /* no-repeat center center fixed */;
+	background: url(../images/confirmacion/colageProcess.png) /* no-repeat center center fixed */;
 	background-size: cover;
 	background-position: 100%;
 	background-repeat: no-repeat;
 	min-height: 100vh;
 	display: flex;
+	background-position: center;
 	flex-direction: column;
 }
 
@@ -53,13 +54,6 @@ form button:hover {
 		width: 96%;
 		/* margin-top: 10%; */
 		align-items: center;
-	}
-
-	body {
-		background: url(../images/contacto/azul-rosa.jpg) /* no-repeat center center fixed */;
-		background-size: 120% 220%;
-		background-position: top center;
-		background-repeat: no-repeat;
 	}
 }
 
