@@ -80,15 +80,58 @@
 
                         <img src="assets/images/confirmacion/love-plants.gif" class="d-flex mx-auto" alt="gifplanta">
 
-                        <button  type="submit" class="d-flex mx-auto boton-detail">Ver detalles de pedido</button>
+                        <button type="button" class="d-flex mx-auto boton-detail" data-toggle="modal" data-target="#exampleModalCenter">
+							Ver detalles del pedido</button>
 						<br>
-						<button type="submit" class="d-flex mx-auto boton-detail">Ver más productos</button>
+						<a class="btn d-flex mx-auto boton-detail" href="productos.html" role="button">Ver más productos</a>
 					</div>
 				</div>
 			</div>
 		</div>
         <br>
 
+<!-- Modal -->
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLongTitle">Confirmación de pedido</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		</div>
+		<div class="modal-body">
+			<table class="table">
+				<thead class="thead-dark">
+				<tr>
+						<th scope="col">#</th>
+						<th scope="col">First</th>
+						<th scope="col">Last</th>
+				<th scope="col">Handle</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<th scope="row">1</th>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>@mdo</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="d-flex mx-auto boton-detail" data-dismiss="modal">Regresar</button>
+			<button type="button" class="d-flex mx-auto boton-detail">Imprimir</button>
+		</div>
+		</div>
+	</div>
+	</div>
+				</div>
+			</div>
+		</div>
+
+		<br>
 
 		<footer class="footer mt-auto py-3">
 			<div class="container footer mx-1 align-items-center">
@@ -102,6 +145,8 @@
 				</div>
 			</div>
 		</footer>
+
+		<script src="assets/js/confirmacion.js"></script>
 
 		<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
