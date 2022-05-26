@@ -47,26 +47,13 @@ inputs.forEach((inp)=>{
 	})
 	
 })
+formulario.addEventListener('submit', (e) => {
+	e.preventDefault();
+	if (Object.values(statusInf).every((value) => value === true)) {
 
-formulario.addEventListener("submit", (e) =>{
-    e.preventDefault();
-    /* console.log(Objet.values(statusInf));
-    console.log(Objet.values(statusInf).incluedes(false)); */
-    const check = document.querySelector("#terminos").checked
-    /* console.log(check); */
-    if(!Objet.values(statusInf).incluedes(false) && check == true){
-        /* console.log("Enviado"); */
-        document.querySelector(".alert-danger").style.display = "none"
-        const datos = Object.fromEntries(
-            new FormData(e.target)
-        )
-        console.log(datos)
-        formulario.resert()
-
-    }
-    else{
-        /* console.log("No Enviado"); */
-        document.querySelector(".alert-danger").style.display = "block"
-    }
-    
-})
+	const datos = Object.fromEntries(new FormData(e.target));
+	console.log(datos);
+	} else {
+		console.log('No enviado');
+	}
+});
