@@ -13,9 +13,16 @@ const inputsContacto = document.querySelectorAll("input")
 const textareaContacto= document.querySelector("textarea")
 //console.log(inputsContacto,textareaContacto)
 
-//falta asignar ids en html
+
 const nombreError = document.querySelector("#errorNombre") 
 const emailError= document.querySelector("#errorEmail")
 const asuntoError= document.querySelector("#errorAsunto")
 const mensajeError= document.querySelector("#errorMensaje")
+//console.log(nombreError, emailError, asuntoError, mensajeError)
 
+const statusInf = {
+    nombre: false,
+    email: false,
+    asunto: false,
+    mensaje: false
+}
