@@ -9,7 +9,7 @@ const expresiones = {
 	password: /^.{4,12}$/, // 4 a 12 digitos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{7,14}$/, // 7 a 14 numeros.
-	address: /^[a-zA-ZÀ-ÿ\s0-9,.-]{1,80}$/,
+	address: /^[a-zA-ZÀ-ÿ\s0-9,.-#]{1,80}$/,
 };
 
 const formulario = document.querySelector('form');
