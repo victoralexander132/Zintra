@@ -58,11 +58,6 @@ body {
 	clear: both;
 }
 
-body {
-	font-family: poppins, arial, sans-serif;
-	background-color: whitesmoke;
-}
-
 form .form-list {
 	margin-top: 1.5rem;
 	margin-left: 3.5rem;
@@ -97,6 +92,12 @@ form .form-list {
 .number.fa-credit-card {
 	color: #999;
 	font-size: 1rem;
+}
+
+.user input {
+	position: relative;
+	left: -20px;
+	padding-left: 30px;
 }
 
 .number input {
