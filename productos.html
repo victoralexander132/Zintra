@@ -93,9 +93,10 @@
 		<div class="container mt-5 card-font">
 			<div class="row justify-content-center">
 				<div class="col-9 col-lg-4 col-md-9 col-sm-9 col-xl-4 sidebar">
-					<div class="d-flex">
+					
+					<!-- <div class="d-flex">
 						<h2 style="font-size: 150%; font-weight: 800">TIPOS DE <span class="rosa">ZIKLICS</span></h2>
-					</div>
+					</div> -->
 					<div class="container p-3 mb-3 mt-3 cuad-rosa d-flex">
 						<div class="busqueda">
 							<div class="input-group">
@@ -131,15 +132,17 @@
 						</table> -->
 					</div>
 
+					<br>
+
 					<!-- Inicia cestaV2 -->
 					<div  id="cestaV2" class="container">
-						<h5>CARRITO</h5>
+						<h2 style="font-size: 150%; font-weight: 800">CARRITO</h2>
 						<table class="table">
 						  <thead>
 							<tr>
 							  <th scope="col" class="font-size-9">Producto</th>
 							  <th scope="col" colspan="2">Cantidad</th>
-							  <th scope="col">Total</th>
+							  <th scope="col">Subtotal</th>
 							</tr>
 						  </thead>
 
@@ -155,7 +158,7 @@
 						  </tfoot>
 						</table>
 
-						<div class=""><button id="btnComprar" type="button" class="btn texto-boton text-white" style="background-color: rgba(74, 156, 128, 1)">Comprar</button></div>
+						
 					</div>
 
 					<template id="template-carrito">
@@ -198,11 +201,16 @@
 							<td class="font-weight-bold">$ <span>5000</span></td>
 							<tr></tr>
 					</template>
-					<!-- Termina cestaV2 -->
-
+					<!-- Termina cestaV2 -->				
 
 					<div class="boton">
-						<button type="button" class="btn btn-lg btn-block boton text-white d-flex hvr-fade"><span class="texto-boton">Consigue tu planta ideal</span><img src="assets/images/productos/plant.png" class="img-planta" alt="" /></button>
+						<button type="button" class="btn btn-lg btn-block boton text-white d-flex hvr-fade btnComprar text-align-center"><span class="texto-boton"> Comprar</span></button>
+					</div>
+
+					<br>	
+
+					<div class="boton">
+						<button type="button" class="btn btn-lg btn-block boton text-white d-flex hvr-fade "><span class="texto-boton">Consigue tu planta ideal</span><img src="assets/images/productos/plant.png" class="img-planta" alt="" /></button>
 					</div>
 					<div class="boton">
 						<button type="button" class="btn btn-lg btn-block boton text-white d-flex hvr-fade"><span class="texto-boton">Contacto</span><img src="assets/images/productos/sobre.png" class="img-sobre" alt="" /></button>
