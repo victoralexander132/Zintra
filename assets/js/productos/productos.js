@@ -20,11 +20,12 @@ fetch(urlProductos).then(resp => resp.json().then(datos => {
                         
                             <div class="card h-100 ml-auto mr-auto" >
                                 <img src="${infoProducto.url}" class="card-img-top" alt="..." />
-                                <div class="card-body color-card">
+                                <div class="card-body color-card ">
                                     <p class="card-text id">${producto.id}</p>
                                     <h5 class="card-title titulo">${infoProducto.nombre}</h5>
                                     <p class="card-text">${infoProducto.descripcion}</p>
                                     <p class="card-text precio">${infoProducto.precio}</p>
+                                    <button class="agregar">Agregar al carrito</button>
                                 </div>
                             </div>
                         
@@ -71,10 +72,11 @@ $items.addEventListener('click', e =>{
 //Si es clic en zona, obtiene los datos de la tarjeta
 const iniciaAdd = e => {
 
-    if (e.target.classList.contains('precio')){
+    if (e.target.classList.contains('agregar')){
 
         //Obtiene contenido de card
         generaCesta(e.target.parentElement)
+        console.log(e.target.parentElement) // **
     }
    
     e.stopPropagation()
