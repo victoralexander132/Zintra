@@ -39,6 +39,11 @@ body {
 	border-radius: 15px;
 }
 
+.msj-error{
+	margin: 0;
+	color: rgb(241, 98, 98);
+}
+
 @media screen and (min-height: 1000px) {
 .container.formulario{
 	height: 85vh;
