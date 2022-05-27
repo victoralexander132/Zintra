@@ -129,6 +129,7 @@ formulario.addEventListener('submit', (e) => {
 	if (Object.values(areValid).every((value) => value === true) && check) {
 		console.log('Enviado');
 		const datos = Object.fromEntries(new FormData(e.target));
+		localStorage.setItem('direccion', JSON.stringify(datos));
 		console.log(datos);
 		window.location.href = '/checkout.html';
 	} else {

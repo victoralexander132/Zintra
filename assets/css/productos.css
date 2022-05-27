@@ -108,4 +108,6 @@ a:active {
 	background-color: #5c8d89;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 	transition: all 0.3s ease;
+	border-radius: 15px;
+	padding: 16px;
 }
