@@ -4,5 +4,5 @@ $buscar.addEventListener('submit', (e) => {
 	e.preventDefault();
 	const busqueda = document.querySelector('input').value;
 	console.log(busqueda);
-	window.location.href = `busquedas.html?nombre=${busqueda}`; 
+	window.location.href = `busquedas.html?nombre=${busqueda}`;
 });

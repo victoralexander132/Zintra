@@ -47,6 +47,15 @@ const fragment = document.createDocumentFragment()
 
 const $btnComprar = document.getElementById('btnComprarr')
 
+$btnComprar.addEventListener('click', (e) => {
+   
+    console.log(document.querySelector('.totalC').textContent)
+
+    if (document.querySelector('.totalC').textContent.includes('$')){
+        window.location.href = '/direccion.html';    
+    }
+})
+
 
 //Espacio para agregar compras
 let cesta = {} 
@@ -57,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cesta = JSON.parse(localStorage.getItem('cesta'))
         //console.log(cesta)
         actualizaCesta()
-    }
+    } 
 })
 
 //Se escucha click de la tarjeta, o usar $cards es =
