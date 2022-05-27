@@ -75,8 +75,13 @@
 						</div>
 
 						<div class="progress" style="height: 25px">
+							<<<<<<< HEAD
 							<div class="progress-bar pro-bar-color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">DISEÑA</div>
 							<div class="progress-bar pro-bar-sincolor" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">DIRECCIÓN</div>
+							=======
+							<div class="progress-bar pro-bar-color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">ELIGE</div>
+							<div class="progress-bar pro-bar-sincolor" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">DIRECCIÓN</div>
+							>>>>>>> df1584e85955545417a1d1b9a95ffdeaa79fe968
 							<div class="progress-bar pro-bar-sincolor" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">FORMA DE PAGO</div>
 							<div class="progress-bar pro-bar-sincolor" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">CONFIRMACIÓN</div>
 						</div>
@@ -93,11 +98,9 @@
 					</div> -->
 					<div class="container p-3 mb-3 mt-3 cuad-rosa d-flex">
 						<div class="busqueda">
-							<div class="input-group">
-								<input type="text" class="form-control texto-boton" placeholder="Nombre del producto..." aria-label="Recipient's username" aria-describedby="button-addon2" />
-								<div class="input-group-append">
-									<button class="btn btn-outline-secondary texto-boton" type="button" id="button-addon2">Buscar</button>
-								</div>
+							<div class="input-group" id="boton-buscar">
+								<input type="text" class="form-control texto-boton" type="search" placeholder="Nombre del producto..." aria-describedby="button-addon2" />
+								<button class="btn btn-outline-secondary texto-boton" type="submit" id="button-addon2">Buscar</button>
 							</div>
 						</div>
 					</div>
@@ -146,7 +149,7 @@
 
 							<tfoot>
 								<tr id="footer">
-									<th scope="row" colspan="5">Carrito vacío - inicie compra</th>
+									<th scope="row" colspan="5" id="" class="">Carrito vacío - inicie compra</th>
 								</tr>
 							</tfoot>
 						</table>
@@ -182,22 +185,22 @@
 						<td>
 							<button class="btn btn-outline-danger btn-sm" id="vaciar-carrito">vaciar</button>
 						</td>
-						<td class="font-weight-bold">$ <span>5000</span></td>
+						<td class="font-weight-bold totalC">$ <span>5000</span></td>
 						<tr></tr>
 					</template>
 					<!-- Termina cestaV2 -->
 
 					<div class="boton">
-						<button type="button" class="btn btn-lg btn-block boton text-white d-flex hvr-fade btnComprar text-align-center"><span class="texto-boton"> Comprar</span></button>
+						<a id="btnComprarr" class="btn btn-lg btn-block boton text-white d-flex hvr-fade btnComprar" type="button" role="button"><span class="texto-boton">Comprar</span></a>
 					</div>
 
 					<br />
 
 					<div class="boton">
-						<button type="button" class="btn btn-lg btn-block boton text-white d-flex hvr-fade"><span class="texto-boton">Consigue tu planta ideal</span><img src="assets/images/productos/plant.png" class="img-planta" alt="" /></button>
+						<a class="btn btn-lg btn-block boton text-white d-flex hvr-fade" type="button" href="contacto.html" role="button"><span class="texto-boton">Contacto</span><img src="assets/images/productos/sobre.png" class="img-sobre" alt="" /></a>
 					</div>
 					<div class="boton">
-						<button type="button" class="btn btn-lg btn-block boton text-white d-flex hvr-fade"><span class="texto-boton">Contacto</span><img src="assets/images/productos/sobre.png" class="img-sobre" alt="" /></button>
+						<button type="button" class="btn btn-lg btn-block boton text-white d-flex hvr-fade"><span class="texto-boton">Consigue tu planta ideal</span><img src="assets/images/productos/plant.png" class="img-planta" alt="" /></button>
 					</div>
 					<div class="p-3 mb-3 boton texto-boton text-white d-flex hvr-fade" style="width: 100%">Envios a todo México <img src="assets/images/productos/lado-del-camion.png" class="img-camion img-fluid" alt="" /></div>
 				</div>
@@ -297,7 +300,7 @@
 		<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-		<script src=""></script>
-		<script src="assets/js/productos.js"></script>
+		<script src="assets/js/productos/buscador.js"></script>
+		<script src="assets/js/productos/productos.js"></script>
 	</body>
 </html>

@@ -21,6 +21,7 @@ fetch(urlProductos).then(resp => resp.json().then(datos => {
                                 <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.url}" />
                                 <div class="card-body color-card">
                                     <p class="card-text id" style="display:none">${producto.id}</p>
+                                    <p class="card-text src" style="display:none">${producto.url}</p>
                                     <h5 class="card-title titulo">${infoProducto.nombre}</h5>
                                     <p class="card-text">${infoProducto.descripcion}</p>
                                     <p class="card-text precio">${infoProducto.precio}</p>
@@ -44,6 +45,16 @@ const $templateFooter = document.getElementById('template-footer').content
 
 const fragment = document.createDocumentFragment()
 
+const $btnComprar = document.getElementById('btnComprarr')
+
+$btnComprar.addEventListener('click', (e) => {
+   
+    console.log(document.querySelector('.totalC').textContent)
+
+    if (document.querySelector('.totalC').textContent.includes('$')){
+        window.location.href = '/direccion.html';    
+    }
+})
 
 
 //Espacio para agregar compras
@@ -55,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cesta = JSON.parse(localStorage.getItem('cesta'))
         //console.log(cesta)
         actualizaCesta()
-    }
+    } 
 })
 
 //Se escucha click de la tarjeta, o usar $cards es =
@@ -63,9 +74,11 @@ $contenedorPadre.addEventListener('click', e => {
    iniciaAdd(e) 
 })
 
+//se escucha clic sobre item de cesta
 $items.addEventListener('click', e =>{
     modificaCantidades(e)
 })
+
 
 //Si es clic en zona, obtiene los datos de la tarjeta
 const iniciaAdd = e => {
@@ -88,9 +101,10 @@ const generaCesta = objeto => {
         id : objeto.querySelector('.id').textContent,
         nombre : objeto.querySelector('.titulo').textContent,
         precio : objeto.querySelector('.precio').textContent,
-        cantidad : 1
+        cantidad : 1,
+        url : objeto.querySelector('.src').textContent
     }
-    console.log(producto.url)
+    //console.log(producto.url)
 
     //si producto ya esta en la cesta, aumenta cantidad
     if (cesta.hasOwnProperty(producto.id)){
@@ -100,7 +114,6 @@ const generaCesta = objeto => {
     //Actualiza cesta (hace una copia de los datos del producto)
     cesta[producto.id] = {...producto}
     actualizaCesta()
-    
 }
 
 const actualizaCesta = () => {
@@ -135,6 +148,7 @@ const actualizaTotales = () => {
 
     if (Object.keys(cesta).length === 0){
 
+        
         $footer.innerHTML = `
                              <th scope="row" colspan="5">Carrito vacío - inicie compra</th>
             `
@@ -147,9 +161,6 @@ const actualizaTotales = () => {
     const nCantidad = Object.values(cesta).reduce((acumulador, {cantidad}) => acumulador + cantidad, 0)
     const nPrecio = Object.values(cesta).reduce((acumulador, {cantidad, precio}) => acumulador + cantidad * precio.replace(/[$]/g,''), 0)
 
-    console.log(nCantidad)
-    console.log(nPrecio)
-
     //pinta totales
     $templateFooter.querySelectorAll('td')[0].textContent = nCantidad;
     $templateFooter.querySelector('span').textContent = nPrecio.toFixed(2);
@@ -161,6 +172,7 @@ const actualizaTotales = () => {
     //
     const btnVaciar = document.getElementById('vaciar-carrito')
     btnVaciar.addEventListener('click', () => {
+        
         cesta = {}
         actualizaCesta()
     })
@@ -193,6 +205,10 @@ const modificaCantidades = e => {
 
     e.stopPropagation()
 }
+
+
+
+
 
 
 
