@@ -18,7 +18,7 @@ fetch(urlProductos).then(resp => resp.json().then(datos => {
         const template =  `
                         <div class="col mb-5 grow">
                             <div class="card h-100 ml-auto mr-auto" >
-                                <img src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.url}" />
+                                <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.url}" />
                                 <div class="card-body color-card">
                                     <p class="card-text id" style="display:none">${producto.id}</p>
                                     <h5 class="card-title titulo">${infoProducto.nombre}</h5>
@@ -53,7 +53,7 @@ let cesta = {}
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('cesta')){
         cesta = JSON.parse(localStorage.getItem('cesta'))
-        console.log(cesta)
+        //console.log(cesta)
         actualizaCesta()
     }
 })
@@ -74,7 +74,6 @@ const iniciaAdd = e => {
 
         //Obtiene contenido de card
         generaCesta(e.target.parentElement)
-        console.log(e.target.parentElement) // **
     }
    
     e.stopPropagation()
@@ -91,7 +90,7 @@ const generaCesta = objeto => {
         precio : objeto.querySelector('.precio').textContent,
         cantidad : 1
     }
-    console.log(producto)
+    console.log(producto.url)
 
     //si producto ya esta en la cesta, aumenta cantidad
     if (cesta.hasOwnProperty(producto.id)){
@@ -134,7 +133,7 @@ const actualizaCesta = () => {
 const actualizaTotales = () => {
     $footer.innerHTML = ''
 
-    if (Object.keys(cesta).length ===0){
+    if (Object.keys(cesta).length === 0){
 
         $footer.innerHTML = `
                              <th scope="row" colspan="5">Carrito vacío - inicie compra</th>
