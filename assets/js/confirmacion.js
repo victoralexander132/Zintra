@@ -5,37 +5,52 @@ document.querySelectorAll('.printbutton').forEach(function(element) {
 });
 
 const $mostrarDetalle = document.querySelector('.boton-detail')
+const $padredetalle  = document.getElementById('detalleProdd')
+let $padreDetalleTotales = document.getElementById('detalleTotales')
 
 
-const detalleCesta = {}
+let detalleCesta = {}
+
 $mostrarDetalle.addEventListener('click', e => {
     if (localStorage.getItem('cesta')){
-        cesta = JSON.parse(localStorage.getItem('cesta'))
-        console.log(cesta)
+        detalleCesta = JSON.parse(localStorage.getItem('cesta'))
+        console.log(detalleCesta)
+        actualizaDetalle()
     }
 })
 
 
-const actualizaDetalle = () => {
+let actualizaDetalle = () => {
 
-    //recorremos la coleccion, se usa object para poder usar foreach (un obj no puede recorrerse como array)
-    Object.values(cesta).forEach(producto => {
+    let numeroFila = 0
 
-        document.querySelector('th').textContent = producto.nombre
-        $templateCarrito.querySelectorAll('td')[0].textContent = producto.cantidad
-        $templateCarrito.querySelector('.btn-outline-success').dataset.id = producto.id
-        $templateCarrito.querySelector('.btn-outline-danger').dataset.id = producto.id
+    Object.values(detalleCesta).forEach(producto => {
 
-        const prec = producto.cantidad * producto.precio.replace(/[$]/g,'')
-        $templateCarrito.querySelector('span').textContent = prec.toFixed(2)
-        
-        const clone = $templateCarrito.cloneNode(true)
-        fragment.appendChild(clone)
+        numeroFila++
+
+        template = `
+            <tr>
+                <th scope="row">${numeroFila}</th>
+                <td><img src="assets/images/planTips/amarilloo.jpg" class="img-tabla"></td>
+                <td>${producto.nombre}</td>
+                <td>${producto.cantidad}</td>
+                <td>${producto.precio}</td>
+            </tr>
+            `
+        $padredetalle.innerHTML += template
     })
-    $items.appendChild(fragment)
 
-    actualizaTotales();
 
-    //guarda en localStorage
-    localStorage.setItem('cesta', JSON.stringify(cesta))
+    const nCantidad = Object.values(detalleCesta).reduce((acumulador, {cantidad}) => acumulador + cantidad, 0)
+    const nPrecio = Object.values(detalleCesta).reduce((acumulador, {cantidad, precio}) => acumulador + cantidad * precio.replace(/[$]/g,''), 0)
+
+    templatee = `
+                <tr>
+                    <th scope="row" colspan="3" class="text-center table-active">Total</th>
+					<th scope="row" colspan="1" class="text-center table-active">${nCantidad}</th>
+					<th scope="row" colspan="1" class="text-center table-active">${nPrecio.toFixed(2)}</th>
+                </tr>
+    `
+    $padreDetalleTotales.innerHTML += templatee
+    
 }
