@@ -54,6 +54,6 @@ formulario.addEventListener('submit', (e) => {
 	const datos = Object.fromEntries(new FormData(e.target));
 	console.log(datos);
 	} else {
-		console.log('No enviado');
+		document.querySelector(".alert-danger").style.display = "block"
 	}
 });
