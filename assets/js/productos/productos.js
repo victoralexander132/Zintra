@@ -44,8 +44,7 @@ const $templateFooter = document.getElementById('template-footer').content
 
 const fragment = document.createDocumentFragment()
 
-const $btnComprar = document.getElementById('btnComprar')
-
+const $btnComprar = document.getElementById('btnComprarr')
 
 
 //Espacio para agregar compras
@@ -70,14 +69,6 @@ $items.addEventListener('click', e =>{
     modificaCantidades(e)
 })
 
-
-$btnComprar.addEventListener('click', e => {
-    if ($items.innerHTML = ''){
-        alert("Carrito vacio, agrega productos!")
-    } else {
-        
-    }
-})
 
 //Si es clic en zona, obtiene los datos de la tarjeta
 const iniciaAdd = e => {
@@ -112,7 +103,6 @@ const generaCesta = objeto => {
     //Actualiza cesta (hace una copia de los datos del producto)
     cesta[producto.id] = {...producto}
     actualizaCesta()
-    
 }
 
 const actualizaCesta = () => {
