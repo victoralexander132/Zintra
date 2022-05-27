@@ -34,7 +34,7 @@ let actualizaDetalle = () => {
         template = `
             <tr>
                 <th scope="row">${numeroFila}</th>
-                <td><img src="assets/images/planTips/amarilloo.jpg" class="img-tabla"></td>
+                <td><img src="${producto.url}" class="img-tabla"></td>
                 <td>${producto.nombre}</td>
                 <td>${producto.cantidad}</td>
                 <td>${(producto.cantidad * producto.precio.replace(/[$]/g,'')).toFixed(2) }</td>

@@ -21,6 +21,7 @@ fetch(urlProductos).then(resp => resp.json().then(datos => {
                                 <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.url}" />
                                 <div class="card-body color-card">
                                     <p class="card-text id" style="display:none">${producto.id}</p>
+                                    <p class="card-text src" style="display:none">${producto.url}</p>
                                     <h5 class="card-title titulo">${infoProducto.nombre}</h5>
                                     <p class="card-text">${infoProducto.descripcion}</p>
                                     <p class="card-text precio">${infoProducto.precio}</p>
@@ -91,9 +92,10 @@ const generaCesta = objeto => {
         id : objeto.querySelector('.id').textContent,
         nombre : objeto.querySelector('.titulo').textContent,
         precio : objeto.querySelector('.precio').textContent,
-        cantidad : 1
+        cantidad : 1,
+        url : objeto.querySelector('.src').textContent
     }
-    console.log(producto.url)
+    //console.log(producto.url)
 
     //si producto ya esta en la cesta, aumenta cantidad
     if (cesta.hasOwnProperty(producto.id)){
