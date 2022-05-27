@@ -37,7 +37,7 @@ let actualizaDetalle = () => {
                 <td><img src="assets/images/planTips/amarilloo.jpg" class="img-tabla"></td>
                 <td>${producto.nombre}</td>
                 <td>${producto.cantidad}</td>
-                <td>${producto.precio}</td>
+                <td>${(producto.cantidad * producto.precio.replace(/[$]/g,'')).toFixed(2) }</td>
             </tr>
             `
         $padredetalle.innerHTML += template

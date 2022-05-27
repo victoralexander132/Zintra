@@ -44,6 +44,8 @@ const $templateFooter = document.getElementById('template-footer').content
 
 const fragment = document.createDocumentFragment()
 
+const $btnComprar = document.getElementById('btnComprar')
+
 
 
 //Espacio para agregar compras
@@ -63,8 +65,18 @@ $contenedorPadre.addEventListener('click', e => {
    iniciaAdd(e) 
 })
 
+//se escucha clic sobre item de cesta
 $items.addEventListener('click', e =>{
     modificaCantidades(e)
+})
+
+
+$btnComprar.addEventListener('click', e => {
+    if ($items.innerHTML = ''){
+        alert("Carrito vacio, agrega productos!")
+    } else {
+        
+    }
 })
 
 //Si es clic en zona, obtiene los datos de la tarjeta
@@ -135,6 +147,7 @@ const actualizaTotales = () => {
 
     if (Object.keys(cesta).length === 0){
 
+        
         $footer.innerHTML = `
                              <th scope="row" colspan="5">Carrito vacío - inicie compra</th>
             `
@@ -147,9 +160,6 @@ const actualizaTotales = () => {
     const nCantidad = Object.values(cesta).reduce((acumulador, {cantidad}) => acumulador + cantidad, 0)
     const nPrecio = Object.values(cesta).reduce((acumulador, {cantidad, precio}) => acumulador + cantidad * precio.replace(/[$]/g,''), 0)
 
-    console.log(nCantidad)
-    console.log(nPrecio)
-
     //pinta totales
     $templateFooter.querySelectorAll('td')[0].textContent = nCantidad;
     $templateFooter.querySelector('span').textContent = nPrecio.toFixed(2);
@@ -161,6 +171,7 @@ const actualizaTotales = () => {
     //
     const btnVaciar = document.getElementById('vaciar-carrito')
     btnVaciar.addEventListener('click', () => {
+        
         cesta = {}
         actualizaCesta()
     })
@@ -193,6 +204,10 @@ const modificaCantidades = e => {
 
     e.stopPropagation()
 }
+
+
+
+
 
 
 
