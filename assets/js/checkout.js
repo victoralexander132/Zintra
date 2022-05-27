@@ -81,9 +81,9 @@ inputs.forEach((input) => {
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 	if (Object.values(areValid).every((value) => value === true)) {
-		console.log('Enviado');
+		//console.log('Enviado');
 		const datos = Object.fromEntries(new FormData(e.target));
-		console.log(datos);
+		//console.log(datos);
 		window.location.href = '/confirmacion.html';
 	} else {
 		console.log('No enviado');

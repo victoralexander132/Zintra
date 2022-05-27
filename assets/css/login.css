@@ -12,13 +12,15 @@ body {
 	background-color: rgba(255, 255, 255, 0.9);
 	width: 50%;
 	/* margin-top: 10vh; */
-	padding: 10% 3%;
+	padding: 4% 3%;
 	border-radius: 30px;
 	text-align: center;
 	align-content: center;
 	margin-top: 5vh;
 	margin-bottom: 6vh;
 	height: 80vh;
+	
+	
 }
 .cont_trans{
 	margin: 0px;
@@ -61,6 +63,22 @@ footer {
 
 .bi {
 	color: white;
+}
+
+form button {
+	color: white;
+	padding: 1rem 3rem;
+	border: none;
+	border-radius: 6px;
+	background-color: var(--primary);
+}
+
+form button:hover {
+	background-color: var(--principal);
+}
+
+.formulario__grupo-correcto .formulario__validacion-estado{
+	color: green;
 }
 
 @media (max-width: 576px) {
