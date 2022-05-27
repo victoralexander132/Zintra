@@ -1,7 +1,7 @@
 const expresiones = {
 	usuario: /^[a-zA-Z0-9_-]{4,16}$/, // Letras, numeros, guion y guion_bajo
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	card: /^[0-9]{16,20}$/,
+	card: /^[0-9]{16}$/,
 	mm: /(0[1-9]|1[0-2])/,
 	yy: /2[2-9]|[3-9][0-9]/,
 	cvc: /^[0-9]{3,4}$/,
@@ -9,7 +9,7 @@ const expresiones = {
 	password: /^.{4,12}$/, // 4 a 12 digitos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{7,14}$/, // 7 a 14 numeros.
-	address: /^[a-zA-ZÀ-ÿ\s0-9,.-#]{1,80}$/,
+	address: /^[a-zA-ZÀ-ÿ\s0-9,.\-#]{1,80}$/,
 };
 
 const formulario = document.querySelector('form');
@@ -108,7 +108,7 @@ inputs.forEach((input) => {
 				break;
 
 			case 'referencias':
-				if (expresiones.nombre.test(e.target.value)) {
+				if (expresiones.address.test(e.target.value)) {
 					$valReferencias.textContent = '';
 					areValid.referencias = true;
 				} else {
@@ -129,6 +129,7 @@ formulario.addEventListener('submit', (e) => {
 	if (Object.values(areValid).every((value) => value === true) && check) {
 		console.log('Enviado');
 		const datos = Object.fromEntries(new FormData(e.target));
+		localStorage.setItem('direccion', JSON.stringify(datos));
 		console.log(datos);
 		window.location.href = '/checkout.html';
 	} else {
