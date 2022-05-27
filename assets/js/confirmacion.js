@@ -22,6 +22,9 @@ $mostrarDetalle.addEventListener('click', e => {
 
 let actualizaDetalle = () => {
 
+    $padredetalle.innerHTML = ''
+    $padreDetalleTotales.innerHTML = ''
+
     let numeroFila = 0
 
     Object.values(detalleCesta).forEach(producto => {
