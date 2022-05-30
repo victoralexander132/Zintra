@@ -53,42 +53,41 @@
 <!-- Login -->
         <div class="loginPantalla cont_trans">
 			<div class="login container-fluid">
-        	 <form class=>
-				 
-
-                        <p>Bienvenido a ZINTRA</p>
-                        <h2>Iniciar Sesión</h2>
+        	 	<form action="#">
+				 <p style="font-size: 2ch;">Bienvenido a ZINTRA</p>
+                    <h2 style="font-size: 3ch;">Iniciar Sesión</h2>
                         <div>
                             <div class="btn-group-toggle" >
                                 <label class="btn  btn-light btn-lg">
-									<img src="assets/images/login/google.png" alt="">
-                                  <input type="radio" name="options" id="option1" checked> con Google
+									<img src="assets/images/login/google2.png" alt="">
+                                  <input type="radio" name="options" id="option1">
                                 </label>
                                 <label class="btn btn-light btn-lg">
-									<img src="assets/images/login/Facebook.png" alt="">
+									<img src="assets/images/login/Facebook2.png" alt="">
                                   <input type="radio" name="options" id="option2">
                                 </label>
                                 <label class="btn btn-light btn-lg">
-									<img src="assets/images/login/apple.png" alt="">
+									<img src="assets/images/login/apple2.png" alt="">
                                   <input type="radio" name="options" id="option3">
                                 </label>
                               </div>
-							  
-
-                        </div>
-                         <div class="form-group">
-                           <label for="inputAddress">Ingresa tu correo electrónico</label>
-                           <input type="text" class="form-control formulario" id="inputAddress" placeholder="Correo Electrónico">
-                         </div>
-                         <div class="form-group">
-                           <label for="inputAddress2">Ingresa tu contraseña</label>
-                           <input type="text" class="form-control formulario" id="inputAddress2" placeholder="Contraseña">
-                         </div>
-                         <div class="form-group">
-                         </div>
-						 <button type="submit" class="btn btn-success btn-lg btn-block">Ingresar</button>
-						 <br>
-						 <div class="text-center">
+							  <br>
+							</div>
+                         	<div class="form-group">
+								<label label for="inputAddress">Ingresa tu correo Electrónico</label>
+								<input type="text" class="form-control formulario" id="inputAddress" id="email" name="email" placeholder="Escribe tu correo electrónico">
+							 <p class="msj-Contraseñaa" style="color: red;" id="errorEmail"></p>
+                         	</div>
+                         	<div class="form-group">
+								<label for="inputAddress2">Ingresa tu contraseña</label>
+								<input type="password" class="form-control formulario " id="inputAddress2" id="inputPassword4" id="password"  name="password" placeholder="Contraseña">
+							  	<p class="msj-Contraseña Incorrecta" style="color: red;" id="errorPassword"></p>
+                         	</div>
+                         	<div class="form-group">
+                         	</div>
+						 	<div class="btns btn-lg btn-block"><button>Ingresar</button></div>
+						 	<br>
+						 	<div class="text-center">
 							<p><p> ¿No tienes cuenta? </p></p> 
 							 <a href="http://127.0.0.1:5502/registro.html">Regístrate</a>
 						 </div>
@@ -111,7 +110,7 @@
 		</footer>
 		
 
-    
+		<script src="assets/js/Login.js"></script>
 
 		<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

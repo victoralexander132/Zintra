@@ -1,8 +1,8 @@
-const $buscar = document.getElementById('boton-buscar');
+const $buscar = document.getElementById('button-addon2');
+console.log($buscar);
 
-$buscar.addEventListener('submit', (e) => {
-	e.preventDefault();
-	const busqueda = document.querySelector('input').value;
-	console.log(busqueda);
-	window.location.href = `busquedas.html?nombre=${busqueda}`;
+// Escuchar el click del botón de búsqueda y recuperar el texto
+$buscar.addEventListener('click', (e) => {
+	const $input = document.querySelector('.container input').value;
+	console.log($input);
 });
