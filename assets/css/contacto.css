@@ -14,23 +14,34 @@ body {
 
 /* ESTILOS BODY */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 .card {
 	background-color: rgba(255, 255, 255, 0.9);
 	border-radius: 15px;
 }
-=======
->>>>>>> 5d03786fbf4ca356adec6a92f48cc12155db8605
-/* .container.form{
-	height: 100vh;
-} */
+
+
+
+
+.btn-contact{
+	color: white;
+	border-radius: 3px;
+	background-color: #5c8d89;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+	transition: all 0.3s ease;
+}
+
+
 	
 
 .card{
 	background-color: rgba(255, 255, 255, 0.9);
 	border-radius: 15px;
+}
+
+.msj-error{
+	margin: 0;
+	color: rgb(241, 98, 98);
 }
 
 @media screen and (min-height: 1000px) {
@@ -68,13 +79,8 @@ body {
 } */
 
 /* ESTILOS FOOTER */
-<<<<<<< HEAD
-=======
+
 .card {
 	background-color: rgba(255, 255, 255, 0.9);
 	border-radius: 15px;
 }
->>>>>>> 3483566244f4f28091ee6af4ba29bb7aff3703e1
-=======
->>>>>>> 7851fd37e08ca585595b070c5bf01be1592db8e7
->>>>>>> 5d03786fbf4ca356adec6a92f48cc12155db8605

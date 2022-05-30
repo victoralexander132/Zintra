@@ -60,30 +60,36 @@
 								<label for="">Nombre</label>
 							</div>
 							<div class="col-md-9 pb-4">
-								<input type="text" class="form-control" placeholder="Tu nombre completo" />
+								<input name= "nombre" type="text" class="form-control" placeholder="Tu nombre completo" />
+							<p class="msj-error" id="errorNombre"></p>
 							</div>
 							<div class="col-md-3">
-								<label for="">E-mail</label>
+								<label for="">E-mail</label>							
 							</div>
 							<div class="col-9 pb-4">
-								<input type="email" class="form-control" placeholder="ejemplo@outlook.com">
+								<input name= "email" type="email" class="form-control" placeholder="ejemplo@outlook.com">
 							</div>
 							<div class="col-md-3">
 								<label for="">Asunto</label>
 							</div>
 							<div class="col-md-9 pb-4">
-								<input type="text" class="form-control" placeholder="Asunto" />
+								<input name="asunto" type="text" class="form-control" placeholder="Asunto" />
+								<p class="msj-error" id="errorAsunto"></p>
 							</div>
 							<div class="col-md-3">
 								<label for="">Mensaje</label>
 							</div>
 							<div class="col-md-9 pb-4">
-								<textarea placeholder="Escribe tu mensaje aqui" class="form-control" cols="30" rows="5"></textarea>
+								<textarea name= "mensaje" placeholder="Escribe tu mensaje aqui" class="form-control" cols="30" rows="5"></textarea>
+								<p class="msj-error" id="errorMensaje"></p>
 							</div>
 							<div class="col-sm-12">
 								<div class="d-flex justify-content-end pb-4">
-									<button class="btn text-white btn-contact input-rounded px-5" style="background-color: rgba(74, 156, 128, 1)">Enviar</button>
+									<button type= submit class="btn text-white btn-contact input-rounded px-5">Enviar</button>
 								</div>
+							</div>
+							<div class="alert alert-danger d-none" role="alert">
+								Por favor ingresa los datos correctamente.
 							</div>
 						</form>
 					</div>
