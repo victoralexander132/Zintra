@@ -1,9 +1,9 @@
 [
     {
         "id" : "1",
-        "nombre" : "A-round",
+        "nombre" : "A-round azul",
         "modelo" : ["A-round"], 
-        "descripcion" : "Contenedor A-round azul multiusos.",
+        "descripcion" : "Contenedor A-round multiusos.",
         "precio" : "$99.99",
         "tamanio" : ["Pequeño"],
         "color" : ["Azul"],
@@ -12,7 +12,7 @@
     },
     {
         "id" : "2",
-        "nombre" : "A-round",
+        "nombre" : "A-round azul con nopales",
         "modelo" : ["A-round"], 
         "descripcion" : "Contenedor A-round azul multiusos.",
         "precio" : "$99.99",
@@ -23,7 +23,7 @@
     },
     {
         "id" : "3",
-        "nombre" : "A-round",
+        "nombre" : "A-round rosa con suculentas",
         "modelo" : ["A-round"], 
         "descripcion" : "Contenedor A-round rosa multiusos.",
         "precio" : "$99.99",
@@ -34,7 +34,7 @@
     },
     {
         "id" : "4",
-        "nombre" : "Conjunto 1",
+        "nombre" : "conjunto 1 ",
         "modelo" : ["A-round", "Ziklos", "Plane"], 
         "descripcion" : "Conjunto A-round, ziklos y plane (base) multiusos.",
         "precio" : "$99.99",
