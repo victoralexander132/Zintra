@@ -1,21 +1,10 @@
-body {
-	margin-bottom: 10vh;
-}
-
-a:hover {
+.work-logos i:hover {
 	color: rgb(99, 99, 99);
-	background-color: transparent;
-	text-decoration: none;
 }
 
-.grow {
-	transition: all 0.2s ease-in-out;
-}
-
-.grow:hover,
-.grow:focus,
-.grow:active {
-	transform: scale(1.1);
+.bi-github,
+.bi-linkedin {
+	color: black;
 }
 
 .pantalla {
@@ -47,41 +36,14 @@ a:hover {
 	font-weight: 700;
 }
 
-a {
-	color: black;
-	background-color: transparent;
-	text-decoration: none;
+.cuadro h2 {
+	font-family: 'Satisfy', cursive;
+	font-size: 5rem;
 }
 
-.cuadro-info {
-	/* background-color: rgba(243, 164, 107, 0.87); */
-	border-radius: 20px;
-	color: rgba(92, 141, 137, 1);
-	width: 30vw;
-	height: 30vh;
-	display: flex;
-	text-align: center;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.img-card {
-	width: 50%;
-	position: absolute;
-	top: 70%;
-	border-radius: 50%;
-	margin-top: 20px;
-	align-self: flex-start;
-}
-
-#title-zintra {
-	font-size: 54pt;
-}
-
-.card {
-	margin: 100px auto 0;
-	width: 30vw;
+.about .card {
+	margin: 50px auto 0;
+	width: 100%;
 	height: 80vh;
 	perspective: 1000px;
 	border: none;
@@ -98,9 +60,6 @@ a {
 .card__inner.is-flipped {
 	transform: rotateY(180deg);
 }
-.flip {
-	z-index: 50;
-}
 
 .card__face {
 	position: absolute;
@@ -114,24 +73,40 @@ a {
 }
 
 .card__face--front {
-	background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+	/* background-image: linear-gradient(to bottom right, var(--primary), var(--secondary)); */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
 }
 
 .card__face--front h2 {
+	font-weight: 600;
 	color: #fff;
-	font-size: 1.5em;
+	font-size: 4.5rem;
 	margin-top: auto;
 	margin-bottom: auto;
 }
 
 .card__face--front button {
 	display: block;
-	font-size: 1.5em;
-	margin-bottom: 50px;
+	margin-bottom: 5px;
+	border-radius: 50%;
+	border: none;
+	color: black;
+	font-weight: 100;
+	background-color: white;
+}
+
+.card__face--front button:hover {
+	color: rgba(0, 0, 0, 0.2);
+}
+
+.card__face--front .sabermas {
+	font-size: 3rem;
+	font-weight: 600;
+	margin-top: 0;
 }
 
 .card__face--back {
@@ -157,15 +132,27 @@ a {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
 	z-index: -1;
 	border-radius: 0px 0px 50% 0px;
 }
 
+.naranja::after {
+	background-color: #f8a370;
+}
+.azul::after {
+	background-color: #b5ded9;
+}
+.amarillo::after {
+	background-color: #faea98;
+}
+.morado::after {
+	background-color: #b49fcc;
+}
+
 .pp {
 	display: block;
-	width: 30%;
-	height: 30%;
+	width: 25%;
+	height: 25%;
 	margin: 0 auto 30px;
 	border-radius: 50%;
 	background-color: #fff;
@@ -182,22 +169,18 @@ a {
 }
 
 .card__body {
-	overflow: scroll;
-	display: flex;
-	max-height: 55%;
-	min-height: 40%;
-	flex-direction: column;
-	padding: 30px 30px 0;
-	align-items: center;
-	justify-content: baseline;
+	height: 65%;
+	display: grid;
+	gap: 10px;
+	grid-template-rows: auto auto 4fr auto;
+	padding: 15px 10px 0;
 }
 
 .card__body h3 {
 	color: var(--dark);
 	text-align: center;
 	font-size: 24px;
-	font-weight: 600;
-	margin-bottom: 15px;
+	font-weight: 400;
 }
 
 .work-logos {
@@ -209,78 +192,103 @@ a {
 }
 
 .card__body p {
-	margin-top: auto;
-	margin-bottom: auto;
+	text-align: justify;
+	overflow: auto;
+	place-content: center;
 	color: var(--dark);
-	font-size: 18px;
+	font-size: 1.2rem;
 	line-height: 1.4;
 }
 
 /* CSS */
-.button-37 {
-	background-color: #13aa52;
-	border: 1px solid #13aa52;
-	border-radius: 4px;
-	box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
-	box-sizing: border-box;
-	color: #fff;
-	cursor: pointer;
-	font-family: 'Akzidenz Grotesk BQ Medium', -apple-system, BlinkMacSystemFont, sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	outline: none;
-	outline: 0;
-	padding: 10px 25px;
-	text-align: center;
-	transform: translateY(0);
-	transition: transform 150ms, box-shadow 150ms;
-	user-select: none;
-	-webkit-user-select: none;
-	touch-action: manipulation;
+
+.about .boton {
+	display: flex;
+	justify-content: center;
+	align-content: center;
 }
 
-.button-37:hover {
-	box-shadow: rgba(0, 0, 0, 0.15) 0 3px 9px 0;
-	transform: translateY(-2px);
+.btn {
+	display: inline;
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;
+	padding: 0;
+	font-size: 3rem;
 }
 
-@media (min-width: 768px) {
-	.button-37 {
-		padding: 10px 30px;
+/* Darker background on mouse-over */
+.btn:hover {
+	color: rgba(0, 0, 0, 0.2);
+}
+
+/* ================ MEDIA QUERIES ================ */
+@media only screen and (max-width: 1199.98px) {
+	.about .card {
+		height: 60vh;
+	}
+	.about .card__body {
+		height: 60%;
 	}
 }
 
-@media screen and (max-width: 1200px) {
-	.card {
-		width: 48vw;
-	}
-	.card__body {
-		position: inherit;
-	}
-}
-
-@media screen and (max-width: 991px) {
-	body {
-		margin-bottom: 20vh;
-	}
+@media only screen and (max-width: 991.98px) {
 	.cuadro {
 		flex-direction: column;
 		justify-content: center;
-		font-size: 8pt;
-	}
-
-	.card {
-		width: 90vw;
-	}
-
-	.card__body {
-		padding: 5px;
+		font-size: 18px;
 	}
 
 	.cuadro-info {
 		width: 100%;
 	}
-	#title-zintra {
-		font-size: 40pt;
+	.cuadro h2 {
+		font-size: 30pt;
+	}
+
+	.about .card {
+		height: 60vh;
+	}
+	.about .card__body {
+		height: 48%;
 	}
 }
+
+@media screen and (max-width: 767.98px) {
+	.about .card {
+		height: 60vh;
+	}
+	.about .card__body {
+		height: 58%;
+	}
+	.cuadro {
+		height: 80vh;
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 575.98px) {
+	.about .card {
+		height: 90vh;
+	}
+	.about .card__body {
+		height: 60%;
+	}
+	.cuadro {
+		height: 70vh;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.about .card {
+		height: 100vh;
+	}
+	.about .card__body {
+		height: 65%;
+	}
+	.cuadro {
+		font-size: 10px;
+	}
+}
+
+/* ================ MEDIA QUERIES ================ */

@@ -7,34 +7,31 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	height: 100vh;
-}
-
-.img-logo {
-	width: 100px;
-	height: 50px;
-	object-fit: contain;
-	object-position: center;
-}
-
-.img-person {
-	width: 40px;
-	height: 50px;
-	margin-left: 1vw;
-	object-fit: contain;
-	object-position: center;
-}
-
-.img-contacto {
-	width: 40px;
-	height: 50px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 /* ESTILOS BODY */
 
-.container.form{
-	height: 100vh;
+
+.card {
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 15px;
 }
+
+
+
+
+.btn-contact{
+	color: white;
+	border-radius: 3px;
+	background-color: #5c8d89;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+	transition: all 0.3s ease;
+}
+
+
 	
 
 .card{
@@ -42,11 +39,27 @@ body {
 	border-radius: 15px;
 }
 
-@media screen and (max-width:500px) {
-.card{
-	height: calc(24px-);
+.msj-error{
+	margin: 0;
+	color: rgb(241, 98, 98);
+}
+
+@media screen and (min-height: 1000px) {
+.container.formulario{
+	height: 85vh;
+	display: flex;
+	align-items:center;
+	margin-top: auto;	
 }
 }
+
+@media screen and (min-width: 1000px) {
+.container.formulario{
+		height: 85vh;
+		display: flex;
+		align-items:center;
+		margin-top: auto;
+}}
 /* .form-pantalla {
 	background-color: rgba(255, 255, 255, 0.9);
 	width: 40%;
@@ -66,3 +79,8 @@ body {
 } */
 
 /* ESTILOS FOOTER */
+
+.card {
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 15px;
+}
