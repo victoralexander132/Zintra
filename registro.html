@@ -54,7 +54,7 @@
 
 <div class="loginPantalla">
     <div class="login container-fluid">
-     <form class=>
+     <form action="#">
          <h2>Regístrate</h2>
                 <div class="">
                     <div class="btn-group-toggle" >
@@ -72,32 +72,33 @@
                         </label>
                       </div>
 					  <br>
-                      
-
                 </div>
-                 <div class="form-group">
-                   <label for="inputAddress">Ingresa tu correo Electrónico</label>
-                   <input type="text" class="form-control formulario" id="inputAddress" placeholder="Escribe tu correo electrónico">
-                 </div>
-                 <div class="form-group">
-					<div class="form-row">
+                 		<div class="form-group">
+                   			<label label for="inputAddress">Ingresa tu correo Electrónico</label>
+                   			<input type="text" class="form-control formulario" id="inputAddress" id="email" name="email" placeholder="Escribe tu correo electrónico">
+							<p class="msj-error" style="color: red;" id="errorEmail"></p>
+                 		</div>
+                 		<div class="form-group">
+						<div class="form-row">
 						<div class="form-group col-md-6">
-						  <label for="inputEmail4">Ingresar tu Usuario</label>
-						  <input type="text" class="form-control" id="inputEmail4" placeholder="Usuario">
+						  	<label for="inputEmail4">Ingresar tu Usuario</label>
+						  	<input type="text" class="form-control" id="inputEmail4" id="nombre" name="nombre" placeholder="Usuario">
+							<p class="msj-error" style="color: red;" id="errorNombre"></p>
 						</div>
 						<div class="form-group col-md-6">
 						  <label for="inputPassword4">Ingresa tu teléfono</label>
-						  <input type="text" class="form-control" id="inputPassword4" placeholder="Teléfono">
+						  <input type="text" class="form-control" id="inputPassword4" id="tel" name="telefono" placeholder="Teléfono">
+						  <p class="msj-error" style="color: red;" id="errorTelefono"></p>
 						</div>
-                  </div>
-                 <div class="form-group">
-                   <label for="inputAddress2">Ingresa tu contraseña</label>
-                   <input type="text" class="form-control formulario" id="inputAddress2" placeholder="Contraseña">
-                 </div>
-                 <div class="form-group">
-                 </div>
-                 <button type="submit" class="btn btn-success btn-lg btn-block">Regístrate</button>
-                 
+                  		</div>
+                 		<div class="form-group">
+                   			<label for="inputAddress2">Ingresa tu contraseña</label>
+                  			<input type="password" class="form-control formulario " id="inputAddress2" id="inputPassword4" id="password"  name="password" placeholder="Contraseña">
+							<p class="msj-error" style="color: red;" id="errorPassword"></p>
+                 		</div>
+                 		<div class="form-group">
+                 		</div>
+                 		<div class="btns colorboton btn-lg btn-block"><button>Registrar</button></div>         
      </form>
     </div>    
 </div>
@@ -117,7 +118,7 @@
 </footer>
 
 
-
+<script src="assets/js/Registro.js"></script>
 
 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

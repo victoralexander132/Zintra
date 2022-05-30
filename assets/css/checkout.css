@@ -163,3 +163,9 @@ form button {
 form button:hover {
 	background-color: var(--principal);
 }
+
+.msj-error {
+	position: absolute;
+	margin: 0;
+	color: rgb(241, 98, 98);
+}
