@@ -48,7 +48,7 @@ $btnComprar.addEventListener('click', (e) => {
 	console.log(document.querySelector('.totalC').textContent);
 
 	if (document.querySelector('.totalC').textContent.includes('$')) {
-		window.location.href = '/direccion.html';
+		window.location.href = './direccion.html';
 	}
 });
 
