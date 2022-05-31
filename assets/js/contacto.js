@@ -94,13 +94,17 @@ textareaContacto.addEventListener("input",(e)=>{
     }    
 })
 
-
 formularioContacto.addEventListener("submit",(e)=>{
 	e.preventDefault();
     console.log(Object.values(statusInf));
 	//console.log(Object.values(statusInf).includes(false));
-	if(!(Object.values(statusInf).includes(false))){
-    	alert("Enviado") 
+	if((true)){
+
+		let modal = document.getElementById("exampleModalCenter");
+		console.log(modal);
+
+
+    	alert("Enviado") //modificar para cambiar display: none;
 		
 		const datos = Object.fromEntries(
 			new FormData(e.target)
