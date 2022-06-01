@@ -83,10 +83,8 @@ $filtros.forEach((filtro) => {
                     $contenedorPadre.innerHTML += template
                 }
             })
-    
             //document.getElementById('tipo').value = 'Selecciona un modelo ...'
         }))	
-
     })
 })
 
