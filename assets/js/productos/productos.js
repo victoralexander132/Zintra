@@ -35,10 +35,63 @@ fetch(urlProductos).then(resp => resp.json().then(datos => {
 }))
 
 
+// Hace filtro doble pero no excluyente (ultimo intento)
+const $opcionSeleccion = document.getElementById('tipo')
+const $filtros = document.querySelectorAll('select')
+
+$filtros.forEach((filtro) => {
+
+    filtro.addEventListener('change', () => {
+
+        console.log(document.getElementById('tipo').value)
+        console.log(document.getElementById('color').value)
+
+        fetch(urlProductos).then(resp => resp.json().then(datos => {
+
+            const arrProductos = datos
+            $contenedorPadre.innerHTML = ''
+    
+            arrProductos.forEach(producto => {  
+        
+                if (producto.nombre.includes(document.getElementById('tipo').value) || producto.color.includes(document.getElementById('color').value)){
+                    
+                    console.log(producto.color)
+
+                    const infoProducto = {
+                        id : producto.id,
+                        nombre : producto.nombre,
+                        descripcion : producto.descripcion,
+                        precio : producto.precio,
+                        url : producto.url
+                    }
+            
+                    const template =  `
+                                    <div class="col mb-5 grow">
+                                        <div class="card h-100 ml-auto mr-auto" >
+                                            <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.url}" />
+                                            <div class="card-body color-card">
+                                                <p class="card-text id" style="display:none">${producto.id}</p>
+                                                <p class="card-text src" style="display:none">${producto.url}</p>
+                                                <h5 class="card-title titulo">${infoProducto.nombre}</h5>
+                                                <p class="card-text">${infoProducto.descripcion}</p>
+                                                <p class="card-text precio">${infoProducto.precio}</p>
+                                                <button class="agregar">Agregar al carrito</button></div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                        `
+                    $contenedorPadre.innerHTML += template
+                }
+            })
+    
+            //document.getElementById('tipo').value = 'Selecciona un modelo ...'
+        }))	
+
+    })
+})
 
 
-
-
+/*
 // Hace filtro unico directo con option (segundo intento)
 $opcionSeleccion.addEventListener('change', () =>{
     
@@ -81,6 +134,7 @@ $opcionSeleccion.addEventListener('change', () =>{
         //document.getElementById('tipo').value = 'Selecciona un modelo ...'
     }))	
 })
+*/
 
 
 
