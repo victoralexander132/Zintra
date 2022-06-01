@@ -100,8 +100,26 @@
 					<div class="container p-3 mb-3 mt-3 cuad-rosa d-flex">
 						<div class="busqueda">
 							<div class="input-group" id="boton-buscar">
-								<input type="text" class="form-control texto-boton" type="search" placeholder="Nombre del producto..." aria-describedby="button-addon2" />
-								<button class="btn btn-outline-secondary texto-boton" type="submit" id="button-addon2">Buscar</button>
+								<form>
+									<!-- <input type="text" class="form-control texto-boton" type="search" placeholder="Nombre del producto..." aria-describedby="button-addon2" id="input-search"> -->
+
+									<div class="form-group ">
+										<label for="tipo">Tipo de Ziclik</label>
+										<select id="tipo" class="form-control texto-boton">
+											<option disabled selected>Selecciona un modelo ...</option>
+											<option>Kubik</option>
+											<option>Ziclik</option>
+											<option>A - Round</option>
+											<option>Sunny</option>
+											<option>Ziklos</option>
+											<option>Plane</option>
+											<option>Conjunto</option>
+										</select>
+									</div>
+
+									<button class="btn btn-outline-secondary texto-boton" type="submit" id="button-addon2">Buscar</button>
+								</form>
+
 							</div>
 						</div>
 					</div>
