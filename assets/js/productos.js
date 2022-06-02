@@ -16,7 +16,7 @@ fetch(urlProductos).then((resp) =>
 			const template = `
                         <div class="col mb-5 grow">
                             <div class="card h-100 ml-auto mr-auto" >
-                                <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.url}" />
+                                <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.descripcion}" />
                                 <div class="card-body color-card">
                                     <p class="card-text id" style="display:none">${producto.id}</p>
                                     <p class="card-text src" style="display:none">${producto.url}</p>
@@ -32,7 +32,6 @@ fetch(urlProductos).then((resp) =>
 		});
 	})
 );
-
 
 
 // Hace filtro doble pero no excluyente (ultimo intento)
@@ -128,14 +127,10 @@ $opcionSeleccion.addEventListener('change', () =>{
                 $contenedorPadre.innerHTML += template
             }
         })
-
         //document.getElementById('tipo').value = 'Selecciona un modelo ...'
     }))	
 })
 */
-
-
-
 
 /* 
 // Hace filtro con boton submit del formulario (primer intento)
@@ -160,8 +155,6 @@ $form.addEventListener('submit', (e) => {
                     precio : producto.precio,
                     url : producto.url
                 }
-
-                console.log(infoProducto)
         
                 const template =  `
                                 <div class="col mb-5 grow">
@@ -181,18 +174,10 @@ $form.addEventListener('submit', (e) => {
                 $contenedorPadre.innerHTML += template
             }
         })
-
         document.getElementById('tipo').value = 'Selecciona un modelo ...'
-        
     }))	
 })
  */
-
-
-
-
-
-
 
 const $cards = document.getElementById('cards');
 const $items = document.getElementById('items');
