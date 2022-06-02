@@ -28,6 +28,7 @@
 	top: 20%;
 	padding: 1rem;
 	border-radius: 50px;
+	overflow: scroll;
 }
 
 .names-info {
@@ -259,6 +260,7 @@
 	
 }
 
+
 @media screen and (max-width: 575.98px) {
 	.about .card {
 		height: 90vh;
@@ -280,9 +282,6 @@
 	}
 	.about .card__body {
 		height: 65%;
-	}
-	.cuadro{
-		overflow: scroll;
 	}
 	.cuadro p{
 		font-size: 0.8rem;
