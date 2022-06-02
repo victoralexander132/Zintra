@@ -1,15 +1,15 @@
-const busquedaInf = window.location.href.split('=').pop().substring(1);
+const modeloUsuario = window.location.href.split('=').pop().substring(1);
 const urlProductos = 'assets/api/db.json';
 const $contenedorPadre = document.getElementById('tarjetaProducto');
 
 
-const catchProducts = async (busquedaInf) => {
+const catchProducts = async (modeloUsuario) => {
   const response = await fetch(urlProductos);
   const datos = await response.json();
   console.log(response);
   console.log(datos);
   datos.forEach(element => {
-    if (element.modelo.includes(busquedaInf) || busquedaInf=='todos') {
+    if (element.modelo.includes(modeloUsuario) || modeloUsuario=='todos') {
       const infoProducto = {
         				id: element.id,
         				nombre: element.nombre,
@@ -20,8 +20,8 @@ const catchProducts = async (busquedaInf) => {
       
       const template = `
       <div class="col mb-5 grow">
-      <div class="card h-100 ml-auto mr-auto" >
-      <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.url}" />
+      <div class="card h-100 ml-auto mr-auto">
+      <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.url}"/>
       <div class="card-body color-card">
       <p class="card-text id" style="display:none">${element.id}</p>
       <p class="card-text src" style="display:none">${element.url}</p>
@@ -29,7 +29,7 @@ const catchProducts = async (busquedaInf) => {
       <p class="card-text">${infoProducto.descripcion}</p>
       <p class="card-text precio">${infoProducto.precio}</p>
       <button class="agregar">Agregar al carrito</button></div>
-      </div>  
+      </div>
       </div>
       </div>
       `;
@@ -41,7 +41,7 @@ const catchProducts = async (busquedaInf) => {
 
 }
 
-catchProducts(busquedaInf);
+catchProducts(modeloUsuario);
 
 
 const $cards = document.getElementById('cards');
