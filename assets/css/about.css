@@ -28,7 +28,7 @@
 	top: 20%;
 	padding: 1rem;
 	border-radius: 50px;
-	overflow: scroll;
+	overflow: auto;
 }
 
 .names-info {
