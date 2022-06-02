@@ -1,37 +1,48 @@
+const busquedaInf = window.location.href.split('=').pop().substring(1);
 const urlProductos = 'assets/api/db.json';
 const $contenedorPadre = document.getElementById('tarjetaProducto');
 
-fetch(urlProductos).then((resp) =>
-	resp.json().then((datos) => {
-		const arrProductos = datos;
-		arrProductos.forEach((producto) => {
-			const infoProducto = {
-				id: producto.id,
-				nombre: producto.nombre,
-				descripcion: producto.descripcion,
-				precio: producto.precio,
-				url: producto.url,
-			};
 
-			const template = `
-                        <div class="col mb-5 grow">
-                            <div class="card h-100 ml-auto mr-auto" >
-                                <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.url}" />
-                                <div class="card-body color-card">
-                                    <p class="card-text id" style="display:none">${producto.id}</p>
-                                    <p class="card-text src" style="display:none">${producto.url}</p>
-                                    <h5 class="card-title titulo">${infoProducto.nombre}</h5>
-                                    <p class="card-text">${infoProducto.descripcion}</p>
-                                    <p class="card-text precio">${infoProducto.precio}</p>
-                                    <button class="agregar">Agregar al carrito</button></div>
-                                </div>  
-                            </div>
-                        </div>
-                            `;
-			$contenedorPadre.innerHTML += template;
-		});
-	})
-);
+const catchProducts = async (busquedaInf) => {
+  const response = await fetch(urlProductos);
+  const datos = await response.json();
+  console.log(response);
+  console.log(datos);
+  datos.forEach(element => {
+    if (element.modelo.includes(busquedaInf) || busquedaInf=='todos') {
+      const infoProducto = {
+        				id: element.id,
+        				nombre: element.nombre,
+        				descripcion: element.descripcion,
+        				precio: element.precio,
+        				url: element.url,
+        			};
+      
+      const template = `
+      <div class="col mb-5 grow">
+      <div class="card h-100 ml-auto mr-auto" >
+      <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.url}" />
+      <div class="card-body color-card">
+      <p class="card-text id" style="display:none">${element.id}</p>
+      <p class="card-text src" style="display:none">${element.url}</p>
+      <h5 class="card-title titulo">${infoProducto.nombre}</h5>
+      <p class="card-text">${infoProducto.descripcion}</p>
+      <p class="card-text precio">${infoProducto.precio}</p>
+      <button class="agregar">Agregar al carrito</button></div>
+      </div>  
+      </div>
+      </div>
+      `;
+      $contenedorPadre.innerHTML += template;
+    } else {
+      console.log(element.modelo);
+    }
+    });
+
+}
+
+catchProducts(busquedaInf);
+
 
 const $cards = document.getElementById('cards');
 const $items = document.getElementById('items');
