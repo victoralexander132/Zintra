@@ -35,15 +35,12 @@ fetch(urlProductos).then((resp) =>
 
 
 // Hace filtro doble pero no excluyente (ultimo intento)
-const $opcionSeleccion = document.getElementById('tipo')
+//const $opcionSeleccion = document.getElementById('tipo')
 const $filtros = document.querySelectorAll('select')
 
 $filtros.forEach((filtro) => {
 
     filtro.addEventListener('change', () => {
-
-        console.log(document.getElementById('tipo').value)
-        console.log(document.getElementById('color').value)
 
         fetch(urlProductos).then(resp => resp.json().then(datos => {
 
