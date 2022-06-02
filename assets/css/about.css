@@ -9,7 +9,7 @@
 
 .pantalla {
 	width: 100%;
-	height: calc(100vh - 142px);
+	height: calc(100vh - 76px);
 	display: flex;
 	justify-content: center;
 	align-items: top;
@@ -17,17 +17,16 @@
 	background-image: url('../images/nosotros/conjunto.jpg');
 	background-size: cover;
 	background-position: center;
-	margin-bottom: 5vh;
-}
+	}
 
 .cuadro {
 	background-color: rgba(207, 225, 219, 0.72);
+	position: absolute;
+	width: 90%;
+	height: 45%;
 	color: rgba(23, 53, 43, 1);
-	margin-top: 5vh;
-	padding: 0 2em 0;
-	font-size: 12pt;
-	width: 90vw;
-	height: 45vh;
+	top: 20%;
+	padding: 1rem;
 	border-radius: 50px;
 }
 
@@ -233,24 +232,20 @@
 }
 
 @media only screen and (max-width: 991.98px) {
-	.cuadro {
-		flex-direction: column;
-		justify-content: center;
-		font-size: 18px;
-	}
-
-	.cuadro-info {
-		width: 100%;
-	}
-	.cuadro h2 {
-		font-size: 30pt;
-	}
-
+	
+	
 	.about .card {
 		height: 60vh;
 	}
 	.about .card__body {
 		height: 48%;
+	}
+	.cuadro{
+		flex-direction: column;
+		height: 70%;
+	}
+	.cuadro p{
+		margin: auto 0;
 	}
 }
 
@@ -261,10 +256,7 @@
 	.about .card__body {
 		height: 58%;
 	}
-	.cuadro {
-		height: 80vh;
-		font-size: 15px;
-	}
+	
 }
 
 @media screen and (max-width: 575.98px) {
@@ -274,9 +266,12 @@
 	.about .card__body {
 		height: 60%;
 	}
-	.cuadro {
-		height: 70vh;
+	.cuadro{
+		width: 100%;
+		height: 88%;
+		top: 77px;
 	}
+	
 }
 
 @media screen and (max-width: 400px) {
@@ -286,12 +281,13 @@
 	.about .card__body {
 		height: 65%;
 	}
-	.cuadro {
-		font-size: 10px;
-		margin-top: 0;
-		padding-top: 0;
-		height: 80vh;
+	.cuadro{
+		overflow: scroll;
 	}
+	.cuadro p{
+		font-size: 0.8rem;
+	}
+	
 }
 
 /* ================ MEDIA QUERIES ================ */
