@@ -92,19 +92,19 @@
 					<!-- <div class="d-flex">
 						<h2 style="font-size: 150%; font-weight: 800">TIPOS DE <span class="rosa">ZIKLICS</span></h2>
 					</div> -->
-					<div class="container p-3 mb-3 mt-3 cuad-rosa d-flex">
+					<div class=""> <!-- class="container p-3 mb-3 mt-3 cuad-rosa d-flex" -->
 
 						<!-- Primer propuesta busqueda -->
 						<div class="busqueda">
 							<!-- <div class="input-group" id="boton-buscar">
-								
 									<input type="text" class="form-control texto-boton" type="search" placeholder="Nombre del producto..." aria-describedby="button-addon2" id="input-search">
 									<button class="btn btn-outline-secondary texto-boton" type="submit" id="button-addon2">Buscar</button> 
 							</div> -->
 						</div>
 
 						<!-- Segunda propuesta filtros -->
-						<form > <!-- id="cuad-verde"  ?????-->
+						<!-- id="cuad-verde"  ?????-->
+						<!-- <form > 
 							<div class="form-group ">
 								<label for="tipo">Tipo de Ziclik</label>
 								<select id="tipo" class="form-control texto-boton">
@@ -134,8 +134,47 @@
 									<option>Verde</option>
 								</select>
 							</div>
-							<button class="btn btn-outline-secondary align-items-right">Limpiar filtros</button>
+							<div class="container align-items-right text-right">
+								<button class="btn btn-outline-secondary block">Limpiar filtros</button>
+							</div>
+						</form> -->
+
+						<!-- Tercer propuesta fondo verde -->
+						<form id="cuad-verde">
+							<!-- <legend><b>DISEÑA TU ZIKLIC IDEAL</b></legend> -->
+							<div class="form-group">
+								<label for="tipo">Tipo de Ziclik</label>
+								<select id="tipo" class="form-control texto-boton">
+									<option disabled selected>Selecciona un modelo ...</option>
+									<option>Kubik</option>
+									<option>Ziclik</option>
+									<option>A-round</option>
+									<option>Sunny </option>
+									<option>Ziklos</option>
+									<option>Plane</option>
+									<option>Conjunto</option>
+								</select>
+							</div>
+	
+							<div class="form-group">
+								<label for="color">Color</label>
+								<select id="color" class="form-control texto-boton">
+									<option disabled selected>Selecciona un color ...</option>
+									<option>Amarillo</option>
+									<option>Azul</option>
+									<option>Blanco</option>
+									<option>Cafe</option>
+									<option>Dorado</option>
+									<option>Gris</option>
+									<option>Morado</option>
+									<option>Rosa</option>
+									<option>Turquesa</option>
+									<option>Verde</option>
+								</select>
+							</div>
+							<button type="submit" class="btn d-flex mx-auto hvr-fade boton-rosa" ><b>Limpiar filtros</b></button>
 						</form>
+
 					</div>
 
 					
@@ -167,11 +206,11 @@
 
 					<!-- Inicia cestaV2 -->
 					<div id="cestaV2" class="container">
-						<h2 style="font-size: 150%; font-weight: 800">CARRITO</h2>
-						<table class="table">
+						<h2 style="font-size: 130%; font-weight: 600">CARRITO</h2>
+						<table class="table table-sm" style="font-size: 99%; ">
 							<thead>
 								<tr>
-									<th scope="col" class="font-size-9">Producto</th>
+									<th scope="col" class="font-size-3">Producto</th>
 									<th scope="col" colspan="2">Cantidad</th>
 									<th scope="col">Subtotal</th>
 								</tr>
@@ -193,7 +232,7 @@
 
 					<template id="template-carrito">
 						<tr>
-							<th scope="row">id</th>
+							<td scope="row">id</td>
 							<td></td>
 							<td>
 								<button class="btn btn-outline-danger btn-sm">-</button>
@@ -216,7 +255,6 @@
 					</template>
 
 					<template id="template-footer">
-							
 							<th scope="row" >Total</th>
 							<td>10</td>
 							<td>

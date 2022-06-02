@@ -67,7 +67,7 @@ $filtros.forEach((filtro) => {
                     const template =  `
                                     <div class="col mb-5 grow">
                                         <div class="card h-100 ml-auto mr-auto" >
-                                            <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.url}" />
+                                            <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.descripcion}" />
                                             <div class="card-body color-card">
                                                 <p class="card-text id" style="display:none">${producto.id}</p>
                                                 <p class="card-text src" style="display:none">${producto.url}</p>
@@ -82,7 +82,6 @@ $filtros.forEach((filtro) => {
                     $contenedorPadre.innerHTML += template
                 }
             })
-            //document.getElementById('tipo').value = 'Selecciona un modelo ...'
         }))	
     })
 })
@@ -185,7 +184,6 @@ const $footer = document.getElementById('footer');
 const $templateCard = document.getElementById('template-card').content;
 const $templateCarrito = document.getElementById('template-carrito').content;
 const $templateFooter = document.getElementById('template-footer').content;
-
 const fragment = document.createDocumentFragment();
 
 const $btnComprar = document.getElementById('btnComprarr');
@@ -201,7 +199,7 @@ $btnComprar.addEventListener('click', (e) => {
 //Espacio para agregar compras
 let cesta = {};
 
-//al cargar documento, consulta y recupera localStorage (si es que aplica)
+//al cargar, consulta y recupera localStorage (si es que aplica)
 document.addEventListener('DOMContentLoaded', () => {
 	if (localStorage.getItem('cesta')) {
 		cesta = JSON.parse(localStorage.getItem('cesta'));
@@ -210,30 +208,28 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 });
 
-//Se escucha click de la tarjeta, o usar $cards es =
+//Tarjeta, o usar $cards es =
 $contenedorPadre.addEventListener('click', (e) => {
 	iniciaAdd(e);
 });
 
-//se escucha clic sobre item de cesta
+//Item de cesta
 $items.addEventListener('click', (e) => {
 	modificaCantidades(e);
 });
 
-//Si es clic en zona, obtiene los datos de la tarjeta
+//btn Agregar a carrito, obtiene los datos de la tarjeta
 const iniciaAdd = (e) => {
 	if (e.target.classList.contains('agregar')) {
 		//Obtiene contenido de card
 		generaCesta(e.target.parentElement);
 	}
-
 	e.stopPropagation();
 };
 
 const generaCesta = (objeto) => {
 	//console.log(objeto)
 
-	//Preparacion de datos de contenido card
 	const producto = {
 		id: objeto.querySelector('.id').textContent,
 		nombre: objeto.querySelector('.titulo').textContent,
@@ -243,7 +239,7 @@ const generaCesta = (objeto) => {
 	};
 	//console.log(producto.url)
 
-	//si producto ya esta en la cesta, aumenta cantidad
+	//si el producto ya esta en la cesta, aumenta cantidad
 	if (cesta.hasOwnProperty(producto.id)) {
 		producto.cantidad = cesta[producto.id].cantidad + 1;
 	}
@@ -260,8 +256,8 @@ const actualizaCesta = () => {
 
 	//recorremos la coleccion, se usa object para poder usar foreach (un obj no puede recorrerse como array)
 	Object.values(cesta).forEach((producto) => {
-		$templateCarrito.querySelector('th').textContent = producto.nombre;
-		$templateCarrito.querySelectorAll('td')[0].textContent = producto.cantidad;
+		$templateCarrito.querySelectorAll('td')[0].textContent = producto.nombre;
+		$templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad;
 		$templateCarrito.querySelector('.btn-outline-success').dataset.id = producto.id;
 		$templateCarrito.querySelector('.btn-outline-danger').dataset.id = producto.id;
 
@@ -287,7 +283,7 @@ const actualizaTotales = () => {
                              <th scope="row" colspan="5">Carrito vacío - inicie compra</th>
             `;
 
-		//hacemos que al caer aqui se salga para que no continue pintando (caso de btnVaciar)
+		//bota para que no continue pintando (caso de btnVaciar, --)
 		return;
 	}
 
@@ -303,7 +299,7 @@ const actualizaTotales = () => {
 	fragment.appendChild(clone);
 	$footer.appendChild(fragment);
 
-	//
+	
 	const btnVaciar = document.getElementById('vaciar-carrito');
 	btnVaciar.addEventListener('click', () => {
 		cesta = {};
