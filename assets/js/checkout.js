@@ -84,7 +84,7 @@ formulario.addEventListener('submit', (e) => {
 		//console.log('Enviado');
 		const datos = Object.fromEntries(new FormData(e.target));
 		//console.log(datos);
-		window.location.href = './confirmacion.html';
+		window.location.href = `./confirmacion.html`;
 	} else {
 		console.log('No enviado');
 	}
