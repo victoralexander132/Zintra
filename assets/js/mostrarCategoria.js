@@ -1,18 +1,9 @@
+const modeloUsuario = window.location.href.split('=').pop().substring(1);
 const urlProductos = 'assets/api/db.json';
 const $contenedorPadre = document.getElementById('tarjetaProducto');
 
-fetch(urlProductos).then((resp) =>
-	resp.json().then((datos) => {
-		const arrProductos = datos;
-		arrProductos.forEach((producto) => {
-			const infoProducto = {
-				id: producto.id,
-				nombre: producto.nombre,
-				descripcion: producto.descripcion,
-				precio: producto.precio,
-				url: producto.url,
-			};
 
+<<<<<<< HEAD:assets/js/productos.js
 			const template = `
                         <div class="col mb-5 grow">
                             <div class="card h-100 ml-auto mr-auto" >
@@ -32,6 +23,111 @@ fetch(urlProductos).then((resp) =>
 		});
 	})
 );
+=======
+const catchProducts = async (modeloUsuario) => {
+  const response = await fetch(urlProductos);
+  const datos = await response.json();
+  console.log(response);
+  console.log(datos);
+  datos.forEach(element => {
+    if (element.modelo.includes(modeloUsuario) || modeloUsuario=='todos') {
+      const infoProducto = {
+        				id: element.id,
+        				nombre: element.nombre,
+        				descripcion: element.descripcion,
+        				precio: element.precio,
+        				url: element.url,
+        			};
+      
+      const template = `
+      <div class="col mb-5 grow">
+      <div class="card h-100 ml-auto mr-auto">
+      <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.url}"/>
+      <div class="card-body color-card">
+      <p class="card-text id" style="display:none">${element.id}</p>
+      <p class="card-text src" style="display:none">${element.url}</p>
+      <h5 class="card-title titulo">${infoProducto.nombre}</h5>
+      <p class="card-text">${infoProducto.descripcion}</p>
+      <p class="card-text precio">${infoProducto.precio}</p>
+      <button class="agregar">Agregar al carrito</button></div>
+      </div>
+      </div>
+      </div>
+      `;
+      $contenedorPadre.innerHTML += template;
+    } else {
+      console.log(element.modelo);
+    }
+    });
+
+}
+
+catchProducts(modeloUsuario);
+
+
+
+/* FILTRO */
+
+
+const $filtros = document.querySelectorAll('select')
+
+$filtros.forEach((filtro) => {
+
+    filtro.addEventListener('change', () => {
+
+        fetch(urlProductos).then(resp => resp.json().then(datos => {
+
+            const arrProductos = datos
+            $contenedorPadre.innerHTML = ''
+    
+            arrProductos.forEach(producto => {  
+        
+                if (producto.nombre.includes(document.getElementById('tipo').value) || producto.color.includes(document.getElementById('color').value)){
+                    
+                    console.log(producto.color)
+
+                    const infoProducto = {
+                        id : producto.id,
+                        nombre : producto.nombre,
+                        descripcion : producto.descripcion,
+                        precio : producto.precio,
+                        url : producto.url
+                    }
+            
+                    const template =  `
+                                    <div class="col mb-5 grow">
+                                        <div class="card h-100 ml-auto mr-auto" >
+                                            <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.descripcion}" />
+                                            <div class="card-body color-card">
+                                                <p class="card-text id" style="display:none">${producto.id}</p>
+                                                <p class="card-text src" style="display:none">${producto.url}</p>
+                                                <h5 class="card-title titulo">${infoProducto.nombre}</h5>
+                                                <p class="card-text">${infoProducto.descripcion}</p>
+                                                <p class="card-text precio">${infoProducto.precio}</p>
+                                                <button class="agregar">Agregar al carrito</button></div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                        `
+                    $contenedorPadre.innerHTML += template
+                }
+            })
+        }))	
+    })
+})
+
+
+/* FILTRO */
+
+
+
+
+
+
+
+
+
+>>>>>>> 034397138bb6c8f7ab9e8bdc1f160fbe980a2c58:assets/js/mostrarCategoria.js
 
 
 // Hace filtro doble pero no excluyente (ultimo intento)
@@ -189,7 +285,7 @@ $btnComprar.addEventListener('click', (e) => {
 	console.log(document.querySelector('.totalC').textContent);
 
 	if (document.querySelector('.totalC').textContent.includes('$')) {
-		window.location.href = '/direccion.html';
+		window.location.href = './direccion.html';
 	}
 });
 

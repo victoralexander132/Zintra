@@ -123,6 +123,7 @@ inputs.forEach((input) => {
 	});
 });
 formulario.addEventListener('submit', (e) => {
+	console.log(areValid);
 	const check = document.getElementById('robot').checked;
 	areValid.robot = check;
 	e.preventDefault();
@@ -131,7 +132,7 @@ formulario.addEventListener('submit', (e) => {
 		const datos = Object.fromEntries(new FormData(e.target));
 		localStorage.setItem('direccion', JSON.stringify(datos));
 		console.log(datos);
-		window.location.href = '/checkout.html';
+		window.location.href = `./checkout.html`;
 	} else {
 		console.log('No enviado');
 		console.log(check);

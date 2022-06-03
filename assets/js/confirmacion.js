@@ -15,6 +15,9 @@ $mostrarDetalle.addEventListener('click', e => {
     if (localStorage.getItem('cesta')){
         detalleCesta = JSON.parse(localStorage.getItem('cesta'))
         console.log(detalleCesta)
+        detalleAddress = JSON.parse(localStorage.getItem('direccion'))
+        console.log(detalleAddress);
+        document.getElementById('address').innerHTML = `${detalleAddress.ciudad}, ${detalleAddress.address}`
         actualizaDetalle()
     }
 })
