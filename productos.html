@@ -124,6 +124,7 @@
 
 		<div class="container mt-5 card-font">
 			<div class="row justify-content-center">
+
 				<div class="col-9 col-lg-4 col-md-9 col-sm-9 col-xl-4 sidebar">
 					
 
@@ -167,11 +168,11 @@
 
 					<!-- Inicia cestaV2 -->
 					<div id="cestaV2" class="container">
-						<h2 style="font-size: 150%; font-weight: 800">CARRITO</h2>
-						<table class="table">
+						<h2 style="font-size: 130%; font-weight: 600">CARRITO</h2>
+						<table class="table table-sm" style="font-size: 99%;">
 							<thead>
 								<tr>
-									<th scope="col" class="font-size-9">Producto</th>
+									<th scope="col" class="font-size-3">Producto</th>
 									<th scope="col" colspan="2">Cantidad</th>
 									<th scope="col">Subtotal</th>
 								</tr>
@@ -188,17 +189,18 @@
 								</tr>
 							</tfoot>
 						</table>
+						
 					</div>
 
 					<template id="template-carrito">
 						<tr>
-							<th scope="row">id</th>
+							<td scope="row">id</td>
 							<td></td>
 							<td>
 								<button class="btn btn-outline-danger btn-sm">-</button>
 								<button class="btn btn-outline-success btn-sm">+</button>
 							</td>
-							<td>$ <span></span></td>
+							<td>$ <span>1</span></td>
 						</tr>
 					</template>
 
@@ -207,7 +209,7 @@
 							<div class="card">
 								<div class="card-body">
 									<h5>Titulo</h5>
-									<p>precio</p>
+									<p>Precio</p>
 									<button class="btn btn-dark">Comprar</button>
 								</div>
 							</div>
@@ -215,13 +217,14 @@
 					</template>
 
 					<template id="template-footer">
-						<th scope="row">Total</th>
-						<td>10</td>
-						<td>
-							<button class="btn btn-outline-danger btn-sm" id="vaciar-carrito">vaciar</button>
-						</td>
-						<td class="font-weight-bold totalC">$ <span>5000</span></td>
-						<tr></tr>
+							<th scope="row" >Total</th>
+							<td>10</td>
+							<td>
+								<button class="btn btn-outline-danger btn-sm" id="vaciar-carrito">
+									vaciar
+								</button>
+							</td>
+							<td class="font-weight-bold totalC">$ <span>5000</span></td>
 					</template>
 					<!-- Termina cestaV2 -->
 
@@ -242,7 +245,7 @@
 
 				<div class="col-9 col-lg-8 col-md-9 col-sm-9 col-xl-8 tarjetas">
 					<div class="row row-cols-1 row-cols-md-2" id="tarjetaProducto">
-						<!-- CARGA DINAMICA DE TARJETAS -->
+						<!-- CARGA DINAMICA DE TARJETAS -->	
 					</div>
 				</div>
 			</div>

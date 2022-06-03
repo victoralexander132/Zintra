@@ -40,7 +40,7 @@ let actualizaDetalle = () => {
                 <td><img src="${producto.url}" class="img-tabla"></td>
                 <td>${producto.nombre}</td>
                 <td>${producto.cantidad}</td>
-                <td>${(producto.cantidad * producto.precio.replace(/[$]/g,'')).toFixed(2) }</td>
+                <td> $ ${(producto.cantidad * producto.precio.replace(/[$]/g,'')).toFixed(2) }</td>
             </tr>
             `
         $padredetalle.innerHTML += template
@@ -54,7 +54,7 @@ let actualizaDetalle = () => {
                 <tr>
                     <th scope="row" colspan="3" class="text-center table-active">Total</th>
 					<th scope="row" colspan="1" class="text-center table-active">${nCantidad}</th>
-					<th scope="row" colspan="1" class="text-center table-active">${nPrecio.toFixed(2)}</th>
+					<th scope="row" colspan="1" class="text-center table-active">$ ${nPrecio.toFixed(2)}</th>
                 </tr>
     `
     $padreDetalleTotales.innerHTML += templatee
