@@ -12,13 +12,13 @@ body {
 	background-color: rgba(255, 255, 255, 0.9);
 	width: 50%;
 	/* margin-top: 10vh; */
-	padding: 4% 3%;
+	padding: 4% 4%;
 	border-radius: 30px;
 	text-align: center;
 	align-content: center;
 	margin-top: 5vh;
-	margin-bottom: 6vh;
-	height: 80vh;
+	margin-bottom: 5vh;
+	height: 85vh;
 	
 	
 }
@@ -64,6 +64,13 @@ footer {
 .bi {
 	color: white;
 }
+.iconos{
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
 
 form button {
 	color: white;
@@ -75,6 +82,14 @@ form button {
 
 form button:hover {
 	background-color: var(--principal);
+}
+
+.text-wlm{
+	font-size: 3vh;
+}
+
+.text-init{
+	font-size: 4vh;
 }
 
 .formulario__grupo-correcto .formulario__validacion-estado{
@@ -93,4 +108,30 @@ form button:hover {
 			width: 80%;
 		}
 	
+}
+
+@media screen and (max-width: 420px) {
+	.img-g{
+		width: 55%;
+	}
+	.img-f{
+		width: 55%;
+	}
+	.img-a{
+		width: 55%;
+	}
+
+}
+
+@media screen and (max-height: 675px) {
+	.img-g{
+		width: 55%;
+	}
+	.img-f{
+		width: 55%;
+	}
+	.img-a{
+		width: 55%;
+	}
+
 }
