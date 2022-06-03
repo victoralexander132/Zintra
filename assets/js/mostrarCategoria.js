@@ -3,27 +3,6 @@ const urlProductos = 'assets/api/db.json';
 const $contenedorPadre = document.getElementById('tarjetaProducto');
 
 
-<<<<<<< HEAD:assets/js/productos.js
-			const template = `
-                        <div class="col mb-5 grow">
-                            <div class="card h-100 ml-auto mr-auto" >
-                                <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.descripcion}" />
-                                <div class="card-body color-card">
-                                    <p class="card-text id" style="display:none">${producto.id}</p>
-                                    <p class="card-text src" style="display:none">${producto.url}</p>
-                                    <h5 class="card-title titulo">${infoProducto.nombre}</h5>
-                                    <p class="card-text">${infoProducto.descripcion}</p>
-                                    <p class="card-text precio">${infoProducto.precio}</p>
-                                    <button class="agregar">Agregar al carrito</button></div>
-                                </div>  
-                            </div>
-                        </div>
-                            `;
-			$contenedorPadre.innerHTML += template;
-		});
-	})
-);
-=======
 const catchProducts = async (modeloUsuario) => {
   const response = await fetch(urlProductos);
   const datos = await response.json();
@@ -61,14 +40,10 @@ const catchProducts = async (modeloUsuario) => {
     });
 
 }
-
 catchProducts(modeloUsuario);
 
 
-
 /* FILTRO */
-
-
 const $filtros = document.querySelectorAll('select')
 
 $filtros.forEach((filtro) => {
@@ -116,160 +91,6 @@ $filtros.forEach((filtro) => {
     })
 })
 
-
-/* FILTRO */
-
-
-
-
-
-
-
-
-
->>>>>>> 034397138bb6c8f7ab9e8bdc1f160fbe980a2c58:assets/js/mostrarCategoria.js
-
-
-// Hace filtro doble pero no excluyente (ultimo intento)
-//const $opcionSeleccion = document.getElementById('tipo')
-const $filtros = document.querySelectorAll('select')
-
-$filtros.forEach((filtro) => {
-
-    filtro.addEventListener('change', () => {
-
-        fetch(urlProductos).then(resp => resp.json().then(datos => {
-
-            const arrProductos = datos
-            $contenedorPadre.innerHTML = ''
-    
-            arrProductos.forEach(producto => {  
-        
-                if (producto.nombre.includes(document.getElementById('tipo').value) || producto.color.includes(document.getElementById('color').value)){
-                    
-                    console.log(producto.color)
-
-                    const infoProducto = {
-                        id : producto.id,
-                        nombre : producto.nombre,
-                        descripcion : producto.descripcion,
-                        precio : producto.precio,
-                        url : producto.url
-                    }
-            
-                    const template =  `
-                                    <div class="col mb-5 grow">
-                                        <div class="card h-100 ml-auto mr-auto" >
-                                            <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.descripcion}" />
-                                            <div class="card-body color-card">
-                                                <p class="card-text id" style="display:none">${producto.id}</p>
-                                                <p class="card-text src" style="display:none">${producto.url}</p>
-                                                <h5 class="card-title titulo">${infoProducto.nombre}</h5>
-                                                <p class="card-text">${infoProducto.descripcion}</p>
-                                                <p class="card-text precio">${infoProducto.precio}</p>
-                                                <button class="agregar">Agregar al carrito</button></div>
-                                            </div>  
-                                        </div>
-                                    </div>
-                                        `
-                    $contenedorPadre.innerHTML += template
-                }
-            })
-        }))	
-    })
-})
-
-
-/*
-// Hace filtro unico directo con option (segundo intento)
-$opcionSeleccion.addEventListener('change', () =>{
-    
-    fetch(urlProductos).then(resp => resp.json().then(datos => {
-
-        const arrProductos = datos
-        $contenedorPadre.innerHTML = ''
-
-        arrProductos.forEach(producto => {  
-    
-            if (producto.nombre.includes(document.getElementById('tipo').value) || producto.color.includes(document.getElementById('color'))){
-
-                const infoProducto = {
-                    id : producto.id,
-                    nombre : producto.nombre,
-                    descripcion : producto.descripcion,
-                    precio : producto.precio,
-                    url : producto.url
-                }
-        
-                const template =  `
-                                <div class="col mb-5 grow">
-                                    <div class="card h-100 ml-auto mr-auto" >
-                                        <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.url}" />
-                                        <div class="card-body color-card">
-                                            <p class="card-text id" style="display:none">${producto.id}</p>
-                                            <p class="card-text src" style="display:none">${producto.url}</p>
-                                            <h5 class="card-title titulo">${infoProducto.nombre}</h5>
-                                            <p class="card-text">${infoProducto.descripcion}</p>
-                                            <p class="card-text precio">${infoProducto.precio}</p>
-                                            <button class="agregar">Agregar al carrito</button></div>
-                                        </div>  
-                                    </div>
-                                </div>
-                                    `
-                $contenedorPadre.innerHTML += template
-            }
-        })
-        //document.getElementById('tipo').value = 'Selecciona un modelo ...'
-    }))	
-})
-*/
-
-/* 
-// Hace filtro con boton submit del formulario (primer intento)
-const $form = document.querySelector('form')
-
-$form.addEventListener('submit', (e) => {
-	e.preventDefault()
-
-    fetch(urlProductos).then(resp => resp.json().then(datos => {
-
-        const arrProductos = datos
-        $contenedorPadre.innerHTML = ''
-
-        arrProductos.forEach(producto => {  
-    
-            if (producto.nombre.includes(document.getElementById('tipo').value)){
-
-                const infoProducto = {
-                    id : producto.id,
-                    nombre : producto.nombre,
-                    descripcion : producto.descripcion,
-                    precio : producto.precio,
-                    url : producto.url
-                }
-        
-                const template =  `
-                                <div class="col mb-5 grow">
-                                    <div class="card h-100 ml-auto mr-auto" >
-                                        <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.url}" />
-                                        <div class="card-body color-card">
-                                            <p class="card-text id" style="display:none">${producto.id}</p>
-                                            <p class="card-text src" style="display:none">${producto.url}</p>
-                                            <h5 class="card-title titulo">${infoProducto.nombre}</h5>
-                                            <p class="card-text">${infoProducto.descripcion}</p>
-                                            <p class="card-text precio">${infoProducto.precio}</p>
-                                            <button class="agregar">Agregar al carrito</button></div>
-                                        </div>  
-                                    </div>
-                                </div>
-                                    `
-                $contenedorPadre.innerHTML += template
-            }
-        })
-        document.getElementById('tipo').value = 'Selecciona un modelo ...'
-    }))	
-})
- */
 
 const $cards = document.getElementById('cards');
 const $items = document.getElementById('items');
