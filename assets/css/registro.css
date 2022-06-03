@@ -1,46 +1,47 @@
 body {
 	background: url(../images/login/gris2.jpg);
+	margin: 0;
+	padding: 0;
 	background-size: cover;
-	background-position: 100%;
+	background-position: center;
 	background-repeat: no-repeat;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
+	background-attachment: fixed;
 	
 }
 .login{
 	background-color: rgba(255, 255, 255, 0.9);
-	width: 40%;
+	width: 50%;
 	/* margin-top: 10vh; */
-	padding: 4% 3%;
+	padding: 4% 4%;
 	border-radius: 30px;
 	text-align: center;
 	align-content: center;
 	margin-top: 5vh;
-	/* margin-bottom: 12vh; */
-		
+	margin-bottom: 5vh;
+	height: 85vh;
+	
+	
 }
-
-/* .cont_trans{
+.cont_trans{
 	margin: 0px;
 	padding: 0px;
 	width: 100%;
 	height: 100%;
-} */
+}
 
-/* footer {
+footer {
 	padding: 10px;
 	width: 100%;
 	justify-content: center;
-} */
+}
 
-/* .footer {
+.footer {
 	background-color: var(--principal);
 	display: flex;
 	flex-direction: row;
 }
- */
-/* .container .footer {
+
+.container .footer {
 	display: flex;
 }
 
@@ -53,11 +54,27 @@ body {
 .footer-logos {
 	display: inline-block;
 	display: flex;
-} */
+}
+
+.logo {
+	margin-left: auto;
+	display: inline-block;
+}
+
+.bi {
+	color: white;
+}
+.iconos{
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
 
 form button {
 	color: white;
-	padding: .5rem 2.5rem;
+	padding: 1rem 3rem;
 	border: none;
 	border-radius: 6px;
 	background-color: var(--primary);
@@ -67,7 +84,17 @@ form button:hover {
 	background-color: var(--principal);
 }
 
+.text-wlm{
+	font-size: 3vh;
+}
 
+.text-init{
+	font-size: 4vh;
+}
+
+.formulario__grupo-correcto .formulario__validacion-estado{
+	color: green;
+}
 
 @media (max-width: 576px) {
 	.footer-logos {
@@ -83,9 +110,28 @@ form button:hover {
 	
 }
 
-@media screen and (max-h: 768px) {
-	.login{
-		width: 80%;
+@media screen and (max-width: 420px) {
+	.img-g{
+		width: 55%;
+	}
+	.img-f{
+		width: 55%;
+	}
+	.img-a{
+		width: 55%;
+	}
+
+}
+
+@media screen and (max-height: 675px) {
+	.img-g{
+		width: 55%;
+	}
+	.img-f{
+		width: 55%;
+	}
+	.img-a{
+		width: 55%;
 	}
 
 }
