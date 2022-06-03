@@ -117,7 +117,6 @@ let cesta = {};
 document.addEventListener('DOMContentLoaded', () => {
 	if (localStorage.getItem('cesta')) {
 		cesta = JSON.parse(localStorage.getItem('cesta'));
-		//console.log(cesta)
 		actualizaCesta();
 	}
 });
@@ -142,7 +141,6 @@ const iniciaAdd = (e) => {
 };
 
 const generaCesta = (objeto) => {
-	//console.log(objeto)
 
 	const producto = {
 		id: objeto.querySelector('.id').textContent,
@@ -151,7 +149,6 @@ const generaCesta = (objeto) => {
 		cantidad: 1,
 		url: objeto.querySelector('.src').textContent,
 	};
-	//console.log(producto.url)
 
 	//si el producto ya esta en la cesta, aumenta cantidad
 	if (cesta.hasOwnProperty(producto.id)) {
@@ -185,7 +182,7 @@ const actualizaCesta = () => {
 
 	actualizaTotales();
 
-	//guarda en localStorage
+	//envia a localStorage
 	localStorage.setItem('cesta', JSON.stringify(cesta));
 };
 
@@ -224,7 +221,7 @@ const actualizaTotales = () => {
 const modificaCantidades = (e) => {
 	console.log(e.target);
 
-	//Cuando hay click sobre boton + (cesta)
+	//Click en boton + (cesta)
 	if (e.target.classList.contains('btn-outline-success')) {
 		console.log(cesta[e.target.dataset.id]);
 		const producto = cesta[e.target.dataset.id];
@@ -234,7 +231,7 @@ const modificaCantidades = (e) => {
 		actualizaCesta();
 	}
 
-	//Cuando hay click sobre boton - (cesta)
+	//Click en boton - (cesta)
 	if (e.target.classList.contains('btn-outline-danger')) {
 		console.log(cesta[e.target.dataset.id]);
 		const producto = cesta[e.target.dataset.id];
