@@ -43,7 +43,6 @@
 
 .about{
 	margin: 2rem 1rem;
-	perspective: 1000px;
 	border: none;
 	display: grid;
 	gap: 1rem;
@@ -51,6 +50,7 @@
 }
 
 .card__inner {
+	perspective: 1000px;
 	height: 80vh;
 	transition: transform 1s;
 	transform-style: preserve-3d;
