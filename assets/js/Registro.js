@@ -1,5 +1,5 @@
 const expresiones = {
-	nombre: /^[a-zA-Z0-9\_\-]{4,16}$/, 
+	nombre: /[^0-9\.\,\"\?\!\;\:\#\$\%\&\(\)\*\+\-\/\<\>\=\@\[\]\\\^\_\{\}\|\~]+/, 
     password: /^.{4,12}$/,
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{7,14}$/
@@ -34,7 +34,7 @@ inputs.forEach((inp)=>{
                    }
 				else{
 					statusInf.email = false
-					emailError.textContent = "Correo Electronico Incorrecto"
+					emailError.textContent = "Correo electronico incorrecto"
 				    }
 			    break
                 case "nombre":
@@ -44,18 +44,18 @@ inputs.forEach((inp)=>{
                     }
                     else{
                         statusInf.nombre = false
-                        nombreError.textContent = "Usuario Incorrecto"
+                        nombreError.textContent = "Nombre incorrecto"
                         
                     }    
 				break
-			case "password":
+			case "contrasenia":
 				if(expresiones.password.test(e.target.value)){
 					statusInf.password = true
 					passwordError.textContent = ""
                 }
 				else{
 					statusInf.password = false
-					passwordError.textContent = "Contraseña Incorrecta"
+					passwordError.textContent = "Contraseña incorrecta"
 				}
                 break
 			case "telefono":
@@ -65,7 +65,7 @@ inputs.forEach((inp)=>{
 				}
 				else{
 					statusInf.telefono = false 
-					telefonoError.textContent = "Telefono Incorrecto"
+					telefonoError.textContent = "Telefono incorrecto"
 				}
 
 				break
@@ -80,9 +80,24 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 	if (Object.values(statusInf).every((value) => value === true)) {
 
-	const datos = Object.fromEntries(new FormData(e.target));
-	console.log(datos);
+	const formData = Object.fromEntries(new FormData(e.target));
+	sendInfo(formData);
+	formulario.reset();
 	} else {
 		console.log('No enviado');
 	}
 });
+
+const sendInfo = async (formData) => {
+	const request = await fetch('http://localhost:8080/api/ClienteRegistro', {
+		method: 'POST',
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(formData)
+	});
+
+	const respuesta = await request.json();
+	console.log(respuesta);
+}
