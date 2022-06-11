@@ -83,8 +83,8 @@ formularioContacto.addEventListener('submit', (e) => {
 	if (!Object.values(statusInf).includes(false)) {
 		$('#exampleModalCenter').modal('show');
 		console.log('Enviado');
-
-		const datos = Object.fromEntries(new FormData(e.target));
+		const formData = Object.fromEntries(new FormData(e.target));
+		sendInfo(formData);
 		formularioContacto.reset();
 
 		statusInf.nombre = false;
@@ -95,3 +95,17 @@ formularioContacto.addEventListener('submit', (e) => {
 		mensajeError.textContent = 'Por favor llena los campos';
 	}
 });
+
+const sendInfo = async (formData) =>{
+	const request = await fetch('http://localhost:8080/api/ComentContacto', {
+		method: 'POST',
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(formData)
+	});
+
+	const respuesta = await request.json();
+	console.log(respuesta);
+}
