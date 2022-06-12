@@ -1,18 +1,17 @@
 const modeloUsuario = window.location.href.split('=').pop().substring(1);
-const urlProductos = 'assets/api/db.json';
+const urlProductos = "http://localhost:8080/api/Producto/all";
 const $contenedorPadre = document.getElementById('tarjetaProducto');
 
 
 const catchProducts = async (modeloUsuario) => {
-  const response = await fetch(urlProductos);
+  // const response = await fetch(urlProductos);
+	const response = await fetch(urlProductos);
   const datos = await response.json();
-  console.log(response);
-  console.log(datos);
-  datos.forEach(element => {
+    datos.forEach(element => {
     if (element.modelo.includes(modeloUsuario) || modeloUsuario=='todos') {
       const infoProducto = {
-        				id: element.id,
-        				nombre: element.nombre,
+        				id: element.producto_id,
+        				nombre: element.nomProduct,
         				descripcion: element.descripcion,
         				precio: element.precio,
         				url: element.url,
@@ -27,7 +26,7 @@ const catchProducts = async (modeloUsuario) => {
       <p class="card-text src" style="display:none">${element.url}</p>
       <h5 class="card-title titulo">${infoProducto.nombre}</h5>
       <p class="card-text">${infoProducto.descripcion}</p>
-      <p class="card-text precio">${infoProducto.precio}</p>
+      <p class="card-text precio">\$${infoProducto.precio}.00</p>
       <button class="agregar">Agregar al carrito</button></div>
       </div>
       </div>
@@ -35,7 +34,6 @@ const catchProducts = async (modeloUsuario) => {
       `;
       $contenedorPadre.innerHTML += template;
     } else {
-      console.log(element.modelo);
     }
     });
 
@@ -57,13 +55,12 @@ $filtros.forEach((filtro) => {
     
             arrProductos.forEach(producto => {  
         
-                if (producto.nombre.includes(document.getElementById('tipo').value) || producto.color.includes(document.getElementById('color').value)){
+                if (producto.nomProduct.includes(document.getElementById('tipo').value) || producto.color.includes(document.getElementById('color').value)){
                     
-                    console.log(producto.color)
-
+                    
                     const infoProducto = {
                         id : producto.id,
-                        nombre : producto.nombre,
+                        nombre : producto.nomProduct,
                         descripcion : producto.descripcion,
                         precio : producto.precio,
                         url : producto.url
@@ -78,7 +75,7 @@ $filtros.forEach((filtro) => {
                                                 <p class="card-text src" style="display:none">${producto.url}</p>
                                                 <h5 class="card-title titulo">${infoProducto.nombre}</h5>
                                                 <p class="card-text">${infoProducto.descripcion}</p>
-                                                <p class="card-text precio">${infoProducto.precio}</p>
+                                                <p class="card-text precio">\$${infoProducto.precio}.00</p>
                                                 <button class="agregar">Agregar al carrito</button></div>
                                             </div>  
                                         </div>
@@ -103,7 +100,6 @@ const fragment = document.createDocumentFragment();
 const $btnComprar = document.getElementById('btnComprarr');
 
 $btnComprar.addEventListener('click', (e) => {
-	console.log(document.querySelector('.totalC').textContent);
 
 	if (document.querySelector('.totalC').textContent.includes('$')) {
 		window.location.href = './direccion.html';
@@ -161,7 +157,6 @@ const generaCesta = (objeto) => {
 };
 
 const actualizaCesta = () => {
-	console.log(cesta);
 
 	$items.innerHTML = '';
 
@@ -219,11 +214,10 @@ const actualizaTotales = () => {
 };
 
 const modificaCantidades = (e) => {
-	console.log(e.target);
+	
 
 	//Click en boton + (cesta)
 	if (e.target.classList.contains('btn-outline-success')) {
-		console.log(cesta[e.target.dataset.id]);
 		const producto = cesta[e.target.dataset.id];
 		producto.cantidad++;
 		cesta[e.target.dataset.id] = { ...producto };
@@ -233,7 +227,6 @@ const modificaCantidades = (e) => {
 
 	//Click en boton - (cesta)
 	if (e.target.classList.contains('btn-outline-danger')) {
-		console.log(cesta[e.target.dataset.id]);
 		const producto = cesta[e.target.dataset.id];
 		producto.cantidad--;
 
