@@ -1,5 +1,5 @@
 const modeloUsuario = window.location.href.split('=').pop().substring(1);
-const urlProductos = "http://localhost:8080/api/Producto/all";
+const urlProductos = "https://zintra-api.herokuapp.com/api/Producto/all";
 const $contenedorPadre = document.getElementById('tarjetaProducto');
 
 

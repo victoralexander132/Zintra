@@ -97,7 +97,7 @@ formularioContacto.addEventListener('submit', (e) => {
 });
 
 const sendInfo = async (formData) =>{
-	const request = await fetch('http://localhost:8080/api/ComentContacto', {
+	const request = await fetch('https://zintra-api.herokuapp.com/api/ComentContacto', {
 		method: 'POST',
 		headers: {
 			'Accept': 'application/json',
