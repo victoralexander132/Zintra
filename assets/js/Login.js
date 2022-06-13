@@ -30,7 +30,7 @@ inputs.forEach((inp)=>{
 				    }
 			    break
     
-			case "password":
+			case "contrasenia":
 				if(expresiones.password.test(e.target.value)){
 					statusInf.password = true
 					
@@ -51,9 +51,28 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 	if (Object.values(statusInf).every((value) => value === true)) {
 
-	const datos = Object.fromEntries(new FormData(e.target));
-	console.log(datos);
+	const formData = Object.fromEntries(new FormData(e.target));
+	sendInfo(formData);
 	} else {
 		document.querySelector(".alert-danger").style.display = "block"
 	}
 });
+
+const sendInfo = async (formData) => {
+	const request = await fetch('https://zintra-api.herokuapp.com/api/ClienteRegistro/login', {
+		method: 'POST',
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(formData)
+	});
+
+	const respuesta = await request.json();
+	if (respuesta == true) {
+		alert("Inicio de sesión exitoso");
+		window.location.href = "./index.html" 
+	} else {
+		alert("Datos incorrectos")
+	}
+}
