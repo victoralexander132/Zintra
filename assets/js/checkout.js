@@ -29,7 +29,7 @@ const areValid = {
 inputs.forEach((input) => {
 	input.addEventListener('keyup', (e) => {
 		switch (e.target.name) {
-			case 'nombre':
+			case 'nombre_tarjeta':
 				if (expresiones.nombre.test(e.target.value)) {
 					$valNombre.textContent = '';
 					areValid.nombre = true;
@@ -38,7 +38,7 @@ inputs.forEach((input) => {
 					areValid.nombre = false;
 				}
 				break;
-			case 'card':
+			case 'numero_tarjeta':
 				if (expresiones.card.test(e.target.value)) {
 					$valCard.textContent = '';
 					areValid.card = true;
@@ -81,9 +81,13 @@ inputs.forEach((input) => {
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 	if (Object.values(areValid).every((value) => value === true)) {
-		//console.log('Enviado');
 		const datos = Object.fromEntries(new FormData(e.target));
-		//console.log(datos);
+		datos.cvc = parseInt(datos.cvc);
+		datos.fecha_vencim = parseInt(datos.mm + datos.yy);
+		delete datos.mm;
+		delete datos.yy;
+		// console.log(datos);
+		localStorage.setItem('checkout', JSON.stringify(datos));
 		window.location.href = `./confirmacion.html`;
 	} else {
 		console.log('No enviado');
