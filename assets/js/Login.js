@@ -50,29 +50,32 @@ inputs.forEach((inp)=>{
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 	if (Object.values(statusInf).every((value) => value === true)) {
-
-	const formData = Object.fromEntries(new FormData(e.target));
-	sendInfo(formData);
+	
+	const credenciales = Object.fromEntries(new FormData(e.target));
+	login(credenciales);
 	} else {
 		document.querySelector(".alert-danger").style.display = "block"
 	}
 });
 
-const sendInfo = async (formData) => {
-	const request = await fetch('https://zintra-api.herokuapp.com/api/ClienteRegistro/login', {
-		method: 'POST',
-		headers: {
-			'Accept': 'application/json',
-			'Content-Type': 'application/json'
-		},
-		body: JSON.stringify(formData)
-	});
 
-	const respuesta = await request.json();
-	if (respuesta == true) {
-		alert("Inicio de sesión exitoso");
-		window.location.href = "./index.html" 
+/* Función para comprobar inicio de sesión */
+const login = async (credenciales) => {
+	const resp = await fetch('https://zintra-api.herokuapp.com/login', {
+				method: 'POST',
+        body: JSON.stringify(credenciales),
+        headers: {
+            'Content-type': 'application/json'
+        }
+	})
+	const token = resp.headers.get('Authorization');
+
+	if (token && token.includes('Bearer') && resp.ok) {
+		localStorage.setItem('token', token);
+		url = window.location;
+		const path = url.pathname.substring(0, url.pathname.lastIndexOf('/') + 1);
+		location.href = path + 'index.html';
 	} else {
-		alert("Datos incorrectos")
+		localStorage.removeItem('token');
 	}
 }
