@@ -17,7 +17,7 @@ $mostrarDetalle.addEventListener('click', e => {
         console.log(detalleCesta)
         detalleAddress = JSON.parse(localStorage.getItem('direccion'))
         console.log(detalleAddress);
-        document.getElementById('address').innerHTML = `${detalleAddress.ciudad}, ${detalleAddress.address}`
+        document.getElementById('address').innerHTML = `${detalleAddress.ciudad}, ${detalleAddress.direccion}`
         actualizaDetalle()
     }
 })
@@ -39,16 +39,16 @@ let actualizaDetalle = () => {
                 <th scope="row">${numeroFila}</th>
                 <td><img src="${producto.url}" class="img-tabla"></td>
                 <td>${producto.nombre}</td>
-                <td>${producto.cantidad}</td>
-                <td> $ ${(producto.cantidad * producto.precio.replace(/[$]/g,'')).toFixed(2) }</td>
+                <td>${producto.cant_productos}</td>
+                <td> $ ${(producto.cant_productos * producto.precio.replace(/[$]/g,'')).toFixed(2) }</td>
             </tr>
             `
         $padredetalle.innerHTML += template
     })
 
 
-    const nCantidad = Object.values(detalleCesta).reduce((acumulador, {cantidad}) => acumulador + cantidad, 0)
-    const nPrecio = Object.values(detalleCesta).reduce((acumulador, {cantidad, precio}) => acumulador + cantidad * precio.replace(/[$]/g,''), 0)
+    const nCantidad = Object.values(detalleCesta).reduce((acumulador, {cant_productos}) => acumulador + cant_productos, 0)
+    const nPrecio = Object.values(detalleCesta).reduce((acumulador, {cant_productos, precio}) => acumulador + cant_productos * precio.replace(/[$]/g,''), 0)
 
     templatee = `
                 <tr>
