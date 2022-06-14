@@ -59,7 +59,7 @@ $filtros.forEach((filtro) => {
                     
                     
                     const infoProducto = {
-                        id : producto.id,
+                        id : producto.producto_id,
                         nombre : producto.nomProduct,
                         descripcion : producto.descripcion,
                         precio : producto.precio,
@@ -96,12 +96,17 @@ const $templateCard = document.getElementById('template-card').content;
 const $templateCarrito = document.getElementById('template-carrito').content;
 const $templateFooter = document.getElementById('template-footer').content;
 const fragment = document.createDocumentFragment();
-
 const $btnComprar = document.getElementById('btnComprarr');
 
+// Botón comprar que redirecciona a dirección.html
 $btnComprar.addEventListener('click', (e) => {
 
 	if (document.querySelector('.totalC').textContent.includes('$')) {
+		// Cambiando propiedades a enteros porque así lo pide la API
+		Object.values(cesta).forEach((producto) => {
+			producto.precio = parseInt(producto.precio.replace(/[$]/g, ''));
+			producto.producto_id = parseInt(producto.producto_id)
+		})
 		window.location.href = './direccion.html';
 	}
 });
@@ -139,20 +144,20 @@ const iniciaAdd = (e) => {
 const generaCesta = (objeto) => {
 
 	const producto = {
-		id: objeto.querySelector('.id').textContent,
+		producto_id: objeto.querySelector('.id').textContent,
 		nombre: objeto.querySelector('.titulo').textContent,
 		precio: objeto.querySelector('.precio').textContent,
-		cantidad: 1,
+		cant_productos: 1,
 		url: objeto.querySelector('.src').textContent,
 	};
 
 	//si el producto ya esta en la cesta, aumenta cantidad
-	if (cesta.hasOwnProperty(producto.id)) {
-		producto.cantidad = cesta[producto.id].cantidad + 1;
+	if (cesta.hasOwnProperty(producto.producto_id)) {
+		producto.cant_productos = cesta[producto.producto_id].cantidad + 1;
 	}
 
 	//Actualiza cesta (hace una copia de los datos del producto)
-	cesta[producto.id] = { ...producto };
+	cesta[producto.producto_id] = { ...producto };
 	actualizaCesta();
 };
 
@@ -163,11 +168,11 @@ const actualizaCesta = () => {
 	//recorremos la coleccion, se usa object para poder usar foreach (un obj no puede recorrerse como array)
 	Object.values(cesta).forEach((producto) => {
 		$templateCarrito.querySelectorAll('td')[0].textContent = producto.nombre;
-		$templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad;
-		$templateCarrito.querySelector('.btn-outline-success').dataset.id = producto.id;
-		$templateCarrito.querySelector('.btn-outline-danger').dataset.id = producto.id;
+		$templateCarrito.querySelectorAll('td')[1].textContent = producto.cant_productos;
+		$templateCarrito.querySelector('.btn-outline-success').dataset.id = producto.producto_id;
+		$templateCarrito.querySelector('.btn-outline-danger').dataset.id = producto.producto_id;
 
-		const prec = producto.cantidad * producto.precio.replace(/[$]/g, '');
+		const prec = producto.cant_productos * producto.precio.replace(/[$]/g, '');
 		$templateCarrito.querySelector('span').textContent = prec.toFixed(2);
 
 		const clone = $templateCarrito.cloneNode(true);
@@ -194,8 +199,8 @@ const actualizaTotales = () => {
 	}
 
 	//recorre la cesta y va acumulando las valores de cada columna
-	const nCantidad = Object.values(cesta).reduce((acumulador, { cantidad }) => acumulador + cantidad, 0);
-	const nPrecio = Object.values(cesta).reduce((acumulador, { cantidad, precio }) => acumulador + cantidad * precio.replace(/[$]/g, ''), 0);
+	const nCantidad = Object.values(cesta).reduce((acumulador, { cant_productos }) => acumulador + cant_productos, 0);
+	const nPrecio = Object.values(cesta).reduce((acumulador, { cant_productos, precio }) => acumulador + cant_productos * precio.replace(/[$]/g, ''), 0);
 
 	//pinta totales
 	$templateFooter.querySelectorAll('td')[0].textContent = nCantidad;
@@ -219,7 +224,7 @@ const modificaCantidades = (e) => {
 	//Click en boton + (cesta)
 	if (e.target.classList.contains('btn-outline-success')) {
 		const producto = cesta[e.target.dataset.id];
-		producto.cantidad++;
+		producto.cant_productos++;
 		cesta[e.target.dataset.id] = { ...producto };
 
 		actualizaCesta();
@@ -228,9 +233,9 @@ const modificaCantidades = (e) => {
 	//Click en boton - (cesta)
 	if (e.target.classList.contains('btn-outline-danger')) {
 		const producto = cesta[e.target.dataset.id];
-		producto.cantidad--;
+		producto.cant_productos--;
 
-		if (producto.cantidad === 0) {
+		if (producto.cant_productos === 0) {
 			delete cesta[e.target.dataset.id];
 		}
 		actualizaCesta();
