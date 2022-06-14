@@ -39,7 +39,7 @@ const areValid = {
 inputs.forEach((input) => {
 	input.addEventListener('keyup', (e) => {
 		switch (e.target.name) {
-			case 'nombre':
+			case 'nombre_cliente':
 				if (expresiones.nombre.test(e.target.value)) {
 					$valNombre.textContent = '';
 					areValid.nombre = true;
@@ -48,7 +48,8 @@ inputs.forEach((input) => {
 					areValid.nombre = false;
 				}
 				break;
-			case 'apellido':
+
+			case 'apellido_cliente':
 				if (expresiones.nombre.test(e.target.value)) {
 					$valApellido.textContent = '';
 					areValid.apellido = true;
@@ -57,7 +58,8 @@ inputs.forEach((input) => {
 					areValid.apellido = false;
 				}
 				break;
-			case 'tel':
+
+			case 'telefono':
 				if (expresiones.telefono.test(e.target.value)) {
 					$valTel.textContent = '';
 					areValid.tel = true;
@@ -67,7 +69,7 @@ inputs.forEach((input) => {
 				}
 				break;
 
-			case 'correo':
+			case 'email':
 				if (expresiones.email.test(e.target.value)) {
 					$valMail.textContent = '';
 					areValid.mail = true;
@@ -97,7 +99,7 @@ inputs.forEach((input) => {
 				}
 				break;
 
-			case 'address':
+			case 'direccion':
 				if (expresiones.address.test(e.target.value)) {
 					$valAddress.textContent = '';
 					areValid.address = true;
@@ -122,6 +124,8 @@ inputs.forEach((input) => {
 		}
 	});
 });
+
+// Botón que valida y manda a checkout
 formulario.addEventListener('submit', (e) => {
 	console.log(areValid);
 	const check = document.getElementById('robot').checked;
@@ -130,8 +134,9 @@ formulario.addEventListener('submit', (e) => {
 	if (Object.values(areValid).every((value) => value === true) && check) {
 		console.log('Enviado');
 		const datos = Object.fromEntries(new FormData(e.target));
+		datos.cp = parseInt(datos.cp);
+		datos.estado = "Devastado"
 		localStorage.setItem('direccion', JSON.stringify(datos));
-		console.log(datos);
 		window.location.href = `./checkout.html`;
 	} else {
 		console.log('No enviado');
