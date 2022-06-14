@@ -107,6 +107,7 @@ $btnComprar.addEventListener('click', (e) => {
 			producto.precio = parseInt(producto.precio.replace(/[$]/g, ''));
 			producto.producto_id = parseInt(producto.producto_id)
 		})
+		localStorage.setItem('carrito', JSON.stringify(cesta));
 		window.location.href = './direccion.html';
 	}
 });
