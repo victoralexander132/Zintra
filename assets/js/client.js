@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
 });
 
 const fetchUsuario = async (email) => {
-	const response = await fetch('https://zintra-api.herokuapp.com/api/ClienteRegistro/all', {
+	const response = await fetch('http://localhost:5000/api/ClienteRegistro/all', {
 		headers: {
 			'Content-type': 'application/json',
 			Authorization: token,

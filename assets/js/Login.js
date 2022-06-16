@@ -61,7 +61,7 @@ formulario.addEventListener('submit', (e) => {
 
 /* Función para comprobar inicio de sesión */
 const login = async (credenciales) => {
-	const resp = await fetch('https://zintra-api.herokuapp.com/login', {
+	const resp = await fetch('http://localhost:5000/login', {
 				method: 'POST',
         body: JSON.stringify(credenciales),
         headers: {
