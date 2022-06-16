@@ -89,7 +89,7 @@ formulario.addEventListener('submit', (e) => {
 });
 
 const sendInfo = async (formData) => {
-	const request = await fetch('http://localhost:5000/api/ClienteRegistro', {
+	const request = await fetch('http://localhost:5000/api/Usuario', {
 		method: 'POST',
 		headers: {
 			'Accept': 'application/json',
