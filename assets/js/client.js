@@ -17,16 +17,15 @@ const fetchUsuario = async (email) => {
 	Object.values(usuarios).forEach((usuario) => {
 		if (usuario.email == email) {
       insertUserData(usuario);
+      localStorage.setItem('cliente_id', usuario.cliente_id);
     } else {
-      
+     
     }
 	});
 };
 
 const insertUserData = (usuario) => {
-  console.log(usuario);
   document.getElementById('txt-nombre').outerHTML= usuario.nombre;
   document.getElementById('txt-email').outerHTML= usuario.email;
   document.getElementById('txt-telefono').outerHTML= usuario.telefono;
-
 }
