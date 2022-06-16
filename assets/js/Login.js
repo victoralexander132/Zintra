@@ -72,9 +72,10 @@ const login = async (credenciales) => {
 
 	if (token && token.includes('Bearer') && resp.ok) {
 		localStorage.setItem('token', token);
+		localStorage.setItem('email', credenciales.email);
 		url = window.location;
 		const path = url.pathname.substring(0, url.pathname.lastIndexOf('/') + 1);
-		location.href = path + 'index.html';
+		location.href = path + 'client.html';
 	} else {
 		localStorage.removeItem('token');
 	}
