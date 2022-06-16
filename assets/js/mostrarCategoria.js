@@ -1,5 +1,5 @@
 const modeloUsuario = window.location.href.split('=').pop().substring(1);
-const urlProductos = "https://zintra-api.herokuapp.com/api/Producto/all";
+const urlProductos = "http://localhost:5000/api/Producto/all";
 const $contenedorPadre = document.getElementById('tarjetaProducto');
 
 
@@ -10,8 +10,8 @@ const catchProducts = async (modeloUsuario) => {
     datos.forEach(element => {
     if (element.modelo.includes(modeloUsuario) || modeloUsuario=='todos') {
       const infoProducto = {
-        				id: element.producto_id,
-        				nombre: element.nomProduct,
+        				id: element.id,
+        				nombre: element.nombre,
         				descripcion: element.descripcion,
         				precio: element.precio,
         				url: element.url,
@@ -22,7 +22,7 @@ const catchProducts = async (modeloUsuario) => {
       <div class="card h-100 ml-auto mr-auto">
       <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.url}"/>
       <div class="card-body color-card">
-      <p class="card-text id" style="display:none">${element.producto_id}</p>
+      <p class="card-text id" style="display:none">${element.id}</p>
       <p class="card-text src" style="display:none">${element.url}</p>
       <h5 class="card-title titulo">${infoProducto.nombre}</h5>
       <p class="card-text">${infoProducto.descripcion}</p>
@@ -55,12 +55,12 @@ $filtros.forEach((filtro) => {
     
             arrProductos.forEach(producto => {  
         
-                if (producto.nomProduct.includes(document.getElementById('tipo').value) || producto.color.includes(document.getElementById('color').value)){
+                if (producto.nombre.includes(document.getElementById('tipo').value) || producto.color.includes(document.getElementById('color').value)){
                     
                     
                     const infoProducto = {
-                        id : producto.producto_id,
-                        nombre : producto.nomProduct,
+                        id : producto.id,
+                        nombre : producto.nombre,
                         descripcion : producto.descripcion,
                         precio : producto.precio,
                         url : producto.url
@@ -71,7 +71,7 @@ $filtros.forEach((filtro) => {
                                         <div class="card h-100 ml-auto mr-auto" >
                                             <img id="imgCard" src="${infoProducto.url}" class="card-img-top" alt="${infoProducto.descripcion}" />
                                             <div class="card-body color-card">
-                                                <p class="card-text id" style="display:none">${producto.producto_id}</p>
+                                                <p class="card-text id" style="display:none">${producto.id}</p>
                                                 <p class="card-text src" style="display:none">${producto.url}</p>
                                                 <h5 class="card-title titulo">${infoProducto.nombre}</h5>
                                                 <p class="card-text">${infoProducto.descripcion}</p>
@@ -105,7 +105,7 @@ $btnComprar.addEventListener('click', (e) => {
 		// Cambiando propiedades a enteros porque así lo pide la API
 		Object.values(cesta).forEach((producto) => {
 			producto.precio = parseInt(producto.precio.replace(/[$]/g, ''));
-			producto.producto_id = parseInt(producto.producto_id)
+			producto.id = parseInt(producto.id)
 		})
 		localStorage.setItem('carrito', JSON.stringify(cesta));
 		window.location.href = './direccion.html';
@@ -145,20 +145,20 @@ const iniciaAdd = (e) => {
 const generaCesta = (objeto) => {
 
 	const producto = {
-		producto_id: objeto.querySelector('.id').textContent,
+		id: objeto.querySelector('.id').textContent,
 		nombre: objeto.querySelector('.titulo').textContent,
 		precio: objeto.querySelector('.precio').textContent,
-		cant_productos: 1,
+		cantidad: 1,
 		url: objeto.querySelector('.src').textContent,
 	};
 
 	//si el producto ya esta en la cesta, aumenta cantidad
-	if (cesta.hasOwnProperty(producto.producto_id)) {
-		producto.cant_productos = cesta[producto.producto_id].cantidad + 1;
+	if (cesta.hasOwnProperty(producto.id)) {
+		producto.cantidad = cesta[producto.id].cantidad + 1;
 	}
 
 	//Actualiza cesta (hace una copia de los datos del producto)
-	cesta[producto.producto_id] = { ...producto };
+	cesta[producto.id] = { ...producto };
 	actualizaCesta();
 };
 
@@ -169,11 +169,11 @@ const actualizaCesta = () => {
 	//recorremos la coleccion, se usa object para poder usar foreach (un obj no puede recorrerse como array)
 	Object.values(cesta).forEach((producto) => {
 		$templateCarrito.querySelectorAll('td')[0].textContent = producto.nombre;
-		$templateCarrito.querySelectorAll('td')[1].textContent = producto.cant_productos;
-		$templateCarrito.querySelector('.btn-outline-success').dataset.id = producto.producto_id;
-		$templateCarrito.querySelector('.btn-outline-danger').dataset.id = producto.producto_id;
+		$templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad;
+		$templateCarrito.querySelector('.btn-outline-success').dataset.id = producto.id;
+		$templateCarrito.querySelector('.btn-outline-danger').dataset.id = producto.id;
 
-		const prec = producto.cant_productos * producto.precio.replace(/[$]/g, '');
+		const prec = producto.cantidad * producto.precio.replace(/[$]/g, '');
 		$templateCarrito.querySelector('span').textContent = prec.toFixed(2);
 
 		const clone = $templateCarrito.cloneNode(true);
@@ -200,8 +200,8 @@ const actualizaTotales = () => {
 	}
 
 	//recorre la cesta y va acumulando las valores de cada columna
-	const nCantidad = Object.values(cesta).reduce((acumulador, { cant_productos }) => acumulador + cant_productos, 0);
-	const nPrecio = Object.values(cesta).reduce((acumulador, { cant_productos, precio }) => acumulador + cant_productos * precio.replace(/[$]/g, ''), 0);
+	const nCantidad = Object.values(cesta).reduce((acumulador, { cantidad }) => acumulador + cantidad, 0);
+	const nPrecio = Object.values(cesta).reduce((acumulador, { cantidad, precio }) => acumulador + cantidad * precio.replace(/[$]/g, ''), 0);
 
 	//pinta totales
 	$templateFooter.querySelectorAll('td')[0].textContent = nCantidad;
@@ -225,7 +225,7 @@ const modificaCantidades = (e) => {
 	//Click en boton + (cesta)
 	if (e.target.classList.contains('btn-outline-success')) {
 		const producto = cesta[e.target.dataset.id];
-		producto.cant_productos++;
+		producto.cantidad++;
 		cesta[e.target.dataset.id] = { ...producto };
 
 		actualizaCesta();
@@ -234,9 +234,9 @@ const modificaCantidades = (e) => {
 	//Click en boton - (cesta)
 	if (e.target.classList.contains('btn-outline-danger')) {
 		const producto = cesta[e.target.dataset.id];
-		producto.cant_productos--;
+		producto.cantidad--;
 
-		if (producto.cant_productos === 0) {
+		if (producto.cantidad === 0) {
 			delete cesta[e.target.dataset.id];
 		}
 		actualizaCesta();
