@@ -135,7 +135,7 @@ formulario.addEventListener('submit', (e) => {
 		console.log('Enviado');
 		const datos = Object.fromEntries(new FormData(e.target));
 		datos.cp = parseInt(datos.cp);
-		datos.estado = "Devastado"
+		datos.estado = "Ciudad de México"
 		localStorage.setItem('direccion', JSON.stringify(datos));
 		window.location.href = `./checkout.html`;
 	} else {
