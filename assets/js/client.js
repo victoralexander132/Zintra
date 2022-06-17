@@ -2,6 +2,12 @@
 window.addEventListener('load', () => {
 	const token = localStorage.getItem('token');
 	const email = localStorage.getItem('email');
+	if(!token) {
+			url = window.location;
+			const path = url.pathname.substring(0, url.pathname.lastIndexOf('/') + 1)
+			location.href = path +  './index.html';
+	}
+
 	// Recuperamos los usuarios de la base de datos
 	const usuarios = fetchUsuario(email);
 });
@@ -56,4 +62,8 @@ const fetchUrlName = async (id) => {
 	const response = await fetch("http://localhost:5000/api/Producto/"+id, {headers:{Authorization: localStorage.getItem('token')}});
 	const producto = await response.json();
 	return producto;
+}
+
+const logout = () => {
+	localStorage.removeItem('token')
 }
