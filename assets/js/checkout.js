@@ -163,7 +163,7 @@ formulario.addEventListener('submit', (e) => {
 				// localStorage.removeItem('direccion')
 				// localStorage.removeItem('pago')
 				window.location.href="./confirmacion.html"
-			} , 500);  
+			} , 1500);  
 			
 		} 
 	});
