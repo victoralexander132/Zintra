@@ -88,8 +88,92 @@ formulario.addEventListener('submit', (e) => {
 		delete datos.yy;
 		// console.log(datos);
 		localStorage.setItem('checkout', JSON.stringify(datos));
+
+		console.log('=============================================================');
+		const token = localStorage.getItem('token');
+		const usuarioCarrito = JSON.parse(localStorage.getItem('carrito'));
+		/* Post de carrito y productos del carrito */
+		var carritoId;
+		postCarrito().then((carrito) => {
+			console.log(carrito);
+
+			Object.values(usuarioCarrito).forEach((carritoProducto) => {
+				fetch('http://localhost:5000/api/CarritoProducto', {
+					method: 'POST',
+					headers: {
+						'Content-type': 'application/json',
+						Authorization: token,
+					},
+					body: JSON.stringify({
+						carrito: { id: carrito.id },
+						producto: { id: carritoProducto.id },
+						cant_productos: carritoProducto.cantidad,
+						precio: carritoProducto.precio,
+					}),
+				}).then((resp) =>
+					resp.json().then((carritoProductoResp) => {
+						console.log(carritoProductoResp);
+					})
+				);
+			});
+
+			const envio = JSON.parse(localStorage.getItem('direccion'));
+			fetch('http://localhost:5000/api/Envio', {
+				method: 'POST',
+				headers: {
+					'Content-type': 'application/json',
+					Authorization: localStorage.getItem('token'),
+				},
+				body: JSON.stringify({
+					nombre: envio.nombre_cliente,
+					apellido: envio.apellido_cliente,
+					telefono: envio.telefono,
+					email: envio.email,
+					estado: envio.estado,
+					ciudad: envio.ciudad,
+					cp: envio.cp,
+					direccion: envio.direccion,
+					referencias: envio.referencias,
+					carrito: { id: carrito.id },
+				}),
+			}).then((resp) =>
+				resp.json().then((envio) => {
+					fetch('http://localhost:5000/api/Pago', {
+						method: 'POST',
+						headers: {
+							'Content-type': 'application/json',
+							Authorization: localStorage.getItem('token'),
+						},
+						body: JSON.stringify({
+							cvc: datos.cvc,
+							fecha_vencim: datos.fecha_vencim,
+							nombre_tarjeta: datos.nombre_tarjeta,
+							numero_tarjeta: datos.numero_tarjeta,
+							envio: { id: envio.id },
+						}),
+					});
+				})
+			);
+		});
+
+		console.log('=============================================================');
+
 		window.location.href = `./confirmacion.html`;
-	} else {
-		console.log('No enviado');
-	}
+	} 
 });
+
+const postCarrito = async () => {
+	const resp = await fetch('http://localhost:5000/api/Carrito', {
+		method: 'POST',
+		headers: {
+			'Content-type': 'application/json',
+			Authorization: localStorage.getItem('token'),
+		},
+		body: JSON.stringify({
+			usuario: {
+				id: localStorage.getItem('cliente_id'),
+			},
+		}),
+	});
+	return await resp.json();
+};
