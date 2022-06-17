@@ -9,6 +9,14 @@
     color: black;
 } 
 
+.img-tabla{
+	height: 50px;
+	width: 50px;
+	object-fit: cover;
+    object-position: center;
+	
+}
+
 button:hover {
 	background-color: rgba(255, 216, 126, 0.619);
 }
