@@ -151,19 +151,21 @@ formulario.addEventListener('submit', (e) => {
 							numero_tarjeta: datos.numero_tarjeta,
 							envio: { id: envio.id },
 						}),
+					}).then(()=>{
+						setTimeout(window.location.href="./confirmacion.html",500)
 					});
 				})
 				);
 			});
 			
-			console.log('=============================================================');
-			setTimeout(function(){
-				// localStorage.removeItem('carrito')
-				// localStorage.removeItem('cesta')
-				// localStorage.removeItem('direccion')
-				// localStorage.removeItem('pago')
-				window.location.href="./confirmacion.html"
-			} , 1500);  
+			// console.log('=============================================================');
+			// setTimeout(function(){
+			// 	// localStorage.removeItem('carrito')
+			// 	// localStorage.removeItem('cesta')
+			// 	// localStorage.removeItem('direccion')
+			// 	// localStorage.removeItem('pago')
+			// 	window.location.href="./confirmacion.html"
+			// } , 1500);  
 			
 		} 
 	});
