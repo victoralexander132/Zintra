@@ -17,7 +17,7 @@ const fetchUsuario = async (email) => {
 	Object.values(usuarios).forEach((usuario) => {
 		if (usuario.email == email) {
       insertUserData(usuario);
-      localStorage.setItem('cliente_id', usuario.cliente_id);
+      localStorage.setItem('cliente_id', usuario.id);
     } else {
      
     }
