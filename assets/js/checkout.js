@@ -157,7 +157,13 @@ formulario.addEventListener('submit', (e) => {
 			});
 			
 			console.log('=============================================================');
-			setTimeout(function(){window.location.href="./confirmacion.html"} , 500);  
+			setTimeout(function(){
+				// localStorage.removeItem('carrito')
+				// localStorage.removeItem('cesta')
+				// localStorage.removeItem('direccion')
+				// localStorage.removeItem('pago')
+				window.location.href="./confirmacion.html"
+			} , 500);  
 			
 		} 
 	});
