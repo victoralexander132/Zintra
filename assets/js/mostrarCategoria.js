@@ -104,8 +104,9 @@ $btnComprar.addEventListener('click', (e) => {
 
 	if (document.querySelector('.totalC').textContent.includes('$')) {
 		if (!token) {
-			alert("Tienes que registrarte para poder continuar con tu compra")
-			window.location.href = './registro.html';
+			/* alert("Tienes que registrarte para poder continuar con tu compra") */
+			$('#exampleModalCenter').modal('show');
+			/* window.location.href = './registro.html'; */
 		} else {
 			Object.values(cesta).forEach((producto) => {
 				producto.precio = parseInt(producto.precio.replace(/[$]/g, ''));

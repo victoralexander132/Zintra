@@ -135,3 +135,37 @@ a:active {
 	border-radius: 15px;
 	padding: 16px;
 }
+
+.img-cactus{
+	width: 28em;
+}
+.boton-detail2 {
+	color: white;
+	font-size: 1rem;
+	margin-left: 5px;
+	padding: 1rem 2.5rem;
+	bottom: 0;
+	border: none;
+	border-radius: 3px;
+	background-color: var(--primary);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+	transition: all 0.3s ease;
+	display: absolute;
+}
+
+.boton-detail2:hover {
+	background-color: var(--principal);
+}
+.boton-detail2:hover {
+	background-color: var(--principal);
+	color: white;
+}
+#forgot{
+	background-color: rgba(216, 112, 147, 0.721);
+	color: white;
+}
+@media screen and (max-width: 450px) {
+	.img-party{
+		width: 82vw;
+	}
+} 

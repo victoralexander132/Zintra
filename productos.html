@@ -160,7 +160,7 @@
 								<option>Verde</option>
 							</select>
 						</div>
-						<button onclick="todos()" type="submit" class="btn d-flex mx-auto hvr-fade boton-rosa" ><b>Limpiar filtros</b></button>
+						<button onclick="todos()" type="submit" class="btn d-flex mx-auto hvr-fade boton-rosa" data-toggle="modal" data-target="#myModal"><b>Limpiar filtros</b></button>
 					</form>
 					
 
@@ -250,6 +250,29 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- Modal -->
+		<div class="modal fade align-items-center" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content align-items-center">
+					<div class="modal-header">
+						<h5 class="modal-title " id="exampleModalLongTitle">Regístrate para continuar</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body ">
+						<img src="assets/images/productos/hugerCatus.gif" alt="party-plants" class="img-cactus" />
+						<button id="forgot" type="button" class="btn btn-lg btn-block disabled mx-auto">No me olvides<img src="assets/images/productos/plant.png" class=" ml-4 img-planta" alt="" /></button>
+						<h6 class="text-center"></h6>
+					</div>
+					<div class="modal-footer">
+						<a class="btn d-flex mx-auto boton-detail2 align-self-center text-white" href="./registro.html" role="button"><span class="texto-boton">¡Quiero mi plantita!</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- fin modal -->
 
 		<footer class="footer mt-auto py-3">
 			<div class="container footer mx-1 align-items-center">
