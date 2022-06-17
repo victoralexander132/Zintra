@@ -97,18 +97,24 @@ const $templateCarrito = document.getElementById('template-carrito').content;
 const $templateFooter = document.getElementById('template-footer').content;
 const fragment = document.createDocumentFragment();
 const $btnComprar = document.getElementById('btnComprarr');
+const token = localStorage.getItem('token');
 
 // Botón comprar que redirecciona a dirección.html
 $btnComprar.addEventListener('click', (e) => {
 
 	if (document.querySelector('.totalC').textContent.includes('$')) {
-		// Cambiando propiedades a enteros porque así lo pide la API
-		Object.values(cesta).forEach((producto) => {
-			producto.precio = parseInt(producto.precio.replace(/[$]/g, ''));
-			producto.id = parseInt(producto.id)
-		})
-		localStorage.setItem('carrito', JSON.stringify(cesta));
-		window.location.href = './direccion.html';
+		if (!token) {
+			alert("Tienes que registrarte para poder continuar con tu compra")
+			window.location.href = './registro.html';
+		} else {
+			Object.values(cesta).forEach((producto) => {
+				producto.precio = parseInt(producto.precio.replace(/[$]/g, ''));
+				producto.id = parseInt(producto.id)
+			})
+			localStorage.setItem('carrito', JSON.stringify(cesta));
+			window.location.href = './direccion.html';
+		}
+		
 	}
 });
 

@@ -33,3 +33,17 @@ const todos = () => {
   const busqueda = 'todos';
   window.location.href = `./productos.html?nombre=?${busqueda}`
 }
+
+const accessClient = () => {
+	const token = localStorage.getItem('token');
+	if(!token) {
+			url = window.location;
+			const path = url.pathname.substring(0, url.pathname.lastIndexOf('/') + 1)
+			location.href = path +  './login.html';
+		} else{
+			url = window.location;
+			const path = url.pathname.substring(0, url.pathname.lastIndexOf('/') + 1)
+			location.href = path +  './client.html';
+
+		}
+	}

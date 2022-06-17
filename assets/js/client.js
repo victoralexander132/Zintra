@@ -10,7 +10,7 @@ const fetchUsuario = async (email) => {
 	const response = await fetch('http://localhost:5000/api/Usuario/all', {
 		headers: {
 			'Content-type': 'application/json',
-			Authorization: token,
+			Authorization: localStorage.getItem('token'),
 		},
 	});
 	const usuarios = await response.json();
@@ -53,7 +53,7 @@ const insertUserData = (usuario) => {
 }
 
 const fetchUrlName = async (id) => {
-	const response = await fetch("http://localhost:5000/api/Producto/"+id, {headers:{Authorization: token}});
+	const response = await fetch("http://localhost:5000/api/Producto/"+id, {headers:{Authorization: localStorage.getItem('token')}});
 	const producto = await response.json();
 	return producto;
 }

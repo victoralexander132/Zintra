@@ -153,14 +153,16 @@ formulario.addEventListener('submit', (e) => {
 						}),
 					});
 				})
-			);
-		});
-
-		console.log('=============================================================');
-
-		window.location.href = `./confirmacion.html`;
-	} 
-});
+				);
+			});
+			
+			console.log('=============================================================');
+			setTimeout(function(){window.location.href="./confirmacion.html"} , 500);  
+			
+		} 
+	});
+		
+	
 
 const postCarrito = async () => {
 	const resp = await fetch('http://localhost:5000/api/Carrito', {
