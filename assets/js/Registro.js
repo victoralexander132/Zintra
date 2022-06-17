@@ -79,7 +79,7 @@ formulario.addEventListener('submit', (e) => {
 });
 
 const sendInfo = async (formData) => {
-	const request = await fetch('http://localhost:5000/api/Usuario', {
+	const request = await fetch('https://zintra-api.herokuapp.com/api/Usuario', {
 		method: 'POST',
 		headers: {
 			Accept: 'application/json',

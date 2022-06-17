@@ -98,7 +98,7 @@ formulario.addEventListener('submit', (e) => {
 			console.log(carrito);
 
 			Object.values(usuarioCarrito).forEach((carritoProducto) => {
-				fetch('http://localhost:5000/api/CarritoProducto', {
+				fetch('https://zintra-api.herokuapp.com/api/CarritoProducto', {
 					method: 'POST',
 					headers: {
 						'Content-type': 'application/json',
@@ -118,7 +118,7 @@ formulario.addEventListener('submit', (e) => {
 			});
 
 			const envio = JSON.parse(localStorage.getItem('direccion'));
-			fetch('http://localhost:5000/api/Envio', {
+			fetch('https://zintra-api.herokuapp.com/api/Envio', {
 				method: 'POST',
 				headers: {
 					'Content-type': 'application/json',
@@ -138,7 +138,7 @@ formulario.addEventListener('submit', (e) => {
 				}),
 			}).then((resp) =>
 				resp.json().then((envio) => {
-					fetch('http://localhost:5000/api/Pago', {
+					fetch('https://zintra-api.herokuapp.com/api/Pago', {
 						method: 'POST',
 						headers: {
 							'Content-type': 'application/json',
@@ -171,7 +171,7 @@ formulario.addEventListener('submit', (e) => {
 	
 
 const postCarrito = async () => {
-	const resp = await fetch('http://localhost:5000/api/Carrito', {
+	const resp = await fetch('https://zintra-api.herokuapp.com/api/Carrito', {
 		method: 'POST',
 		headers: {
 			'Content-type': 'application/json',
